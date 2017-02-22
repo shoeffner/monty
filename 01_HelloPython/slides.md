@@ -40,7 +40,7 @@ You need ten thousands of hours to master a skill -- we can only present you wit
 
 # Questionnaire results
 
-[]()
+[Responses](https://docs.google.com/forms/d/17k-BJSgCRWh1cFf86YJNKBTFgrlwza-4l34wv0EBG-8/edit#responses)
 
 
 # Lecture
@@ -69,18 +69,18 @@ You need ten thousands of hours to master a skill -- we can only present you wit
 # Grading
 
 - Only Fail/Pass
-- To Pass: TBD
+- To Pass: TODO
 
 
 # Let's learn together
 
 ## Ask questions
 - Ask questions in class
-- Ask questions in the forum
+- Ask questions in the [forum](TODO)
 - Ask questions per mail
 
 ## Share your knowledge
-- Collect your error messages and the code which produces them here: TBD
+- Collect your error messages and the code which produces them here: TODO
 - Try to solve them
 - We will have a session soon where we discuss different errors
 
@@ -229,12 +229,44 @@ Setup your laptop to run python (we will discuss this in a minute).
 Write your own `Hello World!` program.
 
 
-# Intermezzo: Terminal / Command line
+# Installation of Python (Windows)
 
-TODO
+* Download Python 3.6 from [https://www.python.org/](https://www.python.org/) (Careful with 32 and 64 bit versions!)
+* Install it and make sure that "Add Python 3.6 to PATH" is selected during the installation.
+* Download spyder from [http://www.lfd.uci.edu/~gohlke/pythonlibs/#spyder](http://www.lfd.uci.edu/~gohlke/pythonlibs/#spyder), use `spyder-3.1.3-py3-none-any.whl`.
+* Open your Command Prompt and install it
+    ```shell
+    pip install [...]
+    ```
+    Replace `[...]` with the path to the downloaded file, e.g.
+    ```shell
+    pip install C:\Users\Basti\Downloads\spyder-3.1.3-py3-none-any.whl
+    ```
 
 
-# Installation of Python
+# Installation of Python (Mac OS)
 
-TODO
+* Follow the "Install Homwbrew" instructions (copy the line into the Terminal and excute it).
+* Install Python 3.6 with:
+    ```shell
+    brew install python3
+    ```
+* Install spyder with
+    ```shell
+    pip3 install spyder
+    ```
+
+
+# Installation of Python (Ubuntu)
+
+* On Ubuntu versions less than 16.10 run
+    ```shell
+    sudo add-apt-repository ppa:jonathonf/python-3.6
+    ```
+* Then, on all Ubuntu versions, install Python 3.6 with:
+    ```shell
+    sudo apt-get update
+    sudo apt-get install -y built-essentials python3.6
+    ```
+* Install spyder with `pip3 install spyder`
 
