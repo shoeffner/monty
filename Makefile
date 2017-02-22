@@ -20,3 +20,5 @@ sheet%:
 		; \
 	fi
 
+clean:
+	rm -rf ./*/*.pdf
