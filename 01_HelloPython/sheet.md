@@ -120,7 +120,7 @@ If you want to reset what your turtle drew, you can use `turtle.reset()`.
 In Germany little kids learn to draw the *Haus vom Nikolaus* (St. Nicholas'
 house) in one stroke. It looks like this:
 
-![St. Nicholas' house](saintnicholashouse.png "St. Nicholas' house])
+![St. Nicholas' house](saintnicholashouse.png "St. Nicholas' house")
 
 Can you give your turtle commands to draw something like this?
 
