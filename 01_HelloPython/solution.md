@@ -22,9 +22,9 @@ print("Are you \"Monty\"?")
 print('Are you "Monty"?')
 
 # But you will need escaping for the last:
-print("Can't you just pretend you were \"Morty\"?")
+print("Can't you just pretend you were \"Monty\"?")
 # or
-print('Can\'t you just pretend you were "Morty"?')
+print('Can\'t you just pretend you were "Monty"?')
 ```
 
 Output:
@@ -34,8 +34,8 @@ Hello Aline and Basti!
 What's up?
 Are you "Monty"?
 Are you "Monty"?
-Can't you just pretend you were "Morty"?
-Can't you just pretend you were "Morty"?
+Can't you just pretend you were "Monty"?
+Can't you just pretend you were "Monty"?
 ```
 
 # Exercise 3: Turtles all the way down
