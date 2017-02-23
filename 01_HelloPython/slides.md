@@ -225,48 +225,28 @@ Keep in mind: the concepts are always very very similar!
 
 # Your first homework
 
-Setup your laptop to run python (we will discuss this in a minute).
+Setup your laptop to run Python (we will discuss this in a minute).
 Write your own `Hello World!` program.
 
 
-# Installation of Python (Windows)
+# Installing Python
 
-* Download Python 3.6 from [https://www.python.org/](https://www.python.org/) (Careful with 32 and 64 bit versions!)
-* Install it and make sure that "Add Python 3.6 to PATH" is selected during the installation.
-* Download spyder from [http://www.lfd.uci.edu/~gohlke/pythonlibs/#spyder](http://www.lfd.uci.edu/~gohlke/pythonlibs/#spyder), use `spyder-3.1.3-py3-none-any.whl`.
-* Open your Command Prompt and install it
+Miniconda is a package management system which allows us to keep the
+administrative overhead of installing Python to a minimum.
+
+* Download Miniconda (Python 3.6) from
+  [https://conda.io/miniconda.html](https://conda.io/miniconda.html).
+* Install it. Make sure it is in your path.
+* Open your terminal / command line and run the following to install an
+  IDE[^IDE] we will and two packages we might use:
     ```shell
-    pip install [...]
+    conda -y install spyder numpy matplotlib
     ```
-    Replace `[...]` with the path to the downloaded file, e.g.
+* For stuff used in e.g. Neuroinformatics, Machine Learning, Computer Vision,
+  or other classes, run additionally:
     ```shell
-    pip install C:\Users\Basti\Downloads\spyder-3.1.3-py3-none-any.whl
-    ```
-
-
-# Installation of Python (Mac OS)
-
-* Follow the "Install Homwbrew" instructions (copy the line into the Terminal and excute it).
-* Install Python 3.6 with:
-    ```shell
-    brew install python3
-    ```
-* Install spyder with
-    ```shell
-    pip3 install spyder
+    conda -y install pip scipy pandas jupyter \
+                     scikit-learn scikit-image
     ```
 
-
-# Installation of Python (Ubuntu)
-
-* On Ubuntu versions less than 16.10 run
-    ```shell
-    sudo add-apt-repository ppa:jonathonf/python-3.6
-    ```
-* Then, on all Ubuntu versions, install Python 3.6 with:
-    ```shell
-    sudo apt-get update
-    sudo apt-get install -y built-essentials python3.6
-    ```
-* Install spyder with `pip3 install spyder`
-
+[^IDE]: Integrated Development Environment
