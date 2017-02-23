@@ -83,7 +83,7 @@ Z, you do not need the shift key!).[^eofeot]
 In the late 20th century it became very popular to teach programming with a
 turtle[^turtlewiki]. Those turtles were little robots that could move around --
 check one out here:
-[https://youtu.be/8wU6NdjTVTA](https://youtu.be/8wU6NdjTVTA). Did you notive
+[https://youtu.be/8wU6NdjTVTA](https://youtu.be/8wU6NdjTVTA). Did you notice
 that it drew on the sheet of paper? No? Watch again then.
 
 Since we can not afford to buy a turtle for everyone of you, Python allows us
