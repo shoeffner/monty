@@ -6,7 +6,7 @@
 
 For this exercise we will not include any special solutions. Instead, enjoy this little cartoon:
 
-![How to Teach Yourself Programming](http://abstrusegoose.com/strips/ars_longa_vita_brevis.png "How to Teach Yourself Programming)
+[How to Teach Yourself Programming](http://abstrusegoose.com/strips/ars_longa_vita_brevis.png)
 
 
 # Exercise 2: Hello you!
@@ -76,5 +76,5 @@ turtle.done()
 
 Result:
 
-![St. Nicholas' house](saintnicholashouse.png "St. Nicholas' house])
+![St. Nicholas' house](saintnicholashouse.png "St. Nicholas' house")
 

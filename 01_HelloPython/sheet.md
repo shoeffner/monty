@@ -103,6 +103,7 @@ turtle.home()
 ```
 
 You should see a window like this:
+
 ![Turtle window](turtlewindow.png "Turtle window")
 
 Now you can let your turtle move around and draw with the following commands:
@@ -127,7 +128,7 @@ Store your successful commands in a file `nicholas.py` for your submission.
 
 
 [^turtlewiki]: Check
-  [https://en.wikipedia.org/wiki/Turtle\_(robot)](https://en.wikipedia.org/wiki/Turtle_(robot%29)
+  [https://en.wikipedia.org/wiki/Turtle\_(robot)]()
   for more info. The concept is still popular today, although turtles are not
   enough anymore
-  ([https://studio.code.org/s/frozen/stage/1/puzzle/1](https://studio.code.org/s/frozen/stage/1/puzzle/1)).
+  ([https://studio.code.org/s/frozen/stage/1/puzzle/1]()).
