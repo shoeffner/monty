@@ -8,6 +8,6 @@ print("Are you \"Monty\"?")
 print('Are you "Monty"?')
 
 # But you will need escaping for the last:
-print("Can't you just pretend you were \"Morty\"?")
+print("Can't you just pretend you were \"Monty\"?")
 # or
-print('Can\'t you just pretend you were "Morty"?')
+print('Can\'t you just pretend you were "Monty"?')
