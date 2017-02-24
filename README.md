@@ -5,6 +5,8 @@ Osnabrück University.
 ## Compile
 
 You will need [pandoc](http://pandoc.org/) to compile the materials.
+Additionally you need to install the python requirements, as the custom pandoc
+filters rely on them.
 
 To compile a specific chapter, just run:
 

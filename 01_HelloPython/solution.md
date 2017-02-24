@@ -6,7 +6,7 @@
 
 For this exercise we will not include any special solutions. Instead, enjoy this little cartoon:
 
-[How to Teach Yourself Programming](http://abstrusegoose.com/strips/ars_longa_vita_brevis.png)
+![How to Teach Yourself Programming](http://abstrusegoose.com/strips/ars_longa_vita_brevis.png "How to Teach Yourself Programming")
 
 
 # Exercise 2: Hello you!

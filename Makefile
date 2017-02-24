@@ -6,7 +6,7 @@ rslides = $(path)/slides
 
 sheet = $(path)/BPP-Sheet$(path)
 solution = $(path)/BPP-Solution$(path)
-slides = $(path)/BPP-$(path).pdf
+slides = $(path)/BPP-$(path)
 
 
 %: slides% sheet% solution% zip%
@@ -26,6 +26,7 @@ slides%:
 	@if [ -f $(rslides).md ]; then \
 		pandoc \
 			-t beamer \
+			--filter pandoc-img-glob \
 			-o $(slides).pdf \
 			$(path)/slides.md \
 		; \
@@ -34,6 +35,7 @@ slides%:
 sheet%:
 	@if [ -f $(rsheet).md ]; then \
 		pandoc \
+			--filter pandoc-img-glob \
 			-o $(sheet).pdf \
 			$(path)/sheet.md \
 		; \
@@ -42,6 +44,7 @@ sheet%:
 solution%:
 	@if [ -f $(rsolution).md ]; then \
 		pandoc \
+			--filter pandoc-img-glob \
 			-o $(solution).pdf \
 			$(path)/solution.md \
 		; \
