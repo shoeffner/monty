@@ -76,5 +76,5 @@ turtle.done()
 
 Result:
 
-![St. Nicholas' house](saintnicholashouse.png "St. Nicholas' house")
+![St. Nicholas' house](imgs/saintnicholashouse.png "St. Nicholas' house")
 
