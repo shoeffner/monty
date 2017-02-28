@@ -1,0 +1,8 @@
+---
+handout: True
+classoption:
+    - notes
+header-includes:
+    - \usepackage{pgfpages}
+    - \setbeameroption{show notes on second screen=bottom}
+...

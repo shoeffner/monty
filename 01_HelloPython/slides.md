@@ -1,21 +1,12 @@
-% Basic Programming in Python: Hello Python!
-% Aline Vilks, Sebastian Höffner
-
-
-# Hello Python!
-
-```python
-print('Hello Python!')
-```
-
+% `print('Hello Python!')`
 
 # Programming is easy
 
 But it takes a lot of time to become good at it.
 
-It's like sports: It's easy to run, but it takes a lot of practice to run a marathon.
+\note{It's like sports: It's easy to run, but it takes a lot of practice to run a marathon.
 
-You need ten thousands of hours to master a skill -- we can only present you with your first 50 or so.
+You need ten thousands of hours to master a skill -- we can only present you with your first 50 or so.}
 
 
 # Why programming?
@@ -217,7 +208,7 @@ YOU HAVE BEEN TERMINATED
 
 # Hello World!
 
-`Hello World!` programs give us an idea of how a language looks like.
+`Hello World!` programs give us a first impression of the language of a syntax.
 There are other demo programs but we will take a look into some later.
 
 Keep in mind: the concepts are always very very similar!
@@ -250,3 +241,8 @@ administrative overhead of installing Python to a minimum.
     ```
 
 [^IDE]: Integrated Development Environment
+
+
+# The last slide
+
+![You're a turtle! (xkcd.com/889)](https://imgs.xkcd.com/comics/turtles.png)

@@ -1,6 +1,4 @@
-% Exercise Sheet 01 Solutions -- Hello Python!
-% Aline Vilks, Sebastian Höffner
-
+% Exercise Sheet 01 Solutions -- `print('Hello Python!')`
 
 # Exercise 1: Your development environment
 

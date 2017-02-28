@@ -1,6 +1,4 @@
-% Exercise Sheet 01 -- Hello Python!
-% Aline Vilks, Sebastian Höffner
-% Deadline: Mon, 10 Apr 2017 08:00 +0200
+% Exercise Sheet 01 -- `print('Hello Python!')`
 
 # Submission
 
@@ -86,7 +84,7 @@ check one out here:
 [https://youtu.be/8wU6NdjTVTA](https://youtu.be/8wU6NdjTVTA). Did you notice
 that it drew on the sheet of paper? No? Watch again then.
 
-Since we can not afford to buy a turtle for everyone of you, Python allows us
+Since we can not afford to buy a turtle for everyone, Python allows us
 to draw with a virtual turtle. Open your python interpreter again, as you did
 in the previous exercise.
 
