@@ -4,29 +4,35 @@
 
 But it takes a lot of time to become good at it.
 
-\note{It's like sports: It's easy to run, but it takes a lot of practice to run a marathon.
+\note{
+It's like sports: It's easy to run, but it takes a lot of practice to run a marathon.
 
-You need ten thousands of hours to master a skill -- we can only present you with your first 50 or so.}
+You need ten thousands of hours to master a skill -- we can only present you with your first 50 or so.
+}
 
 
 # Why programming?
 
 ## Programming in academia
 
-* Course work focuses more on contents, less on tools
-* Data analysis becomes more fluent
-* Theses and papers become easier
-* You learn to automate things to be more productive
+\note{
+- Course work focuses more on contents, less on tools
+- Data analysis becomes more fluent
+- Theses and papers become easier
+- You learn to automate things to be more productive
+}
 
 ## Programming outside of academia
 
-* Understanding the principles helps with every day tasks:
+\note{
+- Understanding the principles helps with every day tasks:
     - using office programs
     - filing your tax returns
     - understanding insurance policies
     - ...
-* Understanding technology makes things easier and less magic
-* Basically every single job for academic people involves code
+- Understanding technology makes things easier and less magic
+- Basically every single job for academic people involves code
+}
 
 
 # Questionnaire results
@@ -225,15 +231,15 @@ Write your own `Hello World!` program.
 Miniconda is a package management system which allows us to keep the
 administrative overhead of installing Python to a minimum.
 
-* Download Miniconda (Python 3.6) from
+- Download Miniconda (Python 3.6) from
   [https://conda.io/miniconda.html](https://conda.io/miniconda.html).
-* Install it. Make sure it is in your path.
-* Open your terminal / command line and run the following to install an
+- Install it. Make sure it is in your path.
+- Open your terminal / command line and run the following to install an
   IDE[^IDE] we will and two packages we might use:
     ```shell
     conda -y install spyder numpy matplotlib
     ```
-* For stuff used in e.g. Neuroinformatics, Machine Learning, Computer Vision,
+- For stuff used in e.g. Neuroinformatics, Machine Learning, Computer Vision,
   or other classes, run additionally:
     ```shell
     conda -y install pip scipy pandas jupyter \

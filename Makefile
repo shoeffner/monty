@@ -38,6 +38,7 @@ slides%: builddir%
 		pandoc \
 			-t beamer \
 			--filter pandoc-img-glob \
+			--filter pandoc-beamer-notes \
 			-o $(slides).pdf \
 			--metadata date='$(dateslides)' \
 			$(path)/slides.md \
@@ -54,6 +55,7 @@ notes%: builddir%
 		pandoc \
 			-t beamer \
 			--filter pandoc-img-glob \
+			--filter pandoc-beamer-notes \
 			-o $(notes).pdf \
 			--metadata date='$(dateslides)' \
 			$(path)/slides.md \
