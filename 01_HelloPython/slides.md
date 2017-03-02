@@ -224,6 +224,7 @@ Keep in mind: the concepts are always very very similar!
 
 Setup your laptop to run Python (we will discuss this in a minute).
 Write your own `Hello World!` program.
+Draw a little St. Nicholas' house. (Not on paper, of course.)
 
 
 # Installing Python
