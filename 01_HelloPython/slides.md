@@ -5,9 +5,9 @@
 But it takes a lot of time to become good at it.
 
 \note{
-It's like sports: It's easy to run, but it takes a lot of practice to run a marathon.
+- It's like sports: easy to run, but it takes a lot of practice to run a marathon.
 
-You need ten thousands of hours to master a skill -- we can only present you with your first 50 or so.
+- You need ten thousands of hours to master a skill -- we can only present you with your first 50 or so.
 }
 
 
@@ -37,13 +37,13 @@ You need ten thousands of hours to master a skill -- we can only present you wit
 
 # Questionnaire results
 
-[Responses](https://docs.google.com/forms/d/17k-BJSgCRWh1cFf86YJNKBTFgrlwza-4l34wv0EBG-8/edit#responses)
+[Responses](https://goo.gl/VhpXY1)
 
 
 # Lecture
 
-- Time:
-- Room:
+- Time: TODO
+- Room: TODO
 
 (Complete list in Stud.IP)
 
@@ -52,7 +52,7 @@ You need ten thousands of hours to master a skill -- we can only present you wit
 
 - One sheet per week
 - Deadline is before Monday morning, 08:00
-- In groups of N students
+- In groups of TODO students
 - Sign up on Stud.IP
 
 
