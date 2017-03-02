@@ -1,3 +1,3 @@
-panflute
-pandoc-img-glob
-pandoc-beamer-notes
+panflute>=1.10.2
+pandoc-img-glob>=0.1.3
+pandoc-beamer-notes>=0.1.1

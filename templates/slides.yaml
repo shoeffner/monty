@@ -5,4 +5,7 @@ classoption:
 header-includes:
     - \usepackage{pgfpages}
     - \setbeameroption{show notes on second screen=bottom}
+panflute-filters:
+    - pandoc-beamer-notes
+    - pandoc-img-glob
 ...

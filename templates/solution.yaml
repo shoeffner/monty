@@ -1,2 +1,4 @@
 ---
+panflute-filters:
+    - pandoc-img-glob
 ---

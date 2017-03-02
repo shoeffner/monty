@@ -37,8 +37,7 @@ slides%: builddir%
 		echo Creating slides for $(path) ; \
 		pandoc \
 			-t beamer \
-			--filter pandoc-img-glob \
-			--filter pandoc-beamer-notes \
+			--filter panflute \
 			-o $(slides).pdf \
 			--metadata date='$(dateslides)' \
 			$(path)/slides.md \
@@ -54,8 +53,7 @@ notes%: builddir%
 		echo Creating notes for $(path) ; \
 		pandoc \
 			-t beamer \
-			--filter pandoc-img-glob \
-			--filter pandoc-beamer-notes \
+			--filter panflute \
 			-o $(notes).pdf \
 			--metadata date='$(dateslides)' \
 			$(path)/slides.md \
@@ -70,7 +68,7 @@ sheet%: builddir%
 	@if [ -f $(rsheet).md ]; then \
 		echo Creating exercises for $(path) ; \
 		pandoc \
-			--filter pandoc-img-glob \
+			--filter panflute \
 			-o $(sheet).pdf \
 			--metadata date='$(datesheet)' \
 			$(path)/sheet.md \
@@ -85,7 +83,7 @@ solution%: builddir%
 	@if [ -f $(rsolution).md ]; then \
 		echo Creating solutions for $(path) ; \
 		pandoc \
-			--filter pandoc-img-glob \
+			--filter panflute \
 			-o $(solution).pdf \
 			--metadata date='$(datesheet)' \
 			$(path)/solution.md \
