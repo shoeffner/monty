@@ -1,6 +1,19 @@
 % Variables and Assignments
 
 
+# Python scripting
+
+- Scripts make code reusable
+- From now on, write all your homework in scripts
+- You can still explore using the interactive interpreter
+
+\note{
+During the first homework, you copied all your commands into files.
+
+You can run them, share them, modify them.
+}
+
+
 # Variable vs. Value
 
 * Variables are containers
