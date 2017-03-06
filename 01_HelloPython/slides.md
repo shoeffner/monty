@@ -52,7 +52,7 @@ But it takes a lot of time to become good at it.
 
 - One sheet per week
 - Deadline is before Monday morning, 08:00
-- In groups of TODO students
+- In groups of $\approx \frac{N}{12}$ students (we prefer $2$--$3$)
 - Sign up on Stud.IP
 
 
@@ -84,7 +84,7 @@ But it takes a lot of time to become good at it.
 
 # Let's program!
 
-We will very often see Pseudocode, algorithms written down in a concise way but
+We will very often see Pseudocode: algorithms written down in a concise way, but
 close to natural language.
 
 
@@ -137,7 +137,7 @@ It is a program which somehow prints[^print] a friendly message:
 Hello World!
 ```
 
-[^print]: printing means to output something, usually on the terminal. Don't
+[^print]: "printing" means to output something, usually on the terminal. Don't
   bring out your printers and throw stacks of paper at us. We have nothing to
   throw back.
 
