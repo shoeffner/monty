@@ -7,6 +7,8 @@
 - From now on, write all your homework in scripts
 - You can still explore using the interactive interpreter
 
+- To replay your code: `python my_code.py` -- or just click the play button in spyder!
+
 \note{
 During the first homework, you copied all your commands into files.
 
@@ -16,24 +18,32 @@ You can run them, share them, modify them.
 
 # Variable vs. Value
 
-* Variables are containers
+* Variables are placeholders
 * Values are the contents
 
 
 # Variable vs. Value
 
-TODO: nice picture of a container with a value, e.g. a coffee mug to fill with coffee or tee
+![Mug of Tea (Factorylad, Wikimedia Commons)](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Mug_of_Tea.JPG/1024px-Mug_of_Tea.JPG)
+
+TODO: mensa mug picture
 
 
 # Example: Liquids
 
 ```python
-cup = 'coffee'
-print(cup)
+mug = 'mensa mug'
+liquid_in_mug = 'hot chocolate'
 
-cup = 'tea'
-print(cup)
+print('My mug "', mug, '" contains ', liquid_in_mug)
 ```
+
+\note{
+You might know this concept from Logics, Mathematics, or Statistics classes.
+
+A variable is thus just a placeholder for a concept, while the value is its
+realization.
+}
 
 
 # Example: Names
@@ -135,8 +145,8 @@ Try out:
 - `5 - 2 + 3`
 - `5 - (2 + 3)`
 - etc.
-
 }
+
 
 # More math operators
 
@@ -170,8 +180,6 @@ Try:
 - Take the cube root of 8 ($\sqrt[3]{8}$).
 
 [^remindersqrt]: Remember that $\sqrt[p]{x} = x^{\frac{1}{p}}$.
-
-# Roots
 
 \note{
 `x = 64`
@@ -238,7 +246,7 @@ sqrt_a = math.sqrt(a)
 
 # Let's solve a real world problem!
 
-TODO
+TODO: damage calculation exercise
 
 \note{
 \begin{align}
@@ -249,10 +257,14 @@ x = \text{TODO}
 
 # Your second homework
 
-TODO
+- We learned about the `math` package. Calculate the area of different St.
+  Nicholas' houses. Use the `random` package to generate useful random
+  variables.
+- Bonus: Draw the random "St. Nicholas' houses" using the `turtle` package.
+- Calculate the effective damage for a hero beating goblins.
 
 
 # The last slide
 
-![TODO](http://www.smbc-comics.com/comic/the-dimension-store)
+![http://lizclimo.tumblr.com/image/88813348409 (Liz Climo)](http://68.media.tumblr.com/a6e26451c90c25b6fae222c5c0a032d9/tumblr_n76t0oir8H1r5ml59o1_r1_1280.jpg)
 
