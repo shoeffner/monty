@@ -252,4 +252,7 @@ administrative overhead of installing Python to a minimum.
 
 # The last slide
 
-![You're a turtle! (xkcd.com/889)](https://imgs.xkcd.com/comics/turtles.png)
+![You're a turtle! [@xkcd889]](https://imgs.xkcd.com/comics/turtles.png)
+
+
+# References

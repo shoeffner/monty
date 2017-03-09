@@ -86,7 +86,7 @@ that sometimes we hold the same fruit, not a copy!
 > A notorious example for a bad idea was the choice of the equal sign to denote
 > assignment.[^wirth]
 
-[^wirth]: Niklaus Wirth: Good Ideas, Through the Looking Glass. 2005
+[^wirth]: @wirth2005: Good Ideas, Through the Looking Glass.
 
 
 # Assignment `=` vs. Equality $=$
@@ -241,7 +241,7 @@ In the beat 'em up game Castle Crashers, four heroic knights are on an epic
 journey to save four princesses who were kidnapped by a dark wizard. During
 the knights' journey they have to fight many evil-doers.
 
-![Castle Crashers, Screenshot (&copy; The Behemoth)](http://www.castlecrashers.com/images/screenshots/cc7.jpg){height=200px}
+![Castle Crashers, Screenshot [@behemoth2012]](http://www.castlecrashers.com/images/screenshots/cc7.jpg){height=200px}
 
 
 # Fighting for princesses
@@ -254,7 +254,7 @@ Level ($L$)       31
 Strength ($S$)    20
 
 When they hit an enemy with a strong attack, damage $D$ is calculated by
-the following formula[^ccref]:
+the following formula[@gamefaq2008]:
 
 $D = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 
@@ -262,11 +262,10 @@ $D = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 2. Assume one knight is a bit stronger than the others: with level 32 he got a
    strength value of 21. How much damage does he deal with a single strong attack?
 
-[^ccref]: Taken from https://www.gamefaqs.com/xbox360/934458-castle-crashers/faqs/54118 .
-
 \note{
 \pycode{castlecrashers.py}
 }
+
 
 # Your second homework
 
@@ -279,5 +278,7 @@ $D = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 
 # The last slide
 
-![http://lizclimo.tumblr.com/image/88813348409 (Liz Climo)](http://68.media.tumblr.com/a6e26451c90c25b6fae222c5c0a032d9/tumblr_n76t0oir8H1r5ml59o1_r1_1280.jpg)
+![happy father's day [@climo2014]](http://68.media.tumblr.com/a6e26451c90c25b6fae222c5c0a032d9/tumblr_n76t0oir8H1r5ml59o1_r1_1280.jpg)
 
+
+# References

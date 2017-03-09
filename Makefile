@@ -1,5 +1,6 @@
-path = $(shell ls | grep $*)
 build = ./output
+path = $(shell ls | grep $*)
+tpl = ./templates
 
 rsheet = $(path)/sheet
 rsolution = $(path)/solution
@@ -31,18 +32,19 @@ zip%: builddir% sheet% solution%
 	fi
 
 
-# Builds builds the uploadable slides
+# Builds the uploadable slides
 slides%: builddir%
 	@if [ -f $(rslides).md ]; then \
 		echo Creating slides for $(path) ; \
 		pandoc \
 			-t beamer \
 			--filter panflute \
+			--bibliography=$(tpl)/bibliography.bib \
 			-o $(slides).pdf \
 			--metadata date='$(dateslides)' \
 			$(path)/slides.md \
-			./templates/meta.yaml \
-			./templates/slides.yaml \
+			$(tpl)/meta.yaml \
+			$(tpl)/slides.yaml \
 		; \
 	fi
 
@@ -54,11 +56,12 @@ notes%: builddir%
 		pandoc \
 			-t beamer \
 			--filter panflute \
+			--bibliography=$(tpl)/bibliography.bib \
 			-o $(notes).pdf \
 			--metadata date='$(dateslides)' \
 			$(path)/slides.md \
-			./templates/meta.yaml \
-			./templates/notes.yaml \
+			$(tpl)/meta.yaml \
+			$(tpl)/notes.yaml \
 		; \
 	fi
 
@@ -69,11 +72,12 @@ sheet%: builddir%
 		echo Creating exercises for $(path) ; \
 		pandoc \
 			--filter panflute \
+			--bibliography=$(tpl)/bibliography.bib \
 			-o $(sheet).pdf \
 			--metadata date='$(datesheet)' \
 			$(path)/sheet.md \
-			./templates/meta.yaml \
-			./templates/sheet.yaml \
+			$(tpl)/meta.yaml \
+			$(tpl)/sheet.yaml \
 		; \
 	fi
 
@@ -84,11 +88,12 @@ solution%: builddir%
 		echo Creating solutions for $(path) ; \
 		pandoc \
 			--filter panflute \
+			--bibliography=$(tpl)/bibliography.bib \
 			-o $(solution).pdf \
 			--metadata date='$(datesheet)' \
 			$(path)/solution.md \
-			./templates/meta.yaml \
-			./templates/solution.yaml \
+			$(tpl)/meta.yaml \
+			$(tpl)/solution.yaml \
 		; \
 	fi
 
