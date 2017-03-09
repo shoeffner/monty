@@ -42,13 +42,13 @@ But it takes a lot of time to become good at it.
 
 # Lecture
 
-- Time: TODO
-- Room: TODO
+- Time: Wednesday, 14:00 - 16:00, c.t.
+- Room: 93/E15
 
 (Complete list in Stud.IP)
 
 
-# Homeworks
+# Homework
 
 - One sheet per week
 - Deadline is before Monday morning, 08:00
@@ -59,7 +59,7 @@ But it takes a lot of time to become good at it.
 # Feedback sessions
 
 - Once per week
-- Homeworks will be checked and commented on
+- Homework will be checked and commented on
 - Not a bad thing, but an opportunity!
 
 
@@ -73,7 +73,7 @@ But it takes a lot of time to become good at it.
 
 ## Ask questions
 - Ask questions in class
-- Ask questions in the [forum](TODO)
+- Ask questions in the [forum](https://studip.uos.de/plugins.php/coreforum/index/index?cid=e7eca86bfdacf12717540d75bb2fcb47)
 - Ask questions per mail
 
 ## Share your knowledge

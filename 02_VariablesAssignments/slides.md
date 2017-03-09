@@ -227,7 +227,7 @@ sqrt_a = math.sqrt(a)
 
 \note{
 - There are lots of useful math functions already implemented in Python.
-- Google for `python 3 math`. Do it now!
+- Search the web for `python 3 math`. Do it now!
 - All functions listed there are available by calling `math.function(...)`
   after `import math`.
 
