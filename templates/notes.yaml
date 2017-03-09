@@ -4,7 +4,11 @@ classoption:
 header-includes:
     - \usepackage{pgfpages}
     - \setbeameroption{show notes on second screen}
+    - \usepackage{listings}
+    - \newcommand{\pycode}[1]{\lstinputlisting[language=python]{#1}}
+panflute-path: 'templates/filters'
 panflute-filters:
     - pandoc-beamer-notes
     - pandoc-img-glob
+    - pandoc-code-glob
 ...
