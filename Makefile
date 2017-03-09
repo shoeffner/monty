@@ -19,6 +19,14 @@ datesheet = $(shell echo Deadline: `[ -f $(path)/dates.txt ] && tail -n1 $(path)
 	@echo 'Done.'
 
 
+outline:
+	@pandoc \
+		--bibliography=$(tpl)/bibliography.bib \
+		-o $(build)/BPP-Outline.pdf \
+		00_Meta/outline.md \
+		$(tpl)/meta.yaml
+
+
 zip%: builddir% sheet% solution%
 	@if [ -f $(rsheet).list ]; then \
 		echo Zipping exercises for $(path) ; \
