@@ -182,17 +182,7 @@ Try:
 [^remindersqrt]: Remember that $\sqrt[p]{x} = x^{\frac{1}{p}}$.
 
 \note{
-`x = 64`
-
-`sqrt_x = x ** (1 / 2)`
-
-`print(sqrt_x)`
-
-`y = 8`
-
-`cbrt_y = y ** (1 / 3)`
-
-`print(cbrt_y)`
+\pycode{sqrt_cbrt.py}
 }
 
 
@@ -237,23 +227,46 @@ sqrt_a = math.sqrt(a)
 
 \note{
 - There are lots of useful math functions already implemented in Python.
-- Google for [`python 3 math`](https://docs.python.org/3/library/math.html). Do
-  it now!
+- Google for `python 3 math`. Do it now!
 - All functions listed there are available by calling `math.function(...)`
   after `import math`.
+
+https://docs.python.org/3/library/math.html
 }
 
 
-# Let's solve a real world problem!
+# Let's solve a "real world" problem!
 
-TODO: damage calculation exercise
+In the beat 'em up game Castle Crashers, four heroic knights are on an epic
+journey to save four princesses who were kidnapped by a dark wizard. During
+the knights' journey they have to fight many evil-doers.
+
+![Castle Crashers, Screenshot (&copy; The Behemoth)](http://www.castlecrashers.com/images/screenshots/cc7.jpg){height=200px}
+
+
+# Fighting for princesses
+
+The knights have different attributes and values assigned to them:
+
+Attribute      Value
+-------------- -----
+Level ($L$)       31
+Strength ($S$)    20
+
+When they hit an enemy with a strong attack, damage $D$ is calculated by
+the following formula[^ccref]:
+
+$D = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
+
+1. Calculate how much damage a knight deals with a single strong attack.
+2. Assume one knight is a bit stronger than the others: with level 32 he got a
+   strength value of 21. How much damage does he deal with a single strong attack?
+
+[^ccref]: Taken from https://www.gamefaqs.com/xbox360/934458-castle-crashers/faqs/54118 .
 
 \note{
-\begin{align}
-x = \text{TODO}
-\end{align}
+\pycode{castlecrashers.py}
 }
-
 
 # Your second homework
 
@@ -261,7 +274,7 @@ x = \text{TODO}
   Nicholas' houses. Use the `random` package to generate useful random
   variables.
 - Bonus: Draw the random "St. Nicholas' houses" using the `turtle` package.
-- Calculate the effective damage for a hero beating goblins.
+- TODO.
 
 
 # The last slide
