@@ -15,23 +15,23 @@ Week of         Name                                Topics
 
 2017-04-10      Variables and Assignments           Basic data types: strings, integers, floats; Arithmetics; Concept of variables and assignments (in comparison to mathematical equality)
 
-2017-04-17      Control flow                        Boolean variables; Comparisons; Lists; Loops and ifs; Functions
+2017-04-17      `True` or `False`?                  Boolean variables; Comparisons; If/Elif/Else
 
-2017-04-24      Errors and Debugging                try/except; Error types; Spyder's debugging functions; Documentation and style; Tests
+2017-04-24      Control Flow                        Loops; Functions; Lists & Tuples
 
-2017-05-01      File I/O and Algorithms             Reading and writing files; Standard algorithms like sorting
+2017-05-01      Errors and Debugging                try/except; Error types; Spyder's debugging functions; Documentation and style; Tests
 
-2017-05-08      Applied Computer Science I          Text and math to code; Analyze data flow; More algorithms
+2017-05-08      File I/O and Algorithms             Reading and writing files; Standard algorithms like sorting
 
-2017-05-15      Object Oriented Programming         Classes and Instances
+2017-05-15      Applied Computer Science I          Text and math to code; Analyze data flow; More algorithms
 
-2017-05-22      Applied Computer Science II         Text and math to code; Abstract data types; Data processing; Python Standard Library
+2017-05-22      Object Oriented Programming         Classes and Instances
 
-2017-05-29      Algorithmic Complexity              Big-O Notation
+2017-05-29      Applied Computer Science II         Text and math to code; Abstract data types; Data processing; Python Standard Library
 
-2017-06-05      Python Packages                     Using other packages; Complex programs
+2017-06-05      Algorithmic Complexity              Big-O Notation
 
-2017-06-12      To be discussed
+2017-06-12      Python Packages                     Using other packages; Complex programs
 
 2017-06-19      Project week 1                      Projects can be e.g. vocabulary trainers, simple games, esoteric language interpreters, image processing, applications from other subjects, ....
 
