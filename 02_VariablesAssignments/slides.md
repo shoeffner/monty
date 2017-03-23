@@ -93,7 +93,7 @@ that sometimes we hold the same fruit, not a copy!
 > A notorious example for a bad idea was the choice of the equal sign to denote
 > assignment.[^wirth]
 
-[^wirth]: @wirth2005: Good Ideas, Through the Looking Glass.
+[^wirth]: @wirth2006: Good Ideas, Through the Looking Glass.
 
 
 # Assignment `=` vs. Equality $=$
@@ -206,13 +206,13 @@ Try:
 
 # Operator Precedence and Parentheses
 
-- Solve for $x$: $x = 5 \cdot 4 + 1$
-- Solve for $y$: $y = 5 \cdot (4 + 1)$
+- What is $x$: $x = 5 \cdot 4 + 1$
+- What is $y$: $y = 5 \cdot (4 + 1)$
 
 \note{
 Multiplication has a higher precedence than addition.
 
-Parentheses overwrite precendences.
+Parentheses overwrite precedence.
 }
 
 
@@ -258,9 +258,9 @@ https://docs.python.org/3/library/math.html
 
 In the beat 'em up game Castle Crashers, four heroic knights are on an epic
 journey to save four princesses who were kidnapped by a dark wizard. During
-the knights' journey they have to fight many evil-doers.
+the knights' journey they fight many evil-doers.
 
-![Castle Crashers, Screenshot [@behemoth2012]](http://www.castlecrashers.com/images/screenshots/cc7.jpg){height=200px}
+![Castle Crashers, Screenshot [@thebehemoth2012]](http://www.castlecrashers.com/images/screenshots/cc7.jpg){height=200px}
 
 
 # Fighting for princesses
@@ -273,11 +273,11 @@ Level ($L$)       31
 Strength ($S$)    20
 
 When they hit an enemy with a strong attack, damage $D$ is calculated by
-the following formula[@gamefaq2008]:
+the following formula [@gamefaq2008]:
 
 $D = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 
-1. Calculate how much damage a knight deals with a single strong attack.
+1. Calculate the damage a knight deals with a strong attack.
 2. Assume one knight is a bit stronger than the others: with level 32 he got a
    strength value of 21. How much damage does he deal with a single strong attack?
 

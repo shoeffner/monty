@@ -50,7 +50,7 @@ But it takes a lot of time to become good at it.
 
 # Homework
 
-- One sheet per week
+- One sheet per week (~ 12 sheets in total)
 - Deadline is before Monday morning, 08:00
 - In groups of $\approx \frac{N}{12}$ students (we prefer $2$--$3$)
 - Sign up on Stud.IP
@@ -66,7 +66,8 @@ But it takes a lot of time to become good at it.
 # Grading
 
 - Only Fail/Pass
-- To Pass: TODO
+- To Pass: Present at least eight homework assignments to your tutor
+    (They do not need to be perfect, but you should have worked on it)
 
 
 # Let's learn together
