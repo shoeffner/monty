@@ -1,6 +1,5 @@
 import turtle
 
-
 turtle.home()
 
 # left edge

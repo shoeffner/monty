@@ -1,7 +1,4 @@
 ---
-header-includes:
-    - \usepackage{listings}
-    - \newcommand{\pycode}[1]{\lstinputlisting[language=python]{#1}}
 panflute-path: 'templates/filters'
 panflute-filters:
     - pandoc-img-glob
