@@ -18,6 +18,8 @@ datesheet = $(shell echo Deadline: `[ -f $(path)/dates.txt ] && tail -n1 $(path)
 %: builddir% slides% notes% sheet% solution% zip%
 	@echo 'Done.'
 
+all: clean outline 01 02 03
+	@
 
 outline:
 	@pandoc \
