@@ -31,13 +31,19 @@ But it takes a lot of time to become good at it.
     - understanding insurance policies
     - ...
 - Understanding technology makes things easier and less magic
-- Basically every single job for academic people involves code
+- Basically every job for academic people involves code
 }
 
 
 # Questionnaire results
 
-[Responses](https://goo.gl/VhpXY1)
+![We will use Cliqr throughout the class. Please bookmark http://vt.uos.de/bufuv](cliqr.png)
+
+\cliqr{Did you take part in our questionnaire?}
+
+\note{
+Responses: https://goo.gl/VhpXY1
+}
 
 
 # Lecture
@@ -88,6 +94,7 @@ But it takes a lot of time to become good at it.
 We will very often see Pseudocode: algorithms written down in a concise way, but
 close to natural language.
 
+\cliqr{What is an algorithm?}
 
 # Pseudocode example
 

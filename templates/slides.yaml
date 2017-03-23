@@ -12,6 +12,7 @@ header-includes:
     - \setbeamercolor{background canvas}{bg=white}
     - \let\Tiny=\tiny
     - \newcommand{\pycode}[1]{\lstinputlisting[language=python]{#1}}
+    - \newcommand{\cliqr}[1]{}
 panflute-path: 'templates/filters'
 panflute-filters:
     - pandoc-beamer-notes
