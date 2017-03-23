@@ -4,6 +4,19 @@
 
 By the end of this sheet you will have a number of different files to submit. In Stud.IP you will have a directory for your own group, please upload them there. It is easier for you if you just archive all files and upload your archive, but it is okay if you upload them one by one.
 
+# Preamble
+
+Throughout the course we will sometimes (especially in the beginning) refer to the command line or the terminal, and then again use them interchanged. Do not be disheartened! It is the same concept, but some operating systems call it one way and others the other. On Ubuntu you can open it up with the keyboard shortcut `Ctrl + Alt + T`. On MacOS press `Cmd + Space` and type `Terminal` to open it. On Windows, press the `Win + R` and type `cmd`, then hit return.
+
+This is the basic "prompt" (... another term) where you can unleash the powers of your operating system (and break things!). Try `ls` on Mac/Linux or `dir` on Windows[^noworries]. You can navigate around with `cd` (go back up with `cd ..`).
+
+[^noworries]: No worries, this won't break anything, it just shows the files of your current directory.
+
+
+## Errors & Web Search
+
+Although most exercises should be solvable with what we provide in the slides and cover in class, you will have problems solving some of the exercises -- that is by design. For example to solve the bonus exercise 1d) on this sheet, you might need to search around a little bit.
+
 
 # Exercise 1: Your development environment
 
@@ -15,7 +28,7 @@ operating systems.
 
 * Download Miniconda (Python 3.6) from
   [https://conda.io/miniconda.html](https://conda.io/miniconda.html).
-* Install it. Make sure it is in your path.
+* Install it. Make sure it is in your path[^path].
 * Open your terminal / command line and run the following to install an
   IDE[^IDE] we will and two packages we might use:
     ```shell
@@ -29,6 +42,13 @@ operating systems.
     ```
 
 [^IDE]: Integrated Development Environment
+[^path]: This is different for all operating systems. On Linux and MacOS it
+    usually involves opening the file `~/.bashrc` and adding this line at
+    the end: `export PATH="$PATH:~/miniconda3/bin"`. On Windows you have
+    to go to your System settings and add `C:\Users\yourname\anaconda3`
+    to the environment variable `Path` -- if you really have to do it
+    manually, try searching the web or ask us for help (Best before Sunday
+    night).
 
 
 # Exercise 2: Hello you!
