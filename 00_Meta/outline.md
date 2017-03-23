@@ -13,7 +13,7 @@ Week of         Name                                Topics
 --------------- ----------------------------------- --------------------------------------------------
 2017-04-03      `print('Hello World!')`             Organization; Motivation; Installation of Python; Getting started with Hello World programs
 
-2017-04-10      Variables and Assignments           Basic data types: strings, integers, floats; Arithmetics; Concept of variables and assignments (in comparison to mathematical equality)
+2017-04-10      Variables, Assignments, Functions   Basic data types: strings, integers, floats; Arithmetics; Concept of variables and assignments (in comparison to mathematical equality); Functions
 
 2017-04-17      `True` or `False`?                  Boolean variables; Comparisons; If/Elif/Else
 

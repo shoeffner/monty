@@ -1,4 +1,4 @@
-% Variables and Assignments
+% Variables, Assignments, and Functions
 
 
 # Python scripting
@@ -272,10 +272,10 @@ Attribute      Value
 Level ($L$)       31
 Strength ($S$)    20
 
-When they hit an enemy with a strong attack, damage $D$ is calculated by
+When they hit an enemy with a strong attack, damage $d$ is calculated by
 the following formula [@gamefaq2008]:
 
-$D = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
+$d(L, S) = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 
 1. Calculate the damage a knight deals with a strong attack.
 2. Assume one knight is a bit stronger than the others: with level 32 he got a
@@ -283,6 +283,9 @@ $D = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 
 \note{
 \pycode{castlecrashers.py}
+
+1. `31`
+2. `32`
 }
 
 
@@ -292,13 +295,38 @@ $D = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 ```
 
 
+# Reusing code: Functions
+
+How did you change the code to solve the second exercise?
+
+\note{
+Split your code into small parts which solve one task.
+
+- This follows a pattern called DNRY (Do Not Repeat Yourself)
+- Fewer mistakes/easy to fix: only need to change them in one place
+- We will learn later: It's easier to test
+- Makes code reusable
+}
+
+
+# Reusing code: Functions
+
+```{ .python .exec }
+def strong_attack_damage(level, strength):
+    return (5 + 1.15 * strength + 0.1 * level) // 1
+
+level = 31
+strength = 20
+damage = strong_attack_damage(level, strength)
+print(damage)
+```
+
+
 # Your second homework
 
-- We learned about the `math` package. Calculate the area of different St.
-  Nicholas' houses. Use the `random` package to generate useful random
-  variables.
-- Bonus: Draw the random "St. Nicholas' houses" using the `turtle` package.
-- TODO.
+- Calculate the area of different St. Nicholas' houses. Use the `random`
+  package to generate useful random variables.
+- Extend the repertoire of the four Castle Crasher knights.
 
 
 # The last slide
