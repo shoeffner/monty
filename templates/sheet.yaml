@@ -6,4 +6,5 @@ panflute-path: 'templates/filters'
 panflute-filters:
     - pandoc-img-glob
     - pandoc-code-glob
+    - pandoc-source-exec
 ---

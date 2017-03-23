@@ -35,20 +35,15 @@ Mind the spelling with a capital **T**!
 
 And we can check whether an expression is *true* or *false*.
 
-```python
+```{ .python .exec .interactive }
 >>> 5 > 42
-False
-
 >>> 5 < 42
-True
 ```
 
 We can also check the truth value of previously assigned variables.
-``` python
+```{ .python .exec .interactive }
 >>> parrot_alive = True
-
 >>> parrot_alive
-True
 ```
 
 
@@ -74,16 +69,11 @@ It is possible to compare strings the same way, but it follows less obvious rule
 
 Comparisons can be chained, which is mostly useful for boundary checks:
 
-```python
+```{ .python .exec .interactive }
 >>> 1 < 2 <= 4 > 3 == 3 != 5
-True
-
 >>> 4 * 8 < 5 * 9 == 45 > 4.2 * 9 < 2
-False
-
 >>> a = 5
 >>> 2 < a < 6  # This is a common application
-True
 ```
 
 
@@ -92,13 +82,8 @@ True
 What do you expect from the following three statements?
 ```python
 >>> (1 < 2) < 2
-???
-
 >>> True == 0
-???
-
 >>> False < True
-???
 ```
 
 \note{
@@ -127,7 +112,7 @@ if age >= 21:
 
 `if` is the most basic control flow tool we have.
 
-```python
+```{ .python .exec }
 c = 4
 if c < 5:
     c = 5
@@ -174,7 +159,7 @@ Often `if` is not enough, e.g. in the Collatz conjecture.
 
 # Collatz conjecture
 
-```python
+```{ .python .exec }
 x = 5
 if x % 2 == 0:
     y = x / 2

@@ -1,3 +1,4 @@
 panflute>=1.10.2
 pandoc-img-glob>=0.1.3
 pandoc-beamer-notes>=0.1.1
+pandoc-source-exec>=0.1.0

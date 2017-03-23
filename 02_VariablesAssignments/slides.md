@@ -31,11 +31,11 @@ TODO: mensa mug picture
 
 # Example: Liquids
 
-```python
+```{ .python .exec }
 mug = 'mensa mug'
 liquid_in_mug = 'hot chocolate'
 
-print('My mug "', mug, '" contains ', liquid_in_mug)
+print('My', mug, 'contains', liquid_in_mug)
 ```
 
 \note{
@@ -48,10 +48,10 @@ realization.
 
 # Example: Names
 
-```python
+```{ .python .exec }
 name_one = 'Aline'
 name_two = 'Basti'
-greeting = 'Good morning, '
+greeting = 'Good morning,'
 
 print(greeting, name_one)
 print(greeting, name_two)
@@ -60,15 +60,22 @@ print(greeting, name_two)
 
 # Example: Variable to Variable assignment
 
-```python
+```{ .python .exec }
 my_fruit = 'Raspberry'
 your_fruit = my_fruit
 
-print(your_fruit)
-# What about mine?
 print(my_fruit)
+print(your_fruit)
+```
 
+
+# Example: Variable to Variable assignment
+
+```{ .python .exec }
+my_fruit = 'Raspberry'
+your_fruit = my_fruit
 my_fruit = 'Blueberry'
+
 print(my_fruit)
 print(your_fruit)
 ```
@@ -114,6 +121,17 @@ print(c)
 \note{
 What do you expect `c` to be?
 }
+
+
+# Variables and Math
+
+```{ .python .exec }
+a = 3
+b = 5
+c = 2
+c = a * b
+print(c)
+```
 
 
 # Math operations
@@ -168,9 +186,9 @@ What do these operators do?
 
 Try:
 
-```python
-2394 ** 23
-5.331 ** 413
+```{ .python .exec .interactive }
+>>> 2394 ** 23
+>>> 5.331 ** 413
 ```
 
 
@@ -213,16 +231,17 @@ weakest             `=`                    Assignment (not equality!)
 overwritten with parentheses.
 [^exp]: Exception: `**` is weaker than `-x` on its *right hand side* (i.e. in
   the exponent).
-[^parens]: Parentheses (and other brackets) are resolved from innner to outer.
+[^parens]: Parentheses (and other brackets) are resolved from inner to outer.
 
 
 # Square roots, again.
 
-```python
+```{ .python .exec }
 import math
 
 a = 5
 sqrt_a = math.sqrt(a)
+print(sqrt_a)
 ```
 
 \note{
@@ -265,6 +284,12 @@ $D = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 \note{
 \pycode{castlecrashers.py}
 }
+
+
+# Fighting for princesses solution
+
+```{ .python .exec file=castlecrashers.py }
+```
 
 
 # Your second homework

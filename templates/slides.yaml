@@ -12,4 +12,5 @@ panflute-filters:
     - pandoc-beamer-notes
     - pandoc-img-glob
     - pandoc-code-glob
+    - pandoc-source-exec
 ...

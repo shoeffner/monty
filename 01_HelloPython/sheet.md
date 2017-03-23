@@ -49,7 +49,7 @@ you can see `Python 3.6.x` there and some `>>>`, you are all set.
 
 Now type the following and hit return:
 
-```python
+```{ .python .exec }
 print("Hello Python!")
 ```
 

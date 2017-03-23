@@ -6,4 +6,4 @@ strength = 20
 damage = math.floor(5 + 1.15 * strength + 0.1 * level)
 
 print(damage)
-print((5 + 1.15 * strength + 0.1 * level) // 1)
+# Or: (5 + 1.15 * strength + 0.1 * level) // 1

@@ -48,6 +48,7 @@ slides%: builddir%
 			-t beamer \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
+			--highlight-style tango \
 			-o $(slides).pdf \
 			--metadata date='$(dateslides)' \
 			$(path)/slides.md \
@@ -65,6 +66,7 @@ notes%: builddir%
 			-t beamer \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
+			--highlight-style tango \
 			-o $(notes).pdf \
 			--metadata date='$(dateslides)' \
 			$(path)/slides.md \
@@ -81,6 +83,7 @@ sheet%: builddir%
 		pandoc \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
+			--highlight-style tango \
 			-o $(sheet).pdf \
 			--metadata date='$(datesheet)' \
 			$(path)/sheet.md \
@@ -97,6 +100,7 @@ solution%: builddir%
 		pandoc \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
+			--highlight-style tango \
 			-o $(solution).pdf \
 			--metadata date='$(datesheet)' \
 			$(path)/solution.md \
