@@ -1,6 +1,6 @@
 import turtle
 
-turtle.home()
+turtle.shape('turtle')
 
 # left edge
 turtle.left(90)
@@ -26,5 +26,5 @@ turtle.forward(141.42)
 turtle.left(135)
 turtle.forward(100)
 
-# keep the window open
+# keep the window open (not needed for the homework)
 turtle.done()

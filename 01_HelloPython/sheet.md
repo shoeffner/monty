@@ -97,7 +97,7 @@ import turtle
 To show our turtle, use:
 
 ```python
-turtle.home()
+turtle.shape('turtle')
 ```
 
 You should see a window like this:
