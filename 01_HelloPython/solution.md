@@ -20,5 +20,5 @@ For this exercise we will not include any special solutions. Instead, enjoy this
 
 Result:
 
-![St. Nicholas' house](imgs/saintnicholashouse.png "St. Nicholas' house")
+![St. Nicholas' house](img/saintnicholashouse.png "St. Nicholas' house")
 

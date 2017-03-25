@@ -21,7 +21,7 @@ datesheet = $(shell echo Deadline: `[ -f $(path)/dates.txt ] && tail -n1 $(path)
 all: clean outline 01 02 03
 	@
 
-outline:
+outline: builddir%
 	@pandoc \
 		--bibliography=$(tpl)/bibliography.bib \
 		-o $(build)/BPP-Outline.pdf \
