@@ -22,11 +22,14 @@ You can run them, share them, modify them.
 * Values are the contents
 
 
-# Variable vs. Value
+# Variable vs. Value: Random Mug
 
 ![Mug of Tea (Factorylad, Wikimedia Commons)](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Mug_of_Tea.JPG/1024px-Mug_of_Tea.JPG)
 
-TODO: mensa mug picture
+
+# Variable vs. Value: Mensa Mug
+
+![Mug of Hot Chocolate (own picture)](mensamug.jpg)
 
 
 # Example: Liquids
@@ -249,6 +252,7 @@ print(sqrt_a)
 - Search the web for `python 3 math`. Do it now!
 - All functions listed there are available by calling `math.function(...)`
   after `import math`.
+- `math` is a **module**
 
 https://docs.python.org/3/library/math.html
 }
@@ -322,11 +326,57 @@ print(damage)
 ```
 
 
+# Functions -- not yet explained
+
+```{ .python .exec }
+def combine(parameter, parameter2):
+    result = parameter + parameter2
+    return result
+
+result1 = combine('Hello', 'World')
+result = combine(1, 4)
+print(result)
+```
+
+\cliqr{What is the value of \texttt{result1}?}
+
+\note{
+- `result1` is `HelloWorld`
+}
+
+
+# Functions -- explained
+
+```{ .python .exec }
+# "def" is the function keyword
+# followed by a name
+def combine(parameter, parameter2):
+    # this is the function body: indented!
+    result = parameter + parameter2
+    return result  # you can return results
+
+# call it:
+result1 = combine('Hello ', 'World')
+result = combine(1, 4)
+print(result)
+```
+
+
+\note{
+- Watch out for indentation
+- Take care of enough whitespace around a function (at least one line above and below)
+- You can have arbitrarily many parameters
+- We will discuss functions in much more details soon,
+  but for now this should be sufficient
+}
+
+
 # Your second homework
 
 - Calculate the area of different St. Nicholas' houses. Use the `random`
-  package to generate useful random variables.
-- Extend the repertoire of the four Castle Crasher knights.
+  module to generate useful random variables.
+- Extend the repertoire of the four Castle Crasher knights and let two
+  of them fight.
 
 
 # The last slide

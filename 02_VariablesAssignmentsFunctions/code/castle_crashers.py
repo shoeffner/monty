@@ -51,6 +51,3 @@ if rounds_to_kill_red < rounds_to_kill_blue:
     print('Blue wins!')
 else:
     print('Red wins!')
-
-
-

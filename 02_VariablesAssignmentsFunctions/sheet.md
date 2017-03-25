@@ -14,23 +14,23 @@ We can define St. Nicholas' house by three parameters: side $a$, base $b$, and
 roof height $h$. Find a formula to calculate the `area` of the geometrical
 figure.
 
+![St. Nicholas' house](img/nick_area.png){height=200px}
+
 Now write a script `nick_area.py` to perform the calculations for you. Import
-the `random` package. Find a way to generate random numbers between 2 and 5 for
+the `random` module. Find a way to generate random numbers between 2 and 5 for
 the parameters. You can also try other constraints instead, e.g. the base must
 be wider than side $a$ is high. Write a function `area` which takes three input
 arguments: `base`, `side`, and `height`, and returns the area of the
 geometrical figure.
 
-Test the results, then use random values:
+Test these results first, then use random values:
 
 ```python
-area1 = area(5, 3, 2)  # should be approx.
-area2 = area(2, 5, 1)  # should be approx.
-area3 = area(3, 3, 3)  # should be approx.
+area1 = area(5, 3, 2)  # should be approx. 20
+area2 = area(2, 5, 1)  # should be approx. 11
+area3 = area(3, 3, 3)  # should be approx. 13.5
 ```
 
-
-\pagebreak
 
 # Exercise 2: Castles crashed
 
@@ -83,28 +83,29 @@ have more functions to calculate the damage $d$:
 
 Every now and then two or more knights have to fight for a princess' kiss.
 Let's assume today the red knight and the blue knight fight for a princess'
-favor. Since they first had to defeat a tough boss, both are weakened
-already. The red knight still has 25 % of his maximum health, while the blue
-knight only has 20 %.
+favor. Since they first had to defeat a tough boss, both are weakened already.
+The red knight still has 25 % of his maximum health, while the blue knight only
+has 20 %.
 
 The older red knight, far more experienced in saving princesses, follows
 a specific strategy: While hitting the blue knight he always hits twice with
-a strong attack followed by a third normal attack. The dashing young blue knight
-simply just flurries with normal attacks, but every 4^th time he becomes super
-confident and throws the old red knight around. As tradition asks of them, the
-older knight is allowed to make the first hit.
+a strong attack followed by a third normal attack. The dashing young blue
+knight simply just flurries with normal attacks, but every 4^th time he becomes
+super confident and throws the old red knight around. As tradition asks of
+them, the older knight is allowed to make the first hit.
 
 The fight thus looks like this:
 
 1. Red attacks Blue with two strong attacks and a normal attack.
-2. While red gathers himself after the strong hit he delivered, blue attacks: four hits, three normal ones and a throw.
-3. Red gets up and attacks blue again with two normal attacks and a strong attack.
+2. While red gathers himself after the strong hit he delivered, blue attacks:
+   four hits, three normal ones and a throw.
+3. Red gets up and attacks blue again with two normal attacks and a strong
+   attack.
 4. They both keep fighting until one goes down.
 
 If we consider one round as both taking their turn in hitting the other, who
-will win? After how many rounds?
+will win? After how many rounds? Add some statements to your script to find
+answers.
 
-
-\pagebreak
 
 # References

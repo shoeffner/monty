@@ -5,11 +5,11 @@ def area(base, side, height):
     return base * side + base * height / 2
 
 
-area1 = area(5, 3, 2)  # should be approx.
+area1 = area(5, 3, 2)  # should be approx. 20
 print(area1)
-area2 = area(2, 5, 1)  # should be approx.
+area2 = area(2, 5, 1)  # should be approx. 11
 print(area2)
-area3 = area(3, 3, 3)  # should be approx.
+area3 = area(3, 3, 3)  # should be approx. 13.5
 print(area3)
 
 random_side = random.randint(2, 5)
