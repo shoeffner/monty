@@ -122,7 +122,7 @@ turtle.shape('turtle')
 
 You should see a window like this:
 
-![Turtle window](imgs/turtlewindow.png "Turtle window")
+![Turtle window](img/turtlewindow.png "Turtle window")
 
 Now you can let your turtle move around and draw with the following commands:
 
@@ -138,7 +138,7 @@ If you want to reset what your turtle drew, you can use `turtle.reset()`.
 In Germany little kids learn to draw the *Haus vom Nikolaus* (St. Nicholas'
 house) in one stroke. It looks like this:
 
-![St. Nicholas' house](imgs/saintnicholashouse.png "St. Nicholas' house")
+![St. Nicholas' house](img/saintnicholashouse.png "St. Nicholas' house")
 
 Can you give your turtle commands to draw something like this?
 

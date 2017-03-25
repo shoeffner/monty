@@ -4,3 +4,4 @@
 *.zsh
 *.zip
 output
+.DS_Store
