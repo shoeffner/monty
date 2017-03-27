@@ -74,12 +74,13 @@ Responses: https://goo.gl/VhpXY1
 - Only Fail/Pass
 - To Pass: Present at least eight homework assignments to your tutor
     (They do not need to be perfect, but you should have worked on it)
-
+- Note: There will be small projects at the end which will be split among
+    several homework sheets, they thus count as two to three assignments
 
 # Let's learn together
 
 ## Ask questions
-- Ask questions in class
+- Ask questions in **class**
 - Ask questions in the [forum](https://studip.uos.de/plugins.php/coreforum/index/index?cid=e7eca86bfdacf12717540d75bb2fcb47)
 - Ask questions per mail
 
@@ -246,13 +247,12 @@ administrative overhead of installing Python to a minimum.
 - Open your terminal / command line and run the following to install an
   IDE[^IDE] we will and two packages we might use:
     ```shell
-    conda -y install spyder numpy matplotlib
+    conda -y install spyder numpy matplotlib scipy
     ```
 - For stuff used in e.g. Neuroinformatics, Machine Learning, Computer Vision,
   or other classes, run additionally:
     ```shell
-    conda -y install pip scipy pandas jupyter \
-                     scikit-learn scikit-image
+    conda -y install pip pandas jupyter scikit-learn scikit-image
     ```
 
 [^IDE]: Integrated Development Environment
