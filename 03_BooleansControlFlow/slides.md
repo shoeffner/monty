@@ -160,11 +160,28 @@ Often `if` is not enough, e.g. in the Collatz conjecture.
 # Collatz conjecture
 
 ```{ .python .exec }
+def collatz(x):
+    if x % 2 == 0:
+        return x // 2
+    else:
+        return 3 * x + 1
+
 x = 5
-if x % 2 == 0:
-    y = x / 2
-else:
-    y = 3 * x + 1
+y = collatz(x)
+print(y)
+```
+
+
+# Collatz conjecture
+
+```{ .python .exec }
+def collatz(x):
+    if x % 2 == 0:
+        return x // 2
+    return 3 * x + 1
+
+x = 5
+y = collatz(x)
 print(y)
 ```
 
@@ -198,6 +215,8 @@ What is the difference between these three?
 `    beer = 'No' ` `    beer = 'No' ` `    beer = 'No' `
 ------------------ ------------------ ------------------
 
+\cliqr{Which one is correct (beer)?}
+
 \note{
 The evaluation order matters.
 
@@ -207,6 +226,47 @@ The evaluation order matters.
 
 Rule of thumb: most constraining conditions first!
 }
+
+
+# Flow Control
+
+TODO: control flow diagram
+
+\note{
+When we talk about flow control we talk about how a program works through data step by step.
+}
+
+
+# How to control flow?
+
+- functions
+- `if` statements
+- loops
+
+
+# Loops
+
+```{ .python .exec }
+for i in range(10):
+    print(i, end=', ')
+```
+
+```{ .python .exec }
+i = 0
+while i < 10:
+    print(i, end=', ')
+    i = i + 1
+```
+
+\note{
+Python uses `for` and `while`.
+
+They are mostly exchangeable with a bit of work, but in most cases you will only need `for`.
+}
+
+
+# `While`
+
 
 
 # Your third homework
