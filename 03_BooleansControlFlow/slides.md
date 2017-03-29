@@ -228,12 +228,12 @@ Rule of thumb: most constraining conditions first!
 }
 
 
-# Flow Control
+# Control Flow
 
 TODO: control flow diagram
 
 \note{
-When we talk about flow control we talk about how a program works through data step by step.
+When we talk about control flow we talk about how a program works through data step by step.
 }
 
 
@@ -261,15 +261,135 @@ while i < 10:
 \note{
 Python uses `for` and `while`.
 
-They are mostly exchangeable with a bit of work, but in most cases you will only need `for`.
+They are mostly exchangeable with a bit of work, but in most cases you will
+only need `for`.
+
+`range(stop)` returns a "list" of integers from `0` to `stop`, but excludes
+`stop`. For example `range(4)` gives four values: 0, 1, 2, and 3.
 }
 
 
 # `While`
 
+- **while** a condition is true, do something
+
+```{ .python .exec }
+counter = 1
+while counter <= 5:
+    print(counter, end=', ')
+    counter = counter + 1
+```
+
+
+\cliqr{What can go wrong?}
+
+
+# Stopping infinite loops
+
+```{ .python }
+while True:
+    print('.', end=' ')
+```
+
+You can stop program execution with **Control + C**!
+
+\note{
+It can very easily happen that you get your conditions wrong or you forget to
+change the variable in the condition and your code keeps looping until the end
+of time.
+}
+
+
+# `For`
+
+- for each element in this iterable, do something
+
+```{ .python .exec }
+for counter in range(6):
+    print(counter, end=', ')
+```
+
+\note{
+Too loop over some collection of values is called "iteration".
+
+Thus, collections of values which allow "iterations" are called "iterables".
+}
+
+
+# `For` and strings
+
+```{ .python }
+for item in 'Python':
+    print(item, end=', ')
+```
+
+\cliqr{What is the output?}
+
+
+# `For` and strings
+
+```{ .python .exec }
+for item in 'Python':
+    print(item, end=', ')
+```
+
+
+# Break things...
+
+```{ .python .exec }
+counter = 1
+while True:
+    if counter > 5:
+        break
+    print(counter, end=', ')
+    counter = counter + 1
+```
+
+\note{
+Break stops the current loop and jumps to the end.
+}
+
+
+# ...Break some more...
+
+```{ .python .exec }
+for letter in 'Python':
+    counter = 0
+    while counter < 5:
+        counter = counter + 1
+        print(letter, end='')
+        if letter == 't':
+            break
+```
+
+\note{
+In this example we only break the inner loop!
+}
+
+
+# ...Then continue
+
+```{ .python .exec }
+for item in 'Python':
+    if item == 'y':
+        continue
+    print(item, end=', ')
+```
+
+\cliqr{What happens if continue is the last statement in the loop body?}
+
+\note{
+Continue skips the remainders of the loop body and jumps back to the top.
+
+If continue is at the end of the loop body, nothing special happens -- the loop would "continue" at this point anyway.
+}
 
 
 # Your third homework
+
+- Learn more about the different control flow operations `if`, `for`, and
+  functions by implementing the classic examples "99 bottles" and "Fizz Buzz".
+- Draw some beautiful things with the turtle.
 
 
 # The last slide

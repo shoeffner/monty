@@ -15,9 +15,9 @@ Week of         Name                                Topics
 
 2017-04-10      Variables, Assignments, Functions   Basic data types: strings, integers, floats; Arithmetics; Concept of variables and assignments (in comparison to mathematical equality); Functions
 
-2017-04-17      `True` or `False`?                  Boolean variables; Comparisons; If/Elif/Else
+2017-04-17      `True` or `False`?                  Boolean variables; Comparisons; If/Elif/Else; Control Flow: While/For
 
-2017-04-24      Control Flow                        Loops; Functions; Lists & Tuples
+2017-04-24      File I/O and Algorithms             Reading and writing files; Lists/Dictionaries; Standard algorithms like sorting
 
 2017-05-01      Errors and Debugging                try/except; Error types; Spyder's debugging functions; Documentation and style; Tests
 
