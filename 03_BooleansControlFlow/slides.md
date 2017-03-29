@@ -230,7 +230,7 @@ Rule of thumb: most constraining conditions first!
 
 # Control Flow
 
-TODO: control flow diagram
+!['Hey Megan, it's your father. How do I print out a flowchart?' [@xkcd627]](https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png)
 
 \note{
 When we talk about control flow we talk about how a program works through data step by step.
@@ -394,6 +394,5 @@ If continue is at the end of the loop body, nothing special happens -- the loop 
 
 # The last slide
 
-TODO
 
 # References
