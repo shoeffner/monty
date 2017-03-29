@@ -1,4 +1,4 @@
-% `True` or `False`?
+% Exercise Sheet 03 Solution -- `True` or `False`?
 
 
 # Exercise 1: Fizz Buzz
