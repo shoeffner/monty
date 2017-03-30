@@ -329,8 +329,8 @@ print(damage)
 # Functions -- not yet explained
 
 ```{ .python .exec }
-def combine(parameter, parameter2):
-    result = parameter + parameter2
+def combine(argument, argument1):
+    result = argument + argument1
     return result
 
 result1 = combine('Hello', 'World')
@@ -350,9 +350,9 @@ print(result)
 ```{ .python .exec }
 # "def" is the function keyword
 # followed by a name
-def combine(parameter, parameter2):
+def combine(argument, argument1):
     # this is the function body: indented!
-    result = parameter + parameter2
+    result = argument + argument1
     return result  # you can return results
 
 # call it:
@@ -365,7 +365,7 @@ print(result)
 \note{
 - Watch out for indentation
 - Take care of enough whitespace around a function (at least one line above and below)
-- You can have arbitrarily many parameters
+- You can have arbitrarily many arguments
 - We will discuss functions in much more details soon,
   but for now this should be sufficient
 }

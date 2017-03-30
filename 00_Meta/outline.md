@@ -59,7 +59,7 @@ Python 2, while we teach Python 3. There are not too many differences you
 should be concerned about, but these are important:
 
 - `/` works slightly different on integers
-- `print` needs no parentheses and has different parameters
+- `print` needs no parentheses and has different arguments
 - `import ... from __future__` is often used to get new language features of
   Python 3 in Python 2
 
