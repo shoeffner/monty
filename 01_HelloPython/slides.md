@@ -35,7 +35,7 @@ But it takes a lot of time to become good at it.
 }
 
 
-# Questionnaire results
+# Cliqr
 
 ![We will use Cliqr throughout the class. Please bookmark http://vt.uos.de/bufuv](cliqr.png)
 
@@ -44,6 +44,31 @@ But it takes a lot of time to become good at it.
 \note{
 Responses: https://goo.gl/VhpXY1
 }
+
+
+# Questionnaire results: speed
+
+- This class is slow, so no worries. For a faster class, consider Brian's on Thursdays 12-2.
+    We target mostly master students with a non Computer Science background who did not program before.
+- Yes, there will be a lot of work -- but we try to help you. And it's okay if you don't do some, but we recommend it.
+
+
+# Questionnaire results: support
+
+- Almost 50 % said they think feedback sessions are important.
+- We can handle at most 12 feedback session groups, so here is our offer:
+  1. Form groups of sizes 3-4 if you want to have feedback sessions and sign up for groups on Stud.IP which have a time slot.
+  2. Form groups of sizes 2-4 if you do not want to have feedback sessions and sign up for groups without.
+  3. If there are not enough groups, please get in touch with us.
+
+
+# Questionnaire results: contents
+
+- We did not plan to go too deep into data analysis and applications (Brian
+  will hopefully cover that), but as it is a popular request in write-ins, we will try to
+  push the emphasis more towards that.
+- Some people stated they did not own a laptop to work on. Please identify
+  yourself after class so we can find a solution.
 
 
 # Lecture
@@ -58,7 +83,7 @@ Responses: https://goo.gl/VhpXY1
 
 - One sheet per week (~ 12 sheets in total)
 - Deadline is before Monday morning, 08:00
-- In groups of $\approx \frac{N}{12}$ students (we prefer $2$--$3$)
+- In groups of 2--4 students (as discussed, either with or without feedback sessions)
 - Sign up on Stud.IP
 
 
@@ -85,17 +110,18 @@ Responses: https://goo.gl/VhpXY1
 - Ask questions per mail
 
 ## Share your knowledge
-- Collect your error messages and the code which produces them here: TODO
+- Collect your error messages and the code which produces [here](https://docs.google.com/document/d/1heObG6cQhuub8hgcTDVB4Pty71woSrX8-SF4p2OAqTs/edit?usp=sharing)
 - Try to solve them
 - We will have a session soon where we discuss different errors
 
 
 # Let's program!
 
-We will very often see Pseudocode: algorithms written down in a concise way, but
+We will often see Pseudocode: algorithms written down in a concise way, but
 close to natural language.
 
 \cliqr{What is an algorithm?}
+
 
 # Pseudocode example
 
@@ -245,14 +271,14 @@ administrative overhead of installing Python to a minimum.
   [https://conda.io/miniconda.html](https://conda.io/miniconda.html).
 - Install it. Make sure it is in your path.
 - Open your terminal / command line and run the following to install an
-  IDE[^IDE] we will and two packages we might use:
+  IDE[^IDE] we will and packages we might use:
     ```shell
-    conda -y install spyder numpy matplotlib scipy
+    conda -y install pip spyder numpy matplotlib scipy
     ```
 - For stuff used in e.g. Neuroinformatics, Machine Learning, Computer Vision,
   or other classes, run additionally:
     ```shell
-    conda -y install pip pandas jupyter scikit-learn scikit-image
+    conda -y install pandas jupyter scikit-learn scikit-image
     ```
 
 [^IDE]: Integrated Development Environment
