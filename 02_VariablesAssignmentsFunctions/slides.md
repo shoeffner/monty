@@ -101,7 +101,7 @@ that sometimes we hold the same fruit, not a copy!
 
 # Assignment `=` vs. Equality $=$
 
-$a = b$ is not the same as `a = b`
+$a = b$ (in Maths) is not the same as `a = b` (in code)
 
 \note{
 - Mathematical equality works different than assignments
