@@ -48,7 +48,7 @@ Responses: https://goo.gl/VhpXY1
 
 # Questionnaire results: speed
 
-- This class is slow, so no worries. For a faster class, consider Brian's on Thursdays 12-2.
+- This class is slow, so no worries. For a faster class, consider Brian's on Thursdays 12:00 - 14:00.
     We target mostly master students with a non Computer Science background who did not program before.
 - Yes, there will be a lot of work -- but we try to help you. And it's okay if you don't do some, but we recommend it.
 
@@ -60,6 +60,8 @@ Responses: https://goo.gl/VhpXY1
   1. Form groups of sizes 3-4 if you want to have feedback sessions and sign up for groups on Stud.IP which have a time slot.
   2. Form groups of sizes 2-4 if you do not want to have feedback sessions and sign up for groups without.
   3. If there are not enough groups, please get in touch with us.
+
+\cliqr{Are you interested in private feedback sessions or homework corrections only?}
 
 
 # Questionnaire results: contents
@@ -84,6 +86,7 @@ Responses: https://goo.gl/VhpXY1
 - One sheet per week (~ 12 sheets in total)
 - Deadline is before Monday morning, 08:00
 - In groups of 2--4 students (as discussed, either with or without feedback sessions)
+- If you work in groups, try to tackle to problems together, don't split the tasks among you.
 - Sign up on Stud.IP
 
 
@@ -112,7 +115,7 @@ Responses: https://goo.gl/VhpXY1
 ## Share your knowledge
 - Collect your error messages and the code which produces [here](https://docs.google.com/document/d/1heObG6cQhuub8hgcTDVB4Pty71woSrX8-SF4p2OAqTs/edit?usp=sharing)
 - Try to solve them
-- We will have a session soon where we discuss different errors
+- We will have a session soon (in May) where we discuss different errors
 
 
 # Let's program!
@@ -175,6 +178,8 @@ Hello World!
 [^print]: "printing" means to output something, usually on the terminal. Don't
   bring out your printers and throw stacks of paper at us. We have nothing to
   throw back.
+
+\cliqr{Do you know about the terminal/command line/command prompt on your system?}
 
 
 # Hello World Pseudocode
