@@ -1,6 +1,6 @@
 % Basic Programming in Python: Course Outline
 % Sebastian Höffner ; Aline Vilks
-% Mon, 03 Apr 2017
+% Wed, 05 Apr 2017
 
 ---
 nocite: "@*"
@@ -17,17 +17,17 @@ Week of         Name                                Topics
 
 2017-04-17      `True` or `False`?                  Boolean variables; Comparisons; If/Elif/Else; Control Flow: While/For
 
-2017-04-24      File I/O and Algorithms             Reading and writing files; Lists/Dictionaries; Standard algorithms like sorting
+2017-04-24      Collections and File I/O            Reading and writing files; JSON/csv; Lists/Dictionaries
 
 2017-05-01      Errors and Debugging                try/except; Error types; Spyder's debugging functions; Documentation and style; Tests
 
-2017-05-08      File I/O and Algorithms             Reading and writing files; Standard algorithms like sorting
+2017-05-08      Applied Data Science I              Simple data analyses: mean, median, mode, percentiles; plotting
 
-2017-05-15      Applied Computer Science I          Text and math to code; Analyze data flow; More algorithms
+2017-05-15      Object Oriented Programming         Classes and Instances
 
-2017-05-22      Object Oriented Programming         Classes and Instances
+2017-05-22      Applied Computer Science I          Text and math to code; Abstract data types; Data processing; Python Standard Library
 
-2017-05-29      Applied Computer Science II         Text and math to code; Abstract data types; Data processing; Python Standard Library
+2017-05-29      Applied Data Science II             More data analyses
 
 2017-06-05      Algorithmic Complexity              Big-O Notation
 
@@ -44,7 +44,7 @@ Week of         Name                                Topics
 # Organizational issues
 
 - There are no grades for this class, only a Fail/Pass option.
-- To pass, work successful on eight (out of twelve) homework sheets.
+- To pass, work successful on nine (out of 13) homework sheets.
 - The final projects will span approximately three of the homework sheets (that
   means they are included, not extra!)
 
