@@ -43,12 +43,12 @@ operating systems.
 
 [^IDE]: Integrated Development Environment
 [^path]: This is different for all operating systems. On Linux and MacOS it
-    usually involves opening the file `~/.bashrc` and adding this line at
-    the end: `export PATH="$PATH:~/miniconda3/bin"`. On Windows you have
-    to go to your System settings and add `C:\Users\yourname\anaconda3`
-    to the environment variable `Path` -- if you really have to do it
-    manually, try searching the web or ask us for help (Best before Sunday
-    night).
+    usually involves opening a file `~/.bashrc` (Linux) or `~/.bash_profile`
+    (MacOS) and adding this line at the end: `export PATH="$PATH:~/miniconda3/bin"`.
+    On Windows you have to go to your System settings and add
+    `C:\Users\yourname\anaconda3` to the environment variable `Path` -- if you
+    really have to do it manually, try searching the web or ask us for help
+    (Best before Sunday night).
 
 
 # Exercise 2: Hello you!
