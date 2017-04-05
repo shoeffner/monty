@@ -83,7 +83,7 @@ Responses: https://goo.gl/VhpXY1
 
 # Homework
 
-- One sheet per week (~ 12 sheets in total)
+- One sheet per week (~ 13 sheets in total)
 - Deadline is before Monday morning, 08:00
 - In groups of 2--4 students (as discussed, either with or without feedback sessions)
 - If you work in groups, try to tackle to problems together, don't split the tasks among you.
@@ -100,7 +100,7 @@ Responses: https://goo.gl/VhpXY1
 # Grading
 
 - Only Fail/Pass
-- To Pass: Present at least eight homework assignments to your tutor
+- To Pass: Present at least nine homework assignments to your tutor
     (They do not need to be perfect, but you should have worked on it)
 - Note: There will be small projects at the end which will be split among
     several homework sheets, they thus count as two to three assignments
