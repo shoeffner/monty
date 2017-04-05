@@ -15,7 +15,7 @@ Week of         Name                                Topics
 
 2017-04-10      Variables, Assignments, Functions   Basic data types: strings, integers, floats; Arithmetics; Concept of variables and assignments (in comparison to mathematical equality); Functions
 
-2017-04-17      `True` or `False`?                  Boolean variables; Comparisons; If/Elif/Else; Control Flow: While/For
+2017-04-17      `True` or `False`?                  Boolean variables; Comparisons; `If`/`Elif`/`Else`; Control Flow: `While`/`For`
 
 2017-04-24      Collections and File I/O            Reading and writing files; JSON/csv; Lists/Dictionaries
 
@@ -66,11 +66,13 @@ should be concerned about, but these are important:
 The best way to learn Python (and programming in general) is to just do
 something. Try to solve a problem of your own, and when you can not solve it,
 try to figure out what blocks you and search the web for a solution. Websites
-like the Python documentation or StackOverflow will usually have an answer. If
-not: Why don't you ask a question in class (or post one on the internet when
-the course is done)?
+like the Python documentation or [StackOverflow](https://stackoverflow.com/)
+will usually have an answer. If not: Why don't you ask a question in class (or
+post one on the internet)?
 
 
 # References
 
-These are all references used throughout the class.
+These are all references used throughout the class. The list will grow from
+time to time.
+
