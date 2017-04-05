@@ -260,6 +260,19 @@ There are other demo programs but we will take a look into some later.
 Keep in mind: the concepts are always very very similar!
 
 
+# Back to Python
+
+```{ .python .exec }
+# This prints Hello World!:
+print('Hello World!')
+```
+
+\note{
+You can use comments in your code: just start a line with `#` and it will be
+"ignored" by Python.
+}
+
+
 # Your first homework
 
 Setup your laptop to run Python (we will discuss this in a minute).
