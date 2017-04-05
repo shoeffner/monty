@@ -33,13 +33,12 @@ operating systems.
 * Open your terminal / command line and run the following to install an
   IDE[^IDE] we will and two packages we might use:
     ```shell
-    conda -y install spyder numpy matplotlib
+    conda -y install pip spyder numpy matplotlib scipy
     ```
 * For stuff used in e.g. Neuroinformatics, Machine Learning, Computer Vision,
   or other classes, run additionally:
     ```shell
-    conda -y install pip scipy pandas jupyter \
-                     scikit-learn scikit-image
+    conda -y install pandas jupyter scikit-learn scikit-image
     ```
 
 [^IDE]: Integrated Development Environment
