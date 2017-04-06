@@ -1,0 +1,7 @@
+*.pdf
+*.swp
+*.swo
+*.zsh
+*.zip
+output
+.DS_Store
