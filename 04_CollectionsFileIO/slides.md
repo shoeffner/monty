@@ -87,17 +87,40 @@ Tuples are sorted the way they are created.
 }
 
 
-# Tuple functions
+# Tuple functions: `len`
 
 ```{ .python .exec }
 my_fruits = ('apple', 'pear', 'banana')
-print(len(my_fruits), my_fruits[0])
+print(len(my_fruits))
+```
+
+
+# Tuple functions: indexing
+
+```{ .python .exec }
+my_fruits = ('apple', 'pear', 'banana')
+print(my_fruits[1])
+
+for i in range(len(my_fruits)):
+    print(my_fruits[i], end=' ')
+```
+
+
+# Tuple functions: `index`
+
+```{ .python .exec }
+my_fruits = ('apple', 'pear', 'banana')
 print(my_fruits.index('pear'))
+```
+
+
+# Tuple functions: merging
+
+```{ .python .exec }
+my_fruits = ('apple', 'pear', 'banana')
 my_fruits = my_fruits + ('strawberry', )
 print(my_fruits)
 ```
-
-...and more
 
 \note{
 We can check the documentation or `help(tuple)` for more information about functions.
@@ -109,6 +132,13 @@ We can check the documentation or `help(tuple)` for more information about funct
 ```{ .python .exec }
 my_fruits = ['apple', 'pear', 'banana']
 print(my_fruits)
+```
+
+
+# Lists are slightly different than tuples
+
+```{ .python .exec }
+my_fruits = ['apple', 'pear', 'banana']
 your_fruits = my_fruits
 your_fruits.append('strawberry')
 print(my_fruits)
@@ -124,23 +154,35 @@ They are also stored sorted.
 }
 
 
-# List functions
+# List functions: `insert`
 
 ```{ .python .exec }
 fruits = ['apple', 'pear', 'banana']
 fruits.insert(1, 'avocado')
 print(fruits)
-last = fruits.pop()
-print(fruits, last)
-del fruits[2]
+```
+
+
+# List functions: `remove`
+
+```{ .python .exec }
+fruits = ['apple', 'pear', 'banana']
+fruits.remove('pear')
 print(fruits)
 ```
 
-...and more
+
+# List functions: `pop`
+
+```{ .python .exec }
+fruits = ['apple', 'pear', 'banana']
+last = fruits.pop()
+print(fruits, last)
+```
 
 \note{
-It also supports the same as tuples: `my_fruits[0]`, `len(my_fruits)`,
-`my_fruits.index('pear')`, and `my_fruits + ['strawberry']`.
+It also supports the same as tuples: `len(my_fruits)`,
+`my_fruits.index('pear')`, and `my_fruits + ['strawberry']`, indexing, etc.
 }
 
 
@@ -154,18 +196,43 @@ print(my_foods)
 \note{
 Dictionaries are also mutable.
 
-In general they are stored in the order they are created but it is not guaranteed, so don't rely on it!
+In general they are stored in the order they are created but it is not
+guaranteed, so don't rely on it!
 }
 
 
-# Dictionary functions
+# Dictionary functions: `keys` and `values`
+
+```{ .python .exec }
+my_foods = {'fruit': 'apple', 'vegetable': 'carrot'}
+print(my_foods.keys())
+print(my_foods.values())
+print(my_foods.items())
+```
+
+
+# Dictionary functions: indexing
 
 ```{ .python .exec }
 my_foods = {'fruit': 'apple', 'vegetable': 'carrot'}
 print(my_foods['fruit'])
-print(my_foods.keys())
-print(my_foods.values())
+```
+
+
+# Dictionary functions: Adding values
+
+```{ .python .exec }
+my_foods = {'fruit': 'apple', 'vegetable': 'carrot'}
 my_foods['soup'] = 'potato'
+print(my_foods)
+```
+
+
+# Dictionary functions: `pop`
+
+```{ .python .exec }
+my_foods = {'fruit': 'apple', 'vegetable': 'carrot'}
+my_foods.pop('fruit')
 print(my_foods)
 ```
 
@@ -195,14 +262,11 @@ print(food_a.difference(food_b))
 ```
 
 
-# Iteration Tuples, Lists, and Sets
+# Iteration over Tuples, Lists, and Sets
 
 ```{ .python .exec }
 fruits = ['apple', 'pear', 'banana']
 for fruit in fruits:
-    print(fruit, end=', ')
-print()
-for fruit in fruits[1:]:
     print(fruit, end=', ')
 ```
 
@@ -211,25 +275,51 @@ It works exactly the same way for tuples and sets.
 }
 
 
-# Iteration Dictionaries
+# Iteration over Tuples, Lists, and Sets with Subscription
+
+```{ .python .exec }
+fruits = ['apple', 'pear', 'banana']
+for fruit in fruits[1:]:
+    print(fruit, end=', ')
+```
+
+
+
+# Iteration over Dictionaries
 
 ```{ .python .exec }
 food = {'start': 'soup', 'main': 'pizza',
         'dessert': 'ice cream'}
 for key in food.keys():
     print(key, end=', ')
-for value in food.values():
-    print(value, end=', ')
-print()
+```
+
+
+# Iteration over Dictionaries -- with values
+
+```{ .python .exec }
+food = {'start': 'soup', 'main': 'pizza',
+        'dessert': 'ice cream'}
 for key, value in food.items():
     print(key, value, end=', ', sep=':')
-print('start' in food.keys())
 ```
 
 \note{
 For dictionaries we have to define what we want to iterate over.
 }
 
+
+# Nested collections
+
+```{ .python .exec }
+menu = {'main': ['pizza', 'pasta'],
+        'dessert': [
+            {'ice cream': ['chocolate', 'vanilla']},
+            'mousse au chocolat'
+        ]
+       }
+print(menu['dessert'][1])
+```
 
 # Function Arguments and Collections
 
@@ -344,7 +434,7 @@ with open('04_CollectionsFileIO/code/lottery.txt', \
           'w+') as lottery_file:
     lottery_file.write(str(my_lottery_numbers))
     result = lottery_file.read()
-print(set(result))
+print(result)
 ```
 
 
@@ -354,7 +444,7 @@ print(set(result))
 my_lottery_numbers = [21, 8, 19, 9, 1, 22]
 with open('04_CollectionsFileIO/code/lottery.txt', \
           'w+') as lottery_file:
-    lottery_file.write(repr(my_lottery_numbers))
+    lottery_file.write(str(my_lottery_numbers))
     lottery_file.seek(0)
     result = lottery_file.read()
 print(result)
@@ -368,12 +458,32 @@ print(type(result))
 with open('04_CollectionsFileIO/code/lottery.txt', \
           'r') as lottery_file:
     lottery_raw = lottery_file.read()
+# This is black python magic! Let's discuss it
 numbers = [int(num) for num in \
            lottery_raw[1:-1].split(',')]
 print(numbers)
 print(type(numbers))
 ```
 
+
+\note{
+`[int(num) for num in \ `
+
+&nbsp;&nbsp;`lottery_raw[1:-1].split(',')]`
+
+is equivalent to (but shorter to write)
+
+`lottery_no_brackets = lottery_raw[1:-1]`
+
+`lottery_strings = lottery_no_brackets.split(',')`
+
+`lottery_numbers = []`
+
+`for num in lottery_strings:`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`lottery_numbers.append(int(num))`
+
+}
 
 # Using JSON to write
 
@@ -396,13 +506,20 @@ import json
 
 with open('04_CollectionsFileIO/code/lottery.json', \
           'r') as file:
-    print(json.load(file))
+    result = json.load(file)
+print(result)
+print(type(result))
 ```
+
+\note{
+JSON allows us to store much more "complex" data, you will have to deal with
+that in the homework.
+}
 
 
 # Your fourth homework
 
-TODO
+
 
 
 # The last slide
