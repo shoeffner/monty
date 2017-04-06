@@ -5,3 +5,5 @@
 *.zip
 output
 .DS_Store
+00_T*
+_site
