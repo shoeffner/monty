@@ -483,6 +483,7 @@ is equivalent to (but shorter to write)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`lottery_numbers.append(int(num))`
 
+This is called **list comprehension**.
 }
 
 # Using JSON to write
