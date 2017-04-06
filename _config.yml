@@ -1,0 +1,14 @@
+title: Basic Programming in Python
+email: shoeffner@uos.de
+description: >
+  Course material for the class <em>Basic Programming in Python</em>.
+  The class is taught during the summer term 2017 at the
+  <a href="http://uos.de">University of Osnabrück</a> by Aline Vilks and
+  Sebastian Höffner.
+theme: jekyll-theme-minimal
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - .gitignore
+  - README.md

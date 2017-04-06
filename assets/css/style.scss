@@ -1,0 +1,13 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* disable the "view on github" until it's a public repo */
+.view {
+    display: none;
+}
+
+footer p:first-child:after {
+    content: '@uos.de';
+}
