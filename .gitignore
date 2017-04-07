@@ -4,6 +4,7 @@
 *.zsh
 *.zip
 output
+submissions
 .DS_Store
 00_T*
 _site
