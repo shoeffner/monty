@@ -16,6 +16,29 @@ You can run them, share them, modify them.
 }
 
 
+# Common mistakes
+
+- Please name your files as we suggest, if we give you some names.
+    `nicolas.py`, `nicholas.docx`, or  `Nicholas.py` are not the same as `nicholas.py`.
+
+
+# Some conventions
+
+- No spaces between function names and parentheses, but after commas:
+    `function_name(arg0, arg1)`
+- Spaces around math operators (we learn more about them today):
+    `a * b`
+- At least one, better two lines after your `import`s:
+    ```{ .python }
+    import turtle
+
+
+    turtle.shape('turtle')
+    turtle.done()
+    ```
+- `import`s should be the first statements in your files.
+
+
 # Variable vs. Value
 
 * Variables are placeholders
