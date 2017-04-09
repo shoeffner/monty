@@ -3,20 +3,35 @@
 
 # Submission
 
-By the end of this sheet you will have a number of different files to submit. In Stud.IP you will have a directory for your own group, please upload them there. It is easier for you if you just archive all files and upload your archive, but it is okay if you upload them one by one.
+By the end of this sheet you will have a number of different files to submit.
+In Stud.IP you will have a directory for your own group, please upload them
+there. It is easier for you if you just archive all files and upload your
+archive (preferably zip), but it is okay if you upload them one by one.
 
 # Preamble
 
-Throughout the course we will sometimes (especially in the beginning) refer to the command line or the terminal, and then again use them interchanged. Do not be disheartened! It is the same concept, but some operating systems call it one way and others the other. On Ubuntu you can open it up with the keyboard shortcut `Ctrl + Alt + T`. On MacOS press `Cmd + Space` and type `Terminal` to open it. On Windows, press the `Win + R` and type `cmd`, then hit return.
+Throughout the course we will sometimes (especially in the beginning) refer to
+the command line or the terminal, and then again use them interchanged. Do not
+be disheartened! It is the same concept, but some operating systems call it one
+way and others the other. On Ubuntu you can open it up with the keyboard
+shortcut `Ctrl + Alt + T`. On MacOS press `Cmd + Space` and type `Terminal` to
+open it. On Windows, press the `Win + R` and type `cmd`, then hit return.
 
-This is the basic "prompt" (... another term) where you can unleash the powers of your operating system (and break things!). Try `ls` on Mac/Linux or `dir` on Windows[^noworries]. You can navigate around with `cd` (go back up with `cd ..`).
+This is the basic "prompt" (... another term) where you can unleash the powers
+of your operating system (and break things!). Try `ls` on Mac/Linux or `dir` on
+Windows[^noworries]. You can navigate around with `cd` (go back up with `cd
+..`).
 
-[^noworries]: No worries, this won't break anything, it just shows the files of your current directory.
+[^noworries]: No worries, this won't break anything, it just shows the files of
+your current directory.
 
 
 ## Errors & Web Search
 
-Although most exercises should be solvable with what we provide in the slides and cover in class, you will have problems solving some of the exercises -- that is by design. For example to solve the bonus exercise 1d) on this sheet, you might need to search around a little bit.
+Although most exercises should be solvable with what we provide in the slides
+and cover in class, you will have problems solving some of the exercises --
+that is by design. For example to solve the bonus exercise 1d) on this sheet,
+you might need to search around a little bit.
 
 
 # Exercise 1: Your development environment
