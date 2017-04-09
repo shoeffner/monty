@@ -323,7 +323,10 @@ print(menu['dessert'][1])
 
 # Function arguments and collections
 
-Write a function `calculator`. It takes a list of arguments and performs the operation provided with the keyword `operation` on all numbers to return one result. Implement it for the operations `+`, `-`, `*`, `/`. If no operation is provided, return the first number.
+Write a function `calculator`. It takes a list of arguments and performs the
+operation provided with the keyword `operation` on all numbers to return one
+result. Implement it for the operations `+`, `-`, `*`, `/`. If no operation
+(or an invalid one) is provided, return the first number.
 
 Example inputs                                   Result
 ------------------------------------------------ ------
@@ -332,6 +335,7 @@ Example inputs                                   Result
 `calculator(3, 2, operation='-')`                1
 `calculator(1, 2, 3, 4, 5, 6, 7, operation='+')` 28
 `calculator(4, 2, 7)`                            4
+`calculator(4, 2, 7, operation='x')`             4
 
 
 # Function arguments and collections - solution
