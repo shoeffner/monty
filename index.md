@@ -4,8 +4,8 @@ This website will be updated whenever we publish new sheets, solutions or lectur
 If you find any mistakes, have some questions or anything else, feel free to drop me a line (shoeffner@uos.de).
 
 1. `print('Hello Python!')`
-    * [Lecture slides](output/BPP-01_HelloPython.pdf)
-    * [Homework sheet](output/BPP-01_HelloPython-Sheet.pdf)
+    * [Lecture slides](files/BPP-01_HelloPython.pdf)
+    * [Homework sheet](files/BPP-01_HelloPython-Sheet.pdf)
 
 
 *Note:* Once the class is done, we will make the source files available as well
