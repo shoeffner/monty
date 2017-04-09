@@ -1,9 +1,10 @@
 *.swp
 *.swo
 *.zsh
-*.zip
 .DS_Store
 _site/
 .sass-cache/
 .jekyll-metadata
 00_T*
+output
+submissions
