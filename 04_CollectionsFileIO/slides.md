@@ -366,7 +366,22 @@ We already used one: the standard output stream ("stdout")
 }
 
 
-# Standard Output Stream
+# Input and output
+
+```{ .python }
+name = input('Who are you? ')
+print('Hello ' + name + '!')
+```
+
+*Output:*
+
+```{ .changelog }
+Who are you? Basti
+Hello Basti!
+```
+
+
+# Standard output stream
 
 ```python
 print(*objects, sep=' ', end='\n',
