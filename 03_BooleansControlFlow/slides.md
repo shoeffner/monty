@@ -1,7 +1,7 @@
 % `True` or `False`?
 
 
-# Another Data Type: Boolean
+# Another data type: Boolean
 
 There are only two things that can be expressed with the boolean data type:
 
@@ -16,7 +16,7 @@ Nevertheless it is an extremely useful and thus important concept in programming
 }
 
 
-# Another Data Type: Boolean
+# Another data type: Boolean
 
 We can *assign* these values to variables. For example:
 
@@ -31,7 +31,7 @@ Mind the spelling with a capital **T**!
 }
 
 
-# Another Data Type: Boolean
+# Another data type: Boolean
 
 And we can check whether an expression is *true* or *false*.
 
@@ -95,7 +95,7 @@ Careful! `True` is equal to `1`, and `1` only, but for `if` (next slide) every n
 }
 
 
-# Using Truth Values
+# Using truth values
 
 What does the following code snippet do? What happens when you change the age to 23?
 
@@ -108,7 +108,7 @@ if age >= 21:
 ```
 
 
-# `if`-Statements
+# `if`-statements
 
 `if` is the most basic control flow tool we have.
 
@@ -120,7 +120,7 @@ print(c)
 ```
 
 
-# Intermezzo: Indentation
+# Intermezzo: indentation
 
 In Python lines of code with the same indentation level are considered a block.
 
@@ -228,7 +228,7 @@ Rule of thumb: most constraining conditions first!
 }
 
 
-# Control Flow
+# Control flow
 
 !['Hey Megan, it's your father. How do I print out a flowchart?' [@xkcd627]](https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png)
 

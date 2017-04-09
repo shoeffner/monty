@@ -8,7 +8,7 @@ there. It is easier for you if you just archive all files and upload your
 archive (preferably zip), but it is okay if you upload them one by one.
 
 
-# Exercise 1: St. Nicholas' Living Space
+# Exercise 1: St. Nicholas' living space
 
 We can define St. Nicholas' house by three parameters: side $a$, base $b$, and
 roof height $h$. Find a formula to calculate the `area` of the geometrical

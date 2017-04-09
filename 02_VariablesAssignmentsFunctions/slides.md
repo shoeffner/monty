@@ -39,18 +39,18 @@ You can run them, share them, modify them.
 - `import`s should be the first statements in your files.
 
 
-# Variable vs. Value
+# Variable vs. value
 
 * Variables are placeholders
 * Values are the contents
 
 
-# Variable vs. Value: Random Mug
+# Variable vs. value: Random mug
 
 ![Mug of Tea (Factorylad, Wikimedia Commons)](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Mug_of_Tea.JPG/1024px-Mug_of_Tea.JPG)
 
 
-# Variable vs. Value: Mensa Mug
+# Variable vs. value: Mensa mug
 
 ![Mug of Hot Chocolate (own picture)](mensamug.jpg)
 
@@ -84,7 +84,7 @@ print(greeting, name_two)
 ```
 
 
-# Example: Variable to Variable assignment
+# Example: Variable to variable assignment
 
 ```{ .python .exec }
 my_fruit = 'Raspberry'
@@ -95,7 +95,7 @@ print(your_fruit)
 ```
 
 
-# Example: Variable to Variable assignment
+# Example: Variable to variable assignment
 
 ```{ .python .exec }
 my_fruit = 'Raspberry'
@@ -114,7 +114,7 @@ that sometimes we hold the same fruit, not a copy!
 }
 
 
-# Variables and Assignments
+# Variables and assignments
 
 > A notorious example for a bad idea was the choice of the equal sign to denote
 > assignment.[^wirth]
@@ -122,9 +122,9 @@ that sometimes we hold the same fruit, not a copy!
 [^wirth]: @wirth2006: Good Ideas, Through the Looking Glass.
 
 
-# Assignment `=` vs. Equality $=$
+# Assignment `=` vs. equality $=$
 
-$a = b$ (in Maths) is not the same as `a = b` (in code)
+$a = b$ (in math) is not the same as `a = b` (in code)
 
 \note{
 - Mathematical equality works different than assignments
@@ -134,7 +134,7 @@ $a = b$ (in Maths) is not the same as `a = b` (in code)
 }
 
 
-# Variables and Math
+# Variables and math
 
 ```python
 a = 3
@@ -149,7 +149,7 @@ What do you expect `c` to be?
 }
 
 
-# Variables and Math
+# Variables and math
 
 ```{ .python .exec }
 a = 3
@@ -230,7 +230,7 @@ Try:
 }
 
 
-# Operator Precedence and Parentheses
+# Operator precedence and parentheses
 
 - What is $x$: $x = 5 \cdot 4 + 1$
 - What is $y$: $y = 5 \cdot (4 + 1)$

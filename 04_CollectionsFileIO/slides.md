@@ -1,7 +1,7 @@
 % Collections and File I/O
 
 
-# Function Arguments -- Positional
+# Function arguments -- positional
 
 ```{ .python .exec }
 def function(arg0, arg1='default'):
@@ -20,7 +20,7 @@ function(arg1=1, arg0=0)
 }
 
 
-# Function Arguments -- Arbitrary Argument Lists
+# Function arguments -- arbitrary argument lists
 
 ```{ .python .exec }
 def function(*args):
@@ -39,7 +39,7 @@ function(1, 2, 3)
 }
 
 
-# Function Arguments -- Keyword arguments
+# Function arguments -- keyword arguments
 
 ```{ .python .exec }
 def function(**kwargs):
@@ -55,7 +55,7 @@ function(arg0=0, mug='tea cup', animal='platypus')
 
 
 
-# Tuples, Lists, Dictionaries, Sets
+# Tuples, lists, dictionaries, sets
 
 Python offers four basic collection types:
 
@@ -219,7 +219,7 @@ print(my_foods['fruit'])
 ```
 
 
-# Dictionary functions: Adding values
+# Dictionary functions: adding values
 
 ```{ .python .exec }
 my_foods = {'fruit': 'apple', 'vegetable': 'carrot'}
@@ -262,7 +262,7 @@ print(food_a.difference(food_b))
 ```
 
 
-# Iteration over Tuples, Lists, and Sets
+# Iteration over tuples, lists, and sets
 
 ```{ .python .exec }
 fruits = ['apple', 'pear', 'banana']
@@ -275,7 +275,7 @@ It works exactly the same way for tuples and sets.
 }
 
 
-# Iteration over Tuples, Lists, and Sets with Subscription
+# Iteration over tuples, lists, and sets with subscripts
 
 ```{ .python .exec }
 fruits = ['apple', 'pear', 'banana']
@@ -285,7 +285,7 @@ for fruit in fruits[1:]:
 
 
 
-# Iteration over Dictionaries
+# Iteration over dictionaries
 
 ```{ .python .exec }
 food = {'start': 'soup', 'main': 'pizza',
@@ -295,7 +295,7 @@ for key in food.keys():
 ```
 
 
-# Iteration over Dictionaries -- with values
+# Iteration over dictionaries -- with values
 
 ```{ .python .exec }
 food = {'start': 'soup', 'main': 'pizza',
@@ -321,7 +321,7 @@ menu = {'main': ['pizza', 'pasta'],
 print(menu['dessert'][1])
 ```
 
-# Function Arguments and Collections
+# Function arguments and collections
 
 Write a function `calculator`. It takes a list of arguments and performs the operation provided with the keyword `operation` on all numbers to return one result. Implement it for the operations `+`, `-`, `*`, `/`. If no operation is provided, return the first number.
 
@@ -334,7 +334,7 @@ Example inputs                                   Result
 `calculator(4, 2, 7)`                            4
 
 
-# Function Arguments and Collections - Solution
+# Function arguments and collections - solution
 
 ```{ .python .exec }
 def calculator(*args, **kwargs):
