@@ -39,6 +39,11 @@ zip%: builddir% sheet% solution%
 		echo Zipping solutions for $(path) ; \
 		awk '{print "$(path)/" $$0}' $(rsolution).list | zip -@ $(solution).zip ; \
 		zip -j $(solution).zip $(solution).pdf ; \
+	fi; \
+	if [ -f $(rslides).list ]; then \
+		echo Zipping slides for $(path) ; \
+		awk '{print "$(path)/" $$0}' $(rslides).list | zip -@ $(slides).zip ; \
+		zip -j $(slides).zip $(slides).pdf ; \
 	fi
 
 
