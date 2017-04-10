@@ -270,6 +270,8 @@ sqrt_a = math.sqrt(a)
 print(sqrt_a)
 ```
 
+\cliqr{Do you like video games?}
+
 \note{
 - There are lots of useful math functions already implemented in Python.
 - Search the web for `python 3 math`. Do it now!
