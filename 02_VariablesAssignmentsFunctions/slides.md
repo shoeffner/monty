@@ -144,9 +144,7 @@ c = a * b
 print(c)
 ```
 
-\note{
-What do you expect `c` to be?
-}
+\cliqr{What do you expect `c` to be?}
 
 
 # Variables and math
@@ -190,6 +188,19 @@ Try out:
 - `5 - (2 + 3)`
 - etc.
 }
+
+
+# Recap: modulo
+
+You have 13 apples and want to share between you and your three friends when
+you head out for a hike. But since the apples become brown if you slice them,
+you only take whole apples with you. How many apples do you leave at home?
+
+\begin{align}
+    13& : 4 = 3 R 1 \\
+    \underline{12}& \\
+     1&
+\end{align}
 
 
 # More math operators
