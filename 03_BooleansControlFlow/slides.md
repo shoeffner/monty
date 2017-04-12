@@ -1,5 +1,16 @@
 % `True` or `False`?
 
+# How to google mathematical symbols
+
+Remember last week's weird brackets?
+
+$d(L, S) = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
+
+Whenever you come across a mathematical symbol you do not know Wikipedia's [List of mathematical symbols]( https://en.wikipedia.org/wiki/List_of_mathematical_symbols) might be useful
+
+\note{
+Names and explanations of symbols can be looked up, examples included
+}
 
 # Another data type: Boolean
 
