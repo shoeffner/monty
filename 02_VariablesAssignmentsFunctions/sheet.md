@@ -99,7 +99,7 @@ The fight thus looks like this:
 1. Red attacks Blue with two strong attacks and a normal attack.
 2. While red gathers himself after the strong hit he delivered, blue attacks:
    four hits, three normal ones and a throw.
-3. Red gets up and attacks blue again with two normal attacks and a strong
+3. Red gets up and attacks blue again with two strong attacks and a normal
    attack.
 4. They both keep fighting until one goes down.
 
