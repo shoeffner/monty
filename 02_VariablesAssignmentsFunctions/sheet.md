@@ -90,7 +90,7 @@ has 20 %.
 The older red knight, far more experienced in saving princesses, follows
 a specific strategy: While hitting the blue knight he always hits twice with
 a strong attack followed by a third normal attack. The dashing young blue
-knight simply just flurries with normal attacks, but every 4^th time he becomes
+knight simply just flurries with normal attacks, but every 4th time he becomes
 super confident and throws the old red knight around. As tradition asks of
 them, the older knight is allowed to make the first hit.
 

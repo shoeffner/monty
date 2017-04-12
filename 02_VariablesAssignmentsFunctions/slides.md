@@ -16,11 +16,15 @@ You can run them, share them, modify them.
 }
 
 
-# Common mistakes
+# Common mistakes & bonus solutions
 
 - Please name your files as we suggest, if we give you some names.
     `nicolas.py`, `nicholas.docx`, or  `Nicholas.py` are not the same as `nicholas.py`.
+- For the bonus questions we needed *escaping*, that means we can write:
 
+```{ .python .exec }
+print("This is \"interesting\".")
+```
 
 # Some conventions
 
