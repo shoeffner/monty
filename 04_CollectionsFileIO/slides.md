@@ -275,7 +275,16 @@ It works exactly the same way for tuples and sets.
 }
 
 
-# Iteration over tuples, lists, and sets with subscripts
+# Iteration over tuples, lists, and sets, with index
+
+```{ .python .exec }
+fruits = ['apple', 'pear', 'banana']
+for i, fruit in enumerate(fruits):
+    print("{}: {}".format(i, fruit), end=', ')
+```
+
+
+# Iteration over parts of tuples, lists, and sets
 
 ```{ .python .exec }
 fruits = ['apple', 'pear', 'banana']
