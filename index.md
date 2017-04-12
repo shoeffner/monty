@@ -8,6 +8,12 @@ If you find any mistakes, have some questions or anything else, feel free to dro
 1. `print('Hello Python!')`
     * [Lecture slides](files/BPP-01_HelloPython.pdf)
     * [Homework sheet](files/BPP-01_HelloPython-Sheet.pdf)
+    * [Solution](files/BPP-01_HelloPython-Solution.pdf)
+    * [Solution code](files/BPP-01_HelloPython-Solution.zip)
+2. `print('Hello Python!')`
+    * [Lecture slides](files/BPP-02_VariablesAssignmentsFunctions.pdf)
+    * [Lecture code](files/BPP-02_VariablesAssignmentsFunctions.pdf)
+    * [Homework sheet](files/BPP-02_VariablesAssignmentsFunctions-Sheet.pdf)
 
 *Note:* Once the class is done, we will make the source files available as well
 (i.e. the repository). But to keep the solutions *secret* while we go (as our
