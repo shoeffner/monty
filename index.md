@@ -12,7 +12,7 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     * [Solution code](files/BPP-01_HelloPython-Solution.zip)
 2. Variables, Assignments, and Functions
     * [Lecture slides](files/BPP-02_VariablesAssignmentsFunctions.pdf)
-    * [Lecture code](files/BPP-02_VariablesAssignmentsFunctions.pdf)
+    * [Lecture code](files/BPP-02_VariablesAssignmentsFunctions.zip)
     * [Homework sheet](files/BPP-02_VariablesAssignmentsFunctions-Sheet.pdf)
 
 *Note:* Once the class is done, we will make the source files available as well
