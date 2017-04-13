@@ -11,3 +11,7 @@
 
 ```{ .python .exec file=castle_crashers.py }
 ```
+
+## Alternative Solution 
+```{ .python .exec file=castle_crashers_alternative_solution.py }
+```
