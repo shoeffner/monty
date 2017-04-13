@@ -1,16 +1,20 @@
 % `True` or `False`?
 
+
 # How to google mathematical symbols
 
 Remember last week's weird brackets?
 
 $d(L, S) = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 
-Whenever you come across a mathematical symbol you do not know Wikipedia's [List of mathematical symbols]( https://en.wikipedia.org/wiki/List_of_mathematical_symbols) might be useful
+Whenever you come across a mathematical symbol you do not know, Wikipedia's
+[List of mathematical symbols](https://en.wikipedia.org/wiki/List_of_mathematical_symbols)
+might be useful.
 
 \note{
 Names and explanations of symbols can be looked up, examples included
 }
+
 
 # Another data type: Boolean
 
@@ -88,6 +92,16 @@ Comparisons can be chained, which is mostly useful for boundary checks:
 ```
 
 
+# Unrolling chained comparisons
+
+Comparisons are done from left to right and "chained" with `and`.
+
+```{ .python .exec .interactive }
+>>> 1 < 5 < 4
+>>> 1 < 5 and 5 < 4
+```
+
+
 # Comparing `True` and `False`
 
 What do you expect from the following three statements?
@@ -99,7 +113,7 @@ What do you expect from the following three statements?
 
 \note{
 * `True` (`True < 2`)
-* `False` (`True == 1`)
+* `False` (because `True == 1`)
 * `True`
 
 Careful! `True` is equal to `1`, and `1` only, but for `if` (next slide) every non-zero number is considered `True`!
@@ -241,7 +255,7 @@ Rule of thumb: most constraining conditions first!
 
 # Control flow
 
-!['Hey Megan, it's your father. How do I print out a flowchart?' [@xkcd627]](https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png)
+![Tech Support Cheat Sheet: 'Hey Megan, it's your father. How do I print out a flowchart?' [@xkcd627]](https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png)
 
 \note{
 When we talk about control flow we talk about how a program works through data step by step.
