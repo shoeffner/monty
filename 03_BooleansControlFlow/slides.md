@@ -1,7 +1,7 @@
 % `True` or `False`?
 
 
-# How to google mathematical symbols
+# How to search for math symbols
 
 Remember last week's weird brackets?
 
@@ -406,18 +406,21 @@ for item in 'Python':
 \note{
 Continue skips the remainders of the loop body and jumps back to the top.
 
-If continue is at the end of the loop body, nothing special happens -- the loop would "continue" at this point anyway.
+If continue is at the end of the loop body, nothing special happens -- the loop
+would "continue" at this point anyway.
 }
 
 
 # Your third homework
 
 - Learn more about the different control flow operations `if`, `for`, and
-  functions by implementing the classic examples "99 bottles" and "Fizz Buzz".
+  functions by implementing the classic example problems "99 bottles" and
+  "Fizz Buzz".
 - Draw some beautiful things with the turtle.
 
 
 # The last slide
 
+![Loopy de loop [@sadasivam2012]](http://pcweenies.com/wp-content/uploads/2012/01/2012-01-10_pcw.jpg)
 
 # References
