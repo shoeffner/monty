@@ -10,10 +10,12 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     * [Homework sheet](files/BPP-01_HelloPython-Sheet.pdf)
     * [Solution](files/BPP-01_HelloPython-Solution.pdf)
     * [Solution code](files/BPP-01_HelloPython-Solution.zip)
-2. Variables, Assignments, and Functions
+2. Variables, Assignments, and Functions ([Recording](http://video4.virtuos.uos.de/engage/ui/watch.html?cid=e7eca86bfdacf12717540d75bb2fcb47&id=409fabdb-b097-4c08-9a36-5a05150b428c))
     * [Lecture slides](files/BPP-02_VariablesAssignmentsFunctions.pdf)
     * [Lecture code](files/BPP-02_VariablesAssignmentsFunctions.zip)
     * [Homework sheet](files/BPP-02_VariablesAssignmentsFunctions-Sheet.pdf)
+
+Unfortunately there is no recording of the first session available.
 
 *Note:* Once the class is done, we will make the source files available as well
 (i.e. the repository). But to keep the solutions *secret* while we go (as our
