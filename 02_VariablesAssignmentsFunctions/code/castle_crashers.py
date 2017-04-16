@@ -30,6 +30,7 @@ strength = 20
 defense = 20
 magic = 20
 agility = 7
+
 red_knight_health = 0.25 * maximum_health(level, defense)
 blue_knight_health = 0.2 * maximum_health(level, defense)
 
