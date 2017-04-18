@@ -11,9 +11,95 @@ Whenever you come across a mathematical symbol you do not know, Wikipedia's
 [List of mathematical symbols](https://en.wikipedia.org/wiki/List_of_mathematical_symbols)
 might be useful.
 
+Another option might be [detexify](http://detexify.kirelabs.org/).
+
 \note{
 Names and explanations of symbols can be looked up, examples included
 }
+
+
+# Common mistakes & conventions: File names
+
+Again, please name your files as we specify them. Bright side: this week we
+only got `*.py` files! (And sometimes supplementary material: documentation,
+cute images etc.)
+
+
+# Common mistakes & conventions: Whitespace
+
+Please use spaces around math operators, after commas, and after `#`.
+
+```{ .python .exec }
+def area(base, side, height):
+    return base * side + height * base / 2
+
+
+# Calculates the St. Nick home area
+print('My area:', area(5, 10, 3))
+```
+
+
+# Common mistakes & conventions: Code order
+
+Try to put functions definitions together to the top of your files
+
+```{ .python }
+def fun1():
+    pass
+
+
+def fun2():
+    pass
+
+
+# prints, calls, etc. here and not between the functions
+```
+
+
+# Common mistakes: Variable names
+
+Variable (and function) names should only use these characters:
+
+```{ .python .exec }
+import string
+
+print(string.ascii_lowercase, string.digits, '_', sep='')
+```
+
+They should not start with digits!
+
+
+# Common mistakes & conventions: Naming things
+
+Variable names should (usually) tell us what is behind them
+
+```{ .python }
+def a(b, s, h):
+    return b * s + b * h / 2
+
+def area(base, side, height):
+    return base * side + base * height / 2
+```
+
+
+# Common mistakes & conventions: Random print statements
+
+Try not to clutter print statements which just print some numbers
+
+```{ .python .exec }
+area = 41.3
+side = 23.1
+print(area)
+print(side)
+print('Area:', area)
+print('Side:', side)
+```
+
+
+# Common mistakes & conventions: `damage_taken`
+
+For the castle crashers exercise you needed to take the `damage_taken` function
+for each individual hit.
 
 
 # Another data type: Boolean
