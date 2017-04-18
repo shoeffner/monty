@@ -25,30 +25,51 @@ def damage_taken(attack_damage, defense):
     return round(attack_damage * (1.2 - 0.01 * defense))
 
 
-level = 31
-strength = 20
-defense = 20
-magic = 20
-agility = 7
+def red_combo_damage(lvl_red, str_red, def_blue):
+    strong_damage = damage_taken(strong_attack_damage(lvl_red, str_red),
+                                 def_blue)
+    normal_damage = damage_taken(normal_attack_damage(lvl_red, str_red),
+                                 def_blue)
+    return 2 * strong_damage + normal_damage
 
-red_knight_health = 0.25 * maximum_health(level, defense)
-blue_knight_health = 0.2 * maximum_health(level, defense)
 
-red_attack_damage = 2 * strong_attack_damage(level, strength) \
-                  + 1 * normal_attack_damage(level, strength)
-blue_attack_damage = 3 * normal_attack_damage(level, strength) \
-                   + 1 * throw_attack_damage(level, strength)
+def blue_combo_damage(lvl_blue, str_blue, def_red):
+    normal_damage = damage_taken(normal_attack_damage(lvl_blue, str_blue),
+                                 def_red)
+    throw_damage = damage_taken(throw_attack_damage(lvl_blue, str_blue),
+                                def_red)
+    return 3 * normal_damage + throw_damage
 
-red_health_loss = damage_taken(blue_attack_damage, defense)
-blue_health_loss = damage_taken(red_attack_damage, defense)
 
-rounds_to_kill_red = math.ceil(red_knight_health / red_health_loss)
-rounds_to_kill_blue = math.ceil(blue_knight_health / blue_health_loss)
+def fight(lvl_red, str_red, def_red, hp_perc_red,
+          lvl_blue, str_blue, def_blue, hp_perc_blue):
+    health_red = round(hp_perc_red / 100 * maximum_health(lvl_red, def_red))
+    health_blue = round(hp_perc_blue / 100 * maximum_health(lvl_blue, def_blue))
 
-print('It takes red', rounds_to_kill_blue, 'rounds to kill blue.')
-print('It takes blue', rounds_to_kill_red, 'rounds to kill red.')
+    loss_blue = red_combo_damage(lvl_red, str_red, def_blue)
+    loss_red = blue_combo_damage(lvl_blue, str_blue, def_red)
 
-if rounds_to_kill_red < rounds_to_kill_blue:
-    print('Blue wins!')
-else:
-    print('Red wins!')
+    rounds_to_kill_red = math.ceil(health_red / loss_red)
+    rounds_to_kill_blue = math.ceil(health_blue / loss_blue)
+
+    print('It takes red', rounds_to_kill_blue, 'rounds to kill blue.')
+    print('It takes blue', rounds_to_kill_red, 'rounds to kill red.')
+
+    if rounds_to_kill_red < rounds_to_kill_blue:
+        print('Blue wins!')
+    else:
+        print('Red wins!')
+
+
+level_red = 31
+strength_red = 20
+defense_red = 30
+start_health_perc_red = 25
+
+level_blue = 31
+strength_blue = 20
+defense_blue = 30
+start_health_perc_blue = 20
+
+fight(level_red, strength_red, defense_red, start_health_perc_red,
+      level_blue, strength_blue, defense_blue, start_health_perc_blue)
