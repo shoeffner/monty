@@ -30,8 +30,8 @@ defense = 30
 agility = 7
 
 # initializing health values
-red_health = 0.25 * maximum_health(level, defense)
-blue_health = 0.2 * maximum_health(level, defense)
+red_health = round(0.25 * maximum_health(level, defense))
+blue_health = round(0.2 * maximum_health(level, defense))
 
 round_counter = 0
 
