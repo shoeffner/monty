@@ -98,7 +98,7 @@ print('Side:', side)
 
 # Common mistakes & conventions: `damage_taken`
 
-For the castle crashers exercise you needed to take the `damage_taken` function
+For the castle crashers exercise you needed to call the `damage_taken` function
 for each individual hit.
 
 
@@ -421,7 +421,7 @@ for counter in range(6):
 ```
 
 \note{
-Too loop over some collection of values is called "iteration".
+To loop over some collection of values is called "iteration".
 
 Thus, collections of values which allow "iterations" are called "iterables".
 }

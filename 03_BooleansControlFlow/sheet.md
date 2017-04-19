@@ -17,8 +17,8 @@ a number is divisible by 5, say `buzz` instead. If the number is divisible by
 
 Write a script `fizz_buzz.py`. Implement a function `fizz(number)` and
 a function `buzz(number)`. The function `fizz` should return `True` iff (= if
-and only if) number is divisible by 3. The function `buzz` should return `True`
-iff the number is divisible by 5.
+and only if) `number` is divisible by 3. The function `buzz` should return `True`
+iff `number` is divisible by 5.
 Next implement a function `fizz_buzz(to)` which plays a game of Fizz Buzz from 1 up to
 number `to` (inclusive). Use the functions `fizz` and `buzz` to test, if a number is
 divisible by 3 or 5.
@@ -77,7 +77,7 @@ Now draw a simple landscape. Draw a house, a small tree, a big tree, a small tre
 
 ![\label{fig:flat}Flat world](img/flat_world.png)
 
-*Bonuses*: Can you build a round world like in Figure \ref{fig:world}?
+*Bonus*: Can you build a round world like in Figure \ref{fig:world}?
 
 ![\label{fig:world}Round world](img/round_world.png)
 
