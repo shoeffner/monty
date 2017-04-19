@@ -14,6 +14,11 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     * [Lecture slides](files/BPP-02_VariablesAssignmentsFunctions.pdf)
     * [Lecture code](files/BPP-02_VariablesAssignmentsFunctions.zip)
     * [Homework sheet](files/BPP-02_VariablesAssignmentsFunctions-Sheet.pdf)
+    * [Solution](files/BPP-02_VariablesAssignmentsFunctions-Solution.pdf)
+    * [Solution code](files/BPP-02_VariablesAssignmentsFunctions-Solution.zip)
+3. `True` or `False`
+    * [Lecture slides](files/BPP-03_BooleansControlFlow.pdf)
+    * [Homework sheet](files/BPP-03_BooleansControlFlow-Sheet.pdf)
 
 Unfortunately there is no recording of the first session available.
 
