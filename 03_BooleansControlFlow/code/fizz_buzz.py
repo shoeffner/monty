@@ -1,9 +1,9 @@
 def fizz(number):
-    return number / 3 == number // 3
+    return not number % 3
 
 
 def buzz(number):
-    return number / 5 == number // 5
+    return not number % 5
 
 
 def fizz_buzz(to):
