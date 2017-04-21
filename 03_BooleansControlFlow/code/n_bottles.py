@@ -4,7 +4,7 @@ def bottles(n):
 
 def n_bottles(n):
     if not 5 <= n <= 99:
-        print('I want to sing funnier songs than ' + bottles(n) + '.\n')
+        print('I want to sing funnier songs than "' + bottles(n) + '".\n')
         return
     while n > 0:
         print(bottles(n) + ' on the wall,\n  ' + bottles(n) + '.')

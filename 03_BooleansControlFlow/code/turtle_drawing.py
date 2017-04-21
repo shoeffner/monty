@@ -1,6 +1,7 @@
 import time
 import turtle
 
+
 LENGTH = 5
 ANGLE = 40
 
@@ -33,82 +34,68 @@ def draw_house():
     turtle.right(90)
 
 
+def draw_world(curvature_step=0):
+    if curvature_step > 0:
+        villages = 360 // 4 // curvature_step
+    else:
+        villages = 5
+
+    for i in range(villages):
+        prepare_drawing()
+        draw_house()
+        finish_drawing()
+
+        turtle.right(curvature_step)
+        turtle.forward(LENGTH * 11)
+
+        for j in range(3):
+            prepare_drawing()
+            draw_tree(3 + j % 2 * 2)
+            finish_drawing()
+
+            turtle.right(curvature_step)
+            turtle.forward(LENGTH * 3)
+
+        turtle.forward(LENGTH)
+
+
 def init():
     turtle.reset()
     turtle.shape('turtle')
     turtle.speed('fastest')
+    turtle.up()
 
 
-def draw_example():
-    init()
+def prepare_drawing():
+    turtle.down()
     turtle.left(90)
+
+
+def finish_drawing():
+    turtle.right(90)
     turtle.up()
-    turtle.goto(-100, 0)
-    turtle.down()
-
-    draw_house()
-
-    turtle.up()
-    turtle.goto(100, 0)
-    turtle.down()
-
-    draw_tree(5)
 
 
 def draw_flat_world():
     init()
-    turtle.up()
-    turtle.goto(-400, 0)
+    turtle.goto(-300, 0)
 
-    for i in range(8):
-        turtle.down()
-        turtle.left(90)
-        draw_house()
-        turtle.right(90)
-        turtle.up()
-        turtle.forward(LENGTH * 11)
-        for j in range(3):
-            turtle.down()
-            turtle.left(90)
-            if j % 2 == 0:
-                draw_tree(3)
-            else:
-                draw_tree(5)
-            turtle.right(90)
-            turtle.up()
-            turtle.forward(LENGTH * 3)
-        turtle.forward(LENGTH)
+    draw_world()
 
 
 def draw_round_world():
     init()
-    turtle.ht()
-    turtle.up()
     turtle.goto(0, 300)
+    turtle.hideturtle()
 
-    for i in range(18):
-        turtle.down()
-        turtle.left(90)
-        draw_house()
-        turtle.right(95)
-        turtle.up()
-        turtle.forward(LENGTH * 11)
-        for j in range(3):
-            turtle.down()
-            turtle.left(90)
-            if j % 2 == 0:
-                draw_tree(3)
-            else:
-                draw_tree(5)
-            turtle.right(95)
-            turtle.up()
-            turtle.forward(LENGTH * 3)
+    draw_world(5)
 
 
-draw_example()
-time.sleep(10)
-draw_flat_world()
-time.sleep(10)
-draw_round_world()
+def draw():
+    draw_flat_world()
+    time.sleep(5)
+    draw_round_world()
+    turtle.done()
 
-turtle.done()
+
+draw()
