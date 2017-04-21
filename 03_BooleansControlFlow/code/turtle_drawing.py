@@ -108,7 +108,7 @@ def draw_round_world():
 draw_example()
 time.sleep(10)
 draw_flat_world()
-# time.sleep(10)
-# draw_round_world()
+time.sleep(10)
+draw_round_world()
 
 turtle.done()
