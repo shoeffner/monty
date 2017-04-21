@@ -2,6 +2,15 @@ import math
 
 
 def add(x, y):
+    """Adds two vectors x and y.
+
+    Args:
+        x: The first summand.
+        y: The right summand.
+
+    Returns:
+        The result is the vector z for which z_i = x_i + y_i holds.
+    """
     result = []
     for i, x_i in enumerate(x):
         result.append(x_i + y[i])
@@ -9,6 +18,15 @@ def add(x, y):
 
 
 def sub(x, y):
+    """Subtracts two vectors x and y.
+
+    Args:
+        x: The minuend.
+        y: The subtrahend.
+
+    Returns:
+        The result is the vector z for which z_i = x_i - y_i holds.
+    """
     result = []
     for i, x_i in enumerate(x):
         result.append(x_i - y[i])
@@ -16,6 +34,17 @@ def sub(x, y):
 
 
 def dot(x, y):
+    """Calculates the scalar product between two vectors x and y.
+
+    The scalar product is the sum of the products of each individual elements.
+
+    Args:
+        x: The left multiplicand.
+        y: The right multiplicand.
+
+    Returns:
+        The sum of all z_i for which z_i = x_i * y_i holds.
+    """
     result = 0
     for i, x_i in enumerate(x):
         result = result + x_i * y[i]
@@ -23,11 +52,44 @@ def dot(x, y):
 
 
 def angle(x, y):
+    """Calculates the angle between two vectors x and y.
+
+    Uses the definition of the scalar product <x, y>:
+
+        <x, y> = |x| |y| cos(alpha)
+
+    where |x| is the norm of x.
+
+    The function uses the distance between the two points and the origin
+    respectively to calculate the respective norms.
+
+    Args:
+        x: The first vector.
+        y: The second vector.
+
+    Returns:
+        The angle between the two vectors.
+    """
     origin = [0 for i in range(len(x))]
     return math.acos(dot(x, y) / (pdist(x, origin) * pdist(y, origin)))
 
 
 def pdist(x, y, p=2):
+    """Calculates the p-distance between x and y.
+
+    The p-distance between two points is the p-th root of the sum over all
+    (x_i - y_i) ^ p.
+
+    By default, the p=2 distance is returned, which is also known as the
+    euclidean distance.
+
+    Args:
+        x: One point.
+        y: Another point.
+
+    Returns:
+        The p-distance between x and y.
+    """
     result = 0
     for i, x_i in enumerate(x):
         result = result + (x_i - y[i]) ** p
