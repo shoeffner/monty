@@ -33,7 +33,7 @@ function(1, 2, 3)
 
 \note{
 - Argument lists can not be used by their names.
-- Their can only be one argument list, as it would otherwise be
+- There can only be one argument list, as it would otherwise be
   indistinguishable to which argument list each argument belongs.
 - The notation `(1, 2, 3)` is new, we will come back to it in a few slides.
 }
