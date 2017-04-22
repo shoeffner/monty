@@ -42,9 +42,9 @@ Call                       Result
 `add(b, a)`                `[5, 7, 9]`
 `sub(a, b)`                `[-3, -3, -3]`
 `dot(c, d)`                `8.0`
-`pdist(a, b)`              approx. `5.4`
+`pdist(a, b)`              approx. `5.2`
 `pdist(c, d, 4)`           approx. `5.6`
-`angle(a, b)`              approx. `0.32`
+`angle(a, b)`              approx. `0.23`
 
 You can try out other values as well.
 
