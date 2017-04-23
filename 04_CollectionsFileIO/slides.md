@@ -1,6 +1,134 @@
 % Collections and File I/O
 
 
+# Homework issues: scope
+
+```{ .python .exec }
+counter = 0
+def count_up():
+    counter = counter + 1
+
+count_up()
+print(counter)
+```
+
+
+# Homework issues: scope
+
+Python has several scopes, relevant to us are:
+
+- local (inside functions)
+- global (inside "modules" or for now: scripts)
+- built-in (what Python itself offers: `len`, `range`, ...)
+
+\note{
+If a variable name is used inside multiple scopes, "local" is the strongest scope.
+
+Try not to overwrite built-in variables (your editor marks them colorful)!
+}
+
+
+# Homework issues: scope -- global solution
+
+```{ .python .exec }
+counter = 0
+def count_up():
+    global counter
+    counter = counter + 1
+
+count_up()
+print(counter)
+```
+
+\note{
+It is not really cool to use variables as globals (there might be situations
+where it's necessary, but try to avoid it).
+
+Better is to use a local solution.
+}
+
+
+# Homework issues: scope -- local solution
+
+```{ .python .exec }
+def count_up(counter):
+    return counter + 1
+
+counter = 0
+counter = count_up(counter)
+print(counter)
+```
+
+
+# Homework issues: scope -- while
+
+```{ .python .exec }
+counter = 0
+def add10(number):
+    while counter < 10:
+        number += 1
+        counter += 1
+    return number
+
+print(add10(2))
+```
+
+\note{
+This won't work, but it's also probably not what was meant to work.
+
+If you use a counter inside a function, you in general want it to be reset each
+time you call that function -- so it should go inside.
+}
+
+
+# Homework issues: scope -- while
+
+```{ .python .exec }
+def add10(number):
+    counter = 0
+    while counter < 10:
+        number += 1
+        counter += 1
+    return number
+
+print(add10(2))
+```
+
+
+# Recursion
+
+```{ .python .exec }
+def count_to_0(current):
+    if current < 0:
+        return
+    print(current, end=', ')
+    count_to_0(current - 1)
+
+count_to_0(10)
+```
+
+
+# Recursive addition
+
+Consider two baskets of apples.
+How can we model putting all into the same basket?
+
+Let's do a live example!
+
+
+# Recursive addition -- solution
+
+```{ .python .exec }
+def add(left, right):
+    if right == 0:
+        return left
+    return add(left + 1, right - 1)
+
+
+print(add(5, 3))
+```
+
+
 # Function arguments -- positional
 
 ```{ .python .exec }
