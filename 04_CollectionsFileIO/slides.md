@@ -408,7 +408,7 @@ It works exactly the same way for tuples and sets.
 ```{ .python .exec }
 fruits = ['apple', 'pear', 'banana']
 for i, fruit in enumerate(fruits):
-    print("{}: {}".format(i, fruit), end=', ')
+    print(i, fruit, sep=':', end=', ')
 ```
 
 
@@ -443,6 +443,8 @@ for key, value in food.items():
 
 \note{
 For dictionaries we have to define what we want to iterate over.
+
+By default the keys are used.
 }
 
 
@@ -637,51 +639,45 @@ is equivalent to (but shorter to write)
 
 `for num in lottery_strings:`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`lottery_numbers.append(int(num))`
+&nbsp;&nbsp;&nbsp;&nbsp;`lottery_numbers.append(int(num))`
 
 This is called **list comprehension**.
 }
 
-# Using JSON to write
 
-[JSON](http://json.org) (JavaScript Object Notation) is a standard to exchange data. Python understands it.
+# Reading a file line by line
 
 ```{ .python .exec }
-import json
-
-my_lottery_numbers = [21, 8, 19, 9, 1, 22]
-with open('04_CollectionsFileIO/code/lottery.json', \
-          'w') as file:
-    json.dump(my_lottery_numbers, file)
+with open('04_CollectionsFileIO/code/names.txt', \
+          'r') as names_file:
+    names = names_file.read().splitlines()
+print(names)
 ```
 
 
-# Using JSON to read
+# Reading a file line by line
 
 ```{ .python .exec }
-import json
+with open('04_CollectionsFileIO/code/names.txt', \
+          'r') as names_file:
+    lastnames = []
+    for name in names_file:
+        first_and_last = name.split()
+        lastnames.append(first_and_last[1])
 
-with open('04_CollectionsFileIO/code/lottery.json', \
-          'r') as file:
-    result = json.load(file)
-print(result)
-print(type(result))
+print(lastnames)
 ```
-
-\note{
-JSON allows us to store much more "complex" data, you will have to deal with
-that in the homework.
-}
 
 
 # Your fourth homework
 
-
+- Do some simple vector algebra with loops.
+- Play hangman to master input and output!
 
 
 # The last slide
 
-TODO
+![Master of the Universe [@cham2007]](http://phdcomics.com/comics/archive/phd113007s.gif)
 
 
 # References
