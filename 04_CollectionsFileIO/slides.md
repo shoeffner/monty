@@ -95,6 +95,24 @@ print(add10(2))
 ```
 
 
+# Homework remark: comparison with True
+
+```{ .python .exec }
+def fizz(number):
+    return number % 3 == 0
+
+
+if fizz(3) == True:
+    print('fizz')
+if fizz(3):
+    print('fizz')
+```
+
+\note{
+`== True` is never needed, you are always checking for True!
+}
+
+
 # Recursion
 
 ```{ .python .exec }
