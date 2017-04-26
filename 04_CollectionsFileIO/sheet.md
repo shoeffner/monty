@@ -61,7 +61,7 @@ guessed, a player would get another stroke of the little hangman (see Figure
 Since it's hard to visualize the stick figure on the terminal, you might want
 to just use a counter.
 
-![Example hangman game](img/hangman_game.png)
+![Example hangman game (McGeddon, Wikipedia, Public Domain)](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Hangman_game.jpg/1920px-Hangman_game.jpg)
 
 ## Task
 
