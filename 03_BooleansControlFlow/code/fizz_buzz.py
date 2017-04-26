@@ -8,12 +8,14 @@ def buzz(number):
 
 def fizz_buzz(to):
     for number in range(1, to + 1):
+        answer = ''
+        if fizz(number):
+            answer += 'fizz'
         if buzz(number):
-            if fizz(number):
-                print('fizz', end='')
-            print('buzz')
-        elif fizz(number):
-            print('fizz')
+            answer += 'buzz'
+
+        if answer != '':
+            print(answer)
         else:
             print(number)
 
