@@ -25,7 +25,7 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Solution](files/BPP-03_BooleansControlFlow-Solution.pdf)
     - [Solution code](files/BPP-03_BooleansControlFlow-Solution.zip)
 
-4. Collections and File I/O
+4. Collections and File I/O ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=b0106bb5-b23d-4e77-9299-4694bfe642a3))
     - [Lecture slides](files/BPP-04_CollectionsFileIO.pdf)
     - [Lecture code](files/BPP-04_CollectionsFileIO.zip)
     - [Homework sheet](files/BPP-04_CollectionsFileIO-Sheet.pdf)
