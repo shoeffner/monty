@@ -15,18 +15,14 @@ he again failed miserably.
 Of course Aline could fix it, but she is busy correcting your homework
 submissions, so she needs your help:
 
-a) Open the accompanying file `.py` and examine it. What does it do? Add
-   documentation comments to all functions, describing what their inputs and
-   expected outputs are, what the functions do.
+a) Open the accompanying file `whatdoesitdo.py` and examine it. What does it do? Add/update
+   documentation comments for all functions, describing what their inputs and
+   expected outputs are, what the functions do. You are allowed to rename it.
 b) Write down what is wrong, so that Sebastian will be able to correct it himself the next time.
 c) Correct the code. Make it so that all assertions pass, add some assertions Sebastian missed.
 d) Make sure everything is properly indented. Be sure to also
     - correct any potential white space conventions Sebastian disobeyed.
-    - fix the calculations which are wrong.
-    - there are enough blank lines between functions and import statements.
-    - all import statements are at the top of the file.
-e) Bonus: There is at least one place where it is really useful to use a `try:
-   ... except ...: ...` block. Can you find it?
+    - ensure enough blank lines between functions and import statements.
 
 
 # Exercise 2: Reading and writing csv files
@@ -55,8 +51,8 @@ Now that we have some corrected data, let's write another script
 `iris_statistics.py`. It should output (at least) the following simple
 statistics:
 
-- How many instances of each of the three iris classes are in the data set?
 - How many rows are there in total?
+- How many instances of each of the three iris classes are in the data set?
 - What is the mean sepal length
     * of all samples?
     * of iris setosa?
