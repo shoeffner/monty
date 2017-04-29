@@ -70,8 +70,7 @@ def angle(x, y):
     Returns:
         The angle between the two vectors.
     """
-    origin = [0 for i in range(len(x))]
-    return math.acos(dot(x, y) / (pdist(x, origin) * pdist(y, origin)))
+    return math.acos(dot(x, y) / math.sqrt(dot(x, x) * dot(y, y)))
 
 
 def pdist(x, y, p=2):
