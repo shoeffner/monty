@@ -218,7 +218,7 @@ Most common causes:
 
 # Other errors
 
-There is a [full list of only Python
+There is a [full list of built-in Python
 errors](https://docs.python.org/3/library/exceptions.html#concrete-exceptions)
 in the documentation.
 
@@ -245,11 +245,23 @@ Some important ones you might encounter:
 
 - A debugger allows to stop code during its execution
 - We can inspect variables after each step!
-- Unfortunately the ipdb (the one Spyder uses) is not very easy to use
 
 
 # Interactive Python DeBugger (ipdb)
 
+![Spyder debug controls: Run/Pause, execute next line, step in, step out, run to breakpoint, stop](img/spyder_debug_controls.png)
+
+
+# Live demo
+
+```{ .python .exec }
+
+```
+
+
+#
+
+![Spyder debug controls](img/spyder_debug_controls.png)
 
 
 # Your fifth homework
