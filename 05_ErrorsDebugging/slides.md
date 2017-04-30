@@ -274,8 +274,10 @@ print(result)
 ```
 
 
-#
+# Assertions
 
+
+# Documentation
 
 
 # Your fifth homework
@@ -285,4 +287,6 @@ print(result)
 
 
 # The last slide
+
+![how I got better at debugging [@evans2016]](http://jvns.ca/images/drawings/better-debugging.png)
 
