@@ -97,7 +97,7 @@ def median(values):
         The median.
     """
     idx = len(values) // 2
-    if len(values) & 2:
+    if len(values) & 1:
         return sorted(values)[idx]
     else:
         return mean(sorted(values)[idx - 1:idx + 1])
@@ -116,6 +116,33 @@ def mode(values):
     """
     counts = {k: values.count(k) for k in set(values)}
     return sorted(counts, key=counts.__getitem__)[-1]
+
+
+def test():
+    """Tests the statistical functions.
+
+    Raises:
+        AssertionError if a test fails.
+    """
+    testlist0 = [1, 2, 3, 4, 5]
+    testlist1 = [1, 2, 3, 4, 5, 6]
+    testlist2 = [2, 2, 3, 4, 4, 6]
+    testlist3 = [2, 2, 3, 4, 5, 6, 7]
+
+    assert mean(testlist0) - 5 <= 1e-6, mean(testlist0)
+    assert mean(testlist1) - 3.5 <= 1e-6, mean(testlist1)
+    assert mean(testlist2) - 21/6 <= 1e-6, mean(testlist2)
+    assert mean(testlist3) - 29/7 <= 1e-6, mean(testlist3)
+
+    assert median(testlist0) == 3, median(testlist0)
+    assert median(testlist1) - 3.5 <= 1e-6, median(testlist1)
+    assert median(testlist2) - 3.5 <= 1e-6, median(testlist2)
+    assert median(testlist3) == 4, median(testlist3)
+
+    assert mode(testlist0) in testlist0, mode(testlist0)
+    assert mode(testlist1) in testlist1, mode(testlist1)
+    assert mode(testlist2) in [2, 4], mode(testlist2)
+    assert mode(testlist3) == 2, mode(testlist3)
 
 
 def main(with_csv=False):
@@ -162,4 +189,5 @@ def main(with_csv=False):
 
 
 if __name__ == '__main__':
+    test()
     main(False)
