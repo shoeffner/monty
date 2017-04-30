@@ -19,7 +19,7 @@ a) Open the accompanying file `whatdoesitdo.py` and examine it. What does it do?
    documentation comments for all functions, describing what their inputs and
    expected outputs are, what the functions do. You are allowed to rename it.
 b) Write down what is wrong, so that Sebastian will be able to correct it himself the next time.
-c) Correct the code. Make it so that all assertions pass, add some assertions Sebastian missed.
+c) Correct the code.
 d) Make sure everything is properly indented. Be sure to also
     - correct any potential white space conventions Sebastian disobeyed.
     - ensure enough blank lines between functions and import statements.
@@ -59,6 +59,9 @@ statistics:
 - What is the median sepal width
     * of all samples?
     * of iris virginica?
-- What is the mode of all petal lengths?
+- What is the mode of all petal lengths? (There are two values which qualify,
+  just pick one)
 
-Remember to use functions where appropriate!
+Remember to use functions where appropriate, e.g. to calculate the mean, median
+and mode. Add tests (i.e. `assert`s) for your statistics functions. Make sure
+to add sufficient documentation.

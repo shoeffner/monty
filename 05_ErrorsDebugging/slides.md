@@ -93,14 +93,14 @@ print("Are you \"Monty\"?")
 ```
 
 
-# `SyntaError`: EOF[^eof] while scanning...
+# `SyntaError`: EOL[^eol] while scanning...
 
 ```{ .python .exec }
 string = "Hello World!
 print(string)
 ```
 
-[^eof]: EOF stands for end of file.
+[^eol]: EOL stands for end of line.
 
 
 # `SyntaError`: EOF while scanning...
@@ -240,6 +240,12 @@ Some important ones you might encounter:
 - If you identified the problem: fix it.
 - It happens only in one out of 100 iterations? Great, let's check the debugger!
 
+\note{
+Despite what everyone tells you: even though there are debuggers (and some of
+them are great!), most of the time a simple `print` already reveals your
+problems. Just don't forget to delete it again!
+}
+
 
 # Debugging
 
@@ -251,24 +257,32 @@ Some important ones you might encounter:
 
 ![Spyder debug controls: Run/Pause, execute next line, step in, step out, run to breakpoint, stop](img/spyder_debug_controls.png)
 
+![Spyder breakpoint controls](img/spyder_breakpoint_controls.png)
+
 
 # Live demo
 
-```{ .python .exec }
+```{ .python }
+def division(x, y):
+    return x / y
 
+result = 0
+for i in range(16):
+    denominator = i - 10
+    result += division(i, denominator)
+print(result)
 ```
 
 
 #
 
-![Spyder debug controls](img/spyder_debug_controls.png)
 
 
 # Your fifth homework
 
 - We wrote a little script, but it's horribly broken. Try to fix it and add proper documentation.
+- Do some simple (very simple!) data analysis on the famous [iris dataset](https://archive.ics.uci.edu/ml/datasets/Iris).
 
 
 # The last slide
 
-TODO
