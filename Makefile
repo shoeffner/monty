@@ -32,7 +32,7 @@ outline: builddir%
 zip%: builddir% sheet% solution%
 	@if [ -f $(rsheet).list ]; then \
 		echo Zipping exercises for $(path) ; \
-		awk '{print "$(path)/" $$0}' $(rsheet).list | zip -@ $(sheet).zip \
+		awk '{print "$(path)/" $$0}' $(rsheet).list | zip -@ $(sheet).zip ; \
 		zip -j $(sheet).zip $(sheet).pdf ; \
 	fi; \
 	if [ -f $(rsolution).list ]; then \
