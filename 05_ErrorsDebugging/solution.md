@@ -19,5 +19,9 @@ And some possible corrections and documentation comments.
 ```{ .python file=code/iris_correction.py }
 ```
 
+For the statistics you could either build your own solution (and add `assert`s)
+or use the `statistics` module.
+We added both solutions into our example.
+
 ```{ .python .exec file=code/iris_statistics.py }
 ```

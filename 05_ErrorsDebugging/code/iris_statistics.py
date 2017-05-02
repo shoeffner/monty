@@ -2,6 +2,7 @@
 Prints some statistics about the iris data set.
 """
 import csv
+import statistics
 
 
 IRIS_FILE = '05_ErrorsDebugging/code/iris.csv'
@@ -139,9 +140,6 @@ def test():
     assert median(testlist2) - 3.5 <= 1e-6, median(testlist2)
     assert median(testlist3) == 4, median(testlist3)
 
-    assert mode(testlist0) in testlist0, mode(testlist0)
-    assert mode(testlist1) in testlist1, mode(testlist1)
-    assert mode(testlist2) in [2, 4], mode(testlist2)
     assert mode(testlist3) == 2, mode(testlist3)
 
 
@@ -168,24 +166,27 @@ def main(with_csv=False):
     print('Instances:', class_counts)
 
     sepal_lengths = [d[SEPAL_LENGTH] for d in data]
-    mean_sepal_length = mean(sepal_lengths)
-    print('Mean sepal length:', mean_sepal_length)
+    print('Mean sepal length (statistics):', statistics.mean(sepal_lengths))
+    print('Mean sepal length (custom):', mean(sepal_lengths))
 
     sepal_l_setosa = [d[SEPAL_LENGTH] for d in data if 'setosa' in d[CLASS]]
-    mean_sepal_l_setosa = mean(sepal_l_setosa)
-    print('Mean sepal length (setosa):', mean_sepal_l_setosa)
+    print('Mean sepal length (setosa, statistics):',
+          statistics.mean(sepal_l_setosa))
+    print('Mean sepal length (setosa, custom):', mean(sepal_l_setosa))
 
-    sepal_widths = [d[SEPAL_LENGTH] for d in data]
-    median_sepal_width = median(sepal_widths)
-    print('Median sepal width:', median_sepal_width)
+    sepal_widths = [d[SEPAL_WIDTH] for d in data]
+    print('Median sepal width (statistics):', statistics.median(sepal_widths))
+    print('Median sepal width (custom):', median(sepal_widths))
 
-    sepal_w_virginica = [d[SEPAL_LENGTH] for d in data if 'vir' in d[CLASS]]
-    median_sepal_w_virginica = median(sepal_w_virginica)
-    print('Median sepal width (virginica):', median_sepal_w_virginica)
+    sepal_w_virginica = [d[SEPAL_WIDTH] for d in data if 'vir' in d[CLASS]]
+    print('Median sepal width (virginica, statistics):',
+          statistics.median(sepal_w_virginica))
+    print('Median sepal width (virginica, custom):', median(sepal_w_virginica))
 
-    petal_lengths = [d[PETAL_LENGTH] for d in data]
-    mode_petal_length = mode(petal_lengths)
-    print('Mode petal length:', mode_petal_length)  # @shoeffner: 1.4 or 1.5
+    petal_l_versicolor = [d[PETAL_LENGTH] for d in data if 'ver' in d[CLASS]]
+    print('Mode petal length (versicolor, statistics):',
+          statistics.mode(petal_l_versicolor))
+    print('Mode petal length (versicolor, custom):', mode(petal_l_versicolor))
 
 
 if __name__ == '__main__':

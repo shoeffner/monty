@@ -59,9 +59,8 @@ statistics:
 - What is the median sepal width
     * of all samples?
     * of iris virginica?
-- What is the mode of all petal lengths? (There are two values which qualify,
-  just pick one)
+- What is the mode of petal lengths of iris versicolor?
 
 Remember to use functions where appropriate, e.g. to calculate the mean, median
-and mode. Add tests (i.e. `assert`s) for your statistics functions. Make sure
-to add sufficient documentation.
+and mode. Add tests (i.e. `assert`s) for your statistics functions if you
+wrote your own. Make sure to add sufficient documentation.
