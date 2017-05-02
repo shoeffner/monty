@@ -31,6 +31,9 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Homework sheet](files/BPP-04_CollectionsFileIO-Sheet.pdf)
     - [Homework code](files/BPP-04_CollectionsFileIO-Sheet.zip)
 
+5. Handling Errors and Debugging
+    - [Homework sheet](files/BPP-05_ErrorsDebugging-Sheet.pdf)
+    - [Homework code](files/BPP-05_ErrorsDebugging-Sheet.zip)
 
 Unfortunately there is no recording of the first session available.
 
