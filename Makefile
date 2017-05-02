@@ -14,6 +14,7 @@ notes = $(slides)-Notes
 dateslides = $(shell [ -f $(path)/dates.txt ] && head -n1 $(path)/dates.txt || date "+%a, %d %b %Y")
 datesheet = $(shell echo Deadline: `[ -f $(path)/dates.txt ] && tail -n1 $(path)/dates.txt || date "+%a, %d %b %Y"` 08:00 +0200)
 
+ENGINE ?= pdflatex
 
 %: builddir% slides% notes% sheet% solution% zip%
 	@echo 'Done.'
@@ -53,6 +54,7 @@ slides%: builddir%
 		echo Creating slides for $(path) ; \
 		pandoc \
 			-t beamer \
+			--latex-engine=$(ENGINE) \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
 			--highlight-style tango \
@@ -71,6 +73,7 @@ notes%: builddir%
 		echo Creating notes for $(path) ; \
 		pandoc \
 			-t beamer \
+			--latex-engine=$(ENGINE) \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
 			--highlight-style tango \
@@ -88,6 +91,7 @@ sheet%: builddir%
 	@if [ -f $(rsheet).md ]; then \
 		echo Creating exercises for $(path) ; \
 		pandoc \
+			--latex-engine=$(ENGINE) \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
 			--highlight-style tango \
@@ -105,6 +109,7 @@ solution%: builddir%
 	@if [ -f $(rsolution).md ]; then \
 		echo Creating solutions for $(path) ; \
 		pandoc \
+			--latex-engine=$(ENGINE) \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
 			--highlight-style tango \
