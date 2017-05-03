@@ -30,8 +30,12 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Lecture code](files/BPP-04_CollectionsFileIO.zip)
     - [Homework sheet](files/BPP-04_CollectionsFileIO-Sheet.pdf)
     - [Homework code](files/BPP-04_CollectionsFileIO-Sheet.zip)
+    - [Solution](files/BPP-04_CollectionsFileIO-Solution.pdf)
+    - [Solution code](files/BPP-04_CollectionsFileIO-Solution.zip)
 
 5. Handling Errors and Debugging
+    - [Lecture slides](files/BPP-05_ErrorsDebugging.pdf)
+    - [Lecture code](files/BPP-05_ErrorsDebugging.zip)
     - [Homework sheet](files/BPP-05_ErrorsDebugging-Sheet.pdf)
     - [Homework code](files/BPP-05_ErrorsDebugging-Sheet.zip)
 
