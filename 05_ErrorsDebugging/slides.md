@@ -256,7 +256,7 @@ print("Are you" + \" + "Monty" + \" + "?")
 (Unexpected character after line continuation character)
 
 \note{
-The line continuation character is `+`.
+The line continuation character is `\ `.
 }
 
 
