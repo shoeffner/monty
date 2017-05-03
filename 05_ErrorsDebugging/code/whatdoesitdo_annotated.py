@@ -38,7 +38,7 @@ def read_database():
 def read_records(conditions):
     persons = read_database()
     # @shoeffner: Missing :
-    if '*' in conditions :
+    if '*' in conditions:
         # @shoeffner: break is wrong, must be return
         break persons
     for condition in conditions:

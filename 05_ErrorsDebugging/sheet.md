@@ -24,6 +24,14 @@ d) Make sure everything is properly indented. Be sure to also
     - correct any potential white space conventions Sebastian disobeyed.
     - ensure enough blank lines between functions and import statements.
 
+*Hints*:
+
+- There are about 20 errors in the script, depending on how you count them.
+- Some are already found by spyder or when you try to run it with python.
+- Some are very subtle and hard to spot, and can only be found when you read carefully or try out the program's functionality (for which you have to correct the other errors first).
+- Try to get it to run first, then search for logical mistakes.
+- It's okay if you don't find all, but we expect you to get the code to run somehow.
+
 
 # Exercise 2: Reading and writing csv files
 

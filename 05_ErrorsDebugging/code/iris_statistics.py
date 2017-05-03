@@ -2,10 +2,11 @@
 Prints some statistics about the iris data set.
 """
 import csv
+import os
 import statistics
 
 
-IRIS_FILE = '05_ErrorsDebugging/code/iris.csv'
+IRIS_FILE = os.path.join('05_ErrorsDebugging', 'code', 'iris.csv')
 SEPAL_LENGTH = 'sepal length in cm'
 SEPAL_WIDTH = 'sepal width in cm'
 PETAL_LENGTH = 'petal length in cm'
@@ -132,8 +133,8 @@ def test():
 
     assert mean(testlist0) - 5 <= 1e-6, mean(testlist0)
     assert mean(testlist1) - 3.5 <= 1e-6, mean(testlist1)
-    assert mean(testlist2) - 21/6 <= 1e-6, mean(testlist2)
-    assert mean(testlist3) - 29/7 <= 1e-6, mean(testlist3)
+    assert mean(testlist2) - 21 / 6 <= 1e-6, mean(testlist2)
+    assert mean(testlist3) - 29 / 7 <= 1e-6, mean(testlist3)
 
     assert median(testlist0) == 3, median(testlist0)
     assert median(testlist1) - 3.5 <= 1e-6, median(testlist1)
