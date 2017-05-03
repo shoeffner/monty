@@ -431,27 +431,188 @@ problems. Just don't forget to delete it again!
 
 ![Spyder debug controls: Run/Pause, execute next line, step in, step out, run to breakpoint, stop](img/spyder_debug_controls.png)
 
+
+# Interactive Python debugger
+
 ![Spyder breakpoint controls](img/spyder_breakpoint_controls.png)
 
 
 # Live demo
 
-```{ .python }
-def division(x, y):
-    return x / y
+\scriptsize
 
-result = 0
-for i in range(16):
-    denominator = i - 10
-    result += division(i, denominator)
-print(result)
+```{ .python file=code/debug_demo.py .exec }
+```
+
+\normalsize
+
+
+# Avoid errors: assertions
+
+Test your code!
+
+```{ .python }
+def add(a, b):
+    return a + b
+
+assert add(4, 5) == 9, 'adding 4 and 5 is not 9'
+assert add(3, 4) == 7, 'adding 3 and 4 is not 7'
+```
+
+Syntax: `assert condition, failmessage`
+
+\note{
+Use simple examples, complex examples, edge cases... test what you know is correct.
+
+If `condition` is `False`, the test fails and the assertion raises an exception, executing the `failmessage`.
+
+The fail message is optional, but it helps you to figure out, which assertion failed.
+
+Assertions are not always useful: It's not really necessary if you just import
+a file. But if you do some complex calculations, it is almost always
+beneficial. Similar to functions, get a feeling when to use them.
+}
+
+
+# Avoid errors: assertions
+
+```{ .python .exec }
+def sub(a, b):
+    return a + b
+
+assert sub(5, 4) == 1, '5 - 4 != 1'
+assert sub(7, 3) == 4, '7 - 3 != 4'
 ```
 
 
-# Assertions
+# Avoid errors: assertions
+
+```{ .python .exec }
+def sub(a, b):
+    return a - b
+
+assert sub(5, 4) == 1, '5 - 4 != 1'
+assert sub(7, 3) == 4, '7 - 3 != 4'
+```
 
 
-# Documentation
+# Avoid errors: documentation
+
+![Python 3.6 documentation](img/py36sampledocs.png)
+
+\note{
+Reading documentation will make you a better programmer, as it explains a lot
+of things.
+
+Imagine you would have to come up with all solutions yourself, or guess what
+functions do, etc.
+
+Python documentation is usually very elaborate and exhausting, so it's almost
+always worth to give it a try.
+}
+
+
+# Using documentation
+
+Of course there is a lot of documentation on the web, but take a look at this:
+
+```{ .python .exec }
+def magic():
+    """Returns a magic square of size 3x3."""
+    return [[2, 7, 6], [9, 5, 1], [4, 3, 8]]
+
+help(magic)
+```
+
+
+# Using documentation
+
+\scriptsize
+
+```{ .python .exec }
+import turtle
+
+help(turtle.up)
+```
+
+\normalsize
+
+
+# Writing documentation
+
+We will roughly follow the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#Comments).
+
+There are others, e.g.
+[Scipy](https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt#docstring-standard)
+and [Python](https://docs.python.org/devguide/documenting.html) styles, but we
+use this.
+
+\note{
+It really does not matter much what you pick, as long as you are consistent
+throughout a project.
+
+I recommend the Google style because it has the least amount of visual clutter in your code.
+
+I hope to discuss how to build beautiful documentation like the Python docs in
+a few weeks, the latest when we do the project work.
+}
+
+
+# Writing documentation example
+
+```{ .python }
+def add(left, right):
+    """Returns the sum of left and right.
+
+    Args:
+        left: The left operand.
+        right: The right operand.
+
+    Returns:
+        The sum of left and right.
+    """
+    return left + right
+```
+
+
+# Writing documentation explanation
+
+\scriptsize
+
+```{ .python }
+def difficult_function(argument, other_arg=None):
+    """Concise description.
+
+    Longer description (if concise is not enough)
+    which might need multiple lines.
+
+    Or even some paragraphs.
+
+    Args:
+        argument: A description of this argument.
+        other_arg: Another description.
+
+    Returns:
+        A short summary of what is returned,
+        especially its format.
+
+    Raises:
+        ValueError: When does this occur?
+    """
+    pass
+```
+
+\normalsize
+
+\note{
+You may omit sections (e.g. Args or Returns) if they are irrelevant for you
+function (not all functions raise nor do all have args).
+
+You can find some documentation in the homework solutions of last week.
+
+More example on how to write it (even for features we have not and will not cover):
+[http://www.sphinx-doc.org/en/stable/ext/example_google.html](http://www.sphinx-doc.org/en/stable/ext/example_google.html)
+}
 
 
 # Your fifth homework
