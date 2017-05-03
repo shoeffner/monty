@@ -622,7 +622,10 @@ More example on how to write it (even for features we have not and will not cove
 
 - From now on: Always document your code!
 
+
 # The last slide
 
 ![how I got better at debugging [@evans2016]](http://jvns.ca/images/drawings/better-debugging.png)
 
+
+# References
