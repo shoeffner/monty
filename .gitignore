@@ -6,5 +6,6 @@ _site/
 .sass-cache/
 .jekyll-metadata
 00_T*
+05_*/code/*
 output
 submissions
