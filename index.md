@@ -33,7 +33,7 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Solution](files/BPP-04_CollectionsFileIO-Solution.pdf)
     - [Solution code](files/BPP-04_CollectionsFileIO-Solution.zip)
 
-5. Handling Errors and Debugging
+5. Handling Errors and Debugging ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=fd9cd234-5969-4c11-8fb8-3dfb52736207))
     - [Lecture slides](files/BPP-05_ErrorsDebugging.pdf)
     - [Lecture code](files/BPP-05_ErrorsDebugging.zip)
     - [Homework sheet](files/BPP-05_ErrorsDebugging-Sheet.pdf)
