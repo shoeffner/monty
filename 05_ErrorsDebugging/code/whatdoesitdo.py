@@ -125,12 +125,12 @@ def main():
 def fill_with_example_data():
     """Writes example data into the database."""
     records = [
-        {NAME: 'Graham Chapman', AGE: 48, HEIGHT: 1.88},
-        {NAME: 'John Cleese', AGE: 77, HEIGHT: 1.96},
-        {NAME: 'Terry Gilliam', AGE: 76, HEIGHT: 1.75},
-        {NAME: 'Eric Idle', AGE: 74, HEIGHT: 1.85},
-        {NAME: 'Terry Jones', AGE: 75, HEIGHT: 1.73},
-        {NAME: 'Michael Palin', AGE: 73, HEIGHT: 1.78}
+        {NAME: 'Graham', AGE: 48, HEIGHT: 1.88},
+        {NAME: 'John', AGE: 77, HEIGHT: 1.96},
+        {NAME: 'Terry', AGE: 76, HEIGHT: 1.75},
+        {NAME: 'Eric', AGE: 74, HEIGHT: 1.85},
+        {NAME: 'Terry', AGE: 75, HEIGHT: 1.73},
+        {NAME: 'Michael', AGE: 73, HEIGHT: 1.78}
     ]
     for record in records:
         write_record(record)
