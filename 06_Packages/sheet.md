@@ -1,4 +1,4 @@
-% Exercise Sheet 06 -- Applied Data Science I
+% Exercise Sheet 06 -- Python Packages
 
 # Submission
 

@@ -21,17 +21,17 @@ Week of         Name                                Topics
 
 2017-05-01      Errors and Debugging                try/except; Error types; Spyder's debugging functions; Documentation and style; Tests
 
-2017-05-08      Applied Data Science I              Simple data analyses: mean, median, mode, percentiles; plotting
+2017-05-08      Python Packages                     Using other packages; Complex programs; Python modules
 
 2017-05-15      Object Oriented Programming         Classes and Instances
 
 2017-05-22      Applied Computer Science I          Text and math to code; Abstract data types; Data processing; Python Standard Library
 
-2017-05-29      Applied Data Science II             More data analyses
+2017-05-29      Applied Data Science I              Simple data analyses: mean, median, mode, percentiles; plotting
 
 2017-06-05      Algorithmic Complexity              Big-O Notation
 
-2017-06-12      Python Packages                     Using other packages; Complex programs
+2017-06-12      Applied Data Science II             More data analyses
 
 2017-06-19      Project week 1                      Projects can be e.g. vocabulary trainers, simple games, esoteric language interpreters, image processing, applications from other subjects, ....
 
