@@ -20,7 +20,7 @@ Even though it was announced off the record last week: We will not use
 
 Agenda for today:
 
-- Two algorithms
+- Two algorithms (Euclidean algorithm and magic square)
 - Python packages and modules
 
 \note{
@@ -35,13 +35,14 @@ use Python for future projects.
 }
 
 
-# Euclid's algorithm
+# Euclidean algorithm
 
 Given two natural numbers, find their greatest common divisor.
 
-# TODO
 
-# TODO: Strassen?
+# Magic algorithm
+
+
 
 # Organizing code
 
@@ -228,11 +229,7 @@ Consider the following directory tree:
 .3 example.data.
 }
 
-It is possible to `import`:
-
-- `import lecture`. Allows accessing e.g. `lecture.reader.read_data(filename)`.
-- `import lecture.reader`. Behaves similar to the above, but excludes the printer.
-
+It is possible to `import lecture.reader`.
 However, `lecture.printer` does not work! It uses `import reader`.
 
 \note{
@@ -247,7 +244,6 @@ A directory can also be a module if it contains proper Python files, just as `le
 \scriptsize
 
 ```{ .python .exec wd=06_Packages/code }
-import lecture
 import lecture.reader
 import lecture.printer
 ```
@@ -274,6 +270,31 @@ The `statistics` modules contains, who would have thought, statistics functions.
 The `os` module contains a lot of functions handling information from the
 operating system (OS). For some parts there is so much (e.g. path handling)
 that it even has some submodules (`os.path`).
+}
+
+
+# `__init__.py`
+
+To `import lecture` we can add `__init__.py`:
+\dirtree{%
+.1 wd.
+.2 lecture.
+.3 \textunderscore{}\textunderscore{}init\textunderscore{}\textunderscore{}.py.
+.3 reader.py.
+.3 printer.py.
+}
+
+```{ .python }
+import lecture.reader
+import lecture.printer
+```
+
+\note{
+We are not able to `import lecture` to gain access to `lecture.reader` or
+`lecture.printer`. But for the `os` package this was possible!
+
+If we want to do it properly, we also have to change the `import` statement in
+`printer.py`. (But we might have done so anyway two slides ago.)
 }
 
 
@@ -393,39 +414,16 @@ We will mostly work with the core library, as it already has many cool things.
 }
 
 
-# `__init__.py`
-
-While reading up about packages and modules yourself, you might stumble across the `__init__.py`.
-
-It has mainly two purposes:
-
-- hint for Python: this is a package/module!
-- gets executed when the directory is imported
-- handles some specifics about the `from ... import *` (defines what `*` actually imports)
-
-\dirtree{%
-.1 mypackage.
-.2 \textunderscore{}\textunderscore{}init\textunderscore{}\textunderscore{}.py.
-.2 mymodule.py.
-.2 mysubmodule.
-.3 \textunderscore{}\textunderscore{}init\textunderscore{}\textunderscore{}.py.
-.3 myothermodule.py.
-}
-
-
 # Your sixth homework
 
-- Perform a matrix multiplication using the divide and conquer algorithm.
-- Write a math package which has modules for each, vector and matrix calculations.
-- Write your own `help` function.
+- Solve a maze by backtracking.
 
 \dirtree{%
 .1 hw6.
-.2 ndmath.
-.3 vector.py.
-.3 matrix.py.
-.2 calculator.py.
-.2 helper.py.
+.2 mazesolver.
+.3 io.py.
+.3 solver.py.
+.2 solve\textunderscore{}maze.py.
 }
 
 
