@@ -38,6 +38,14 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Lecture code](files/BPP-05_ErrorsDebugging.zip)
     - [Homework sheet](files/BPP-05_ErrorsDebugging-Sheet.pdf)
     - [Homework code](files/BPP-05_ErrorsDebugging-Sheet.zip)
+    - [Solution](files/BPP-05_ErrorsDebugging-Solution.pdf)
+    - [Solution code](files/BPP-05_ErrorsDebugging-Solution.zip)
+
+6. Python Packages
+    - [Lecture slides](files/BPP-06_Packages.pdf)
+    - [Lecture code](files/BPP-06_Packages.zip)
+    - [Homework sheet](files/BPP-06_Packages-Sheet.pdf)
+    - [Homework code](files/BPP-06_Packages-Sheet.zip)
 
 Unfortunately there is no recording of the first session available.
 
