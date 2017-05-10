@@ -58,6 +58,7 @@ Given two natural numbers, find their greatest common divisor[^gcd].
 It's a simple task for e.g. 12 and 8:
 
 $12 = 12 \cdot 1 = 6 \cdot 2 = 4 \cdot 3 = 3 \cdot 2 \cdot 2$
+
 $8 = 8 \cdot 1 = 4 \cdot 2 = 2 \cdot 2 \cdot 2$
 
 \begin{align}\text{gcd}(12, 8) &= \max\left(\left\{12, 6, 4, 3, 2, 1\right\} \cap \left\{8, 4, 2, 1\right\}\right) \\
