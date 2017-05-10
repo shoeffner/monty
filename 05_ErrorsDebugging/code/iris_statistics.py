@@ -6,7 +6,7 @@ import os
 import statistics
 
 
-IRIS_FILE = os.path.join('05_ErrorsDebugging', 'code', 'iris.csv')
+IRIS_FILE = 'iris.csv'
 SEPAL_LENGTH = 'sepal length in cm'
 SEPAL_WIDTH = 'sepal width in cm'
 PETAL_LENGTH = 'petal length in cm'

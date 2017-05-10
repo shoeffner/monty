@@ -5,23 +5,23 @@
 
 Here are some annotations about what is wrong.
 
-```{ .python file=code/whatdoesitdo_annotated.py }
+```{ .python file=code/whatdoesitdo_annotated.py wd=05_ErrorsDebugging/code }
 ```
 
 And some possible corrections and documentation comments.
 
-```{ .python file=code/people_database.py }
+```{ .python file=code/people_database.py wd=05_ErrorsDebugging/code }
 ```
 
 
 # Exercise 2: Reading and writing csv files
 
-```{ .python file=code/iris_correction.py }
+```{ .python file=code/iris_correction.py wd=05_ErrorsDebugging/code }
 ```
 
 For the statistics you could either build your own solution (and add `assert`s)
 or use the `statistics` module.
 We added both solutions into our example.
 
-```{ .python .exec file=code/iris_statistics.py }
+```{ .python .exec file=code/iris_statistics.py wd=05_ErrorsDebugging/code }
 ```
