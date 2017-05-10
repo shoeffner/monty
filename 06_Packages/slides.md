@@ -7,6 +7,22 @@
 - Usually complex code can't be read "from top to bottom"
 
 
+# Writing files without simply dumbing the data structures
+
+- Don't just `print([1, 2, 3], file=somefile)`!
+- Often libraries (like the `csv` or `json` packages) are better
+- Sometimes it's still enough to write a custom solution.
+- Be careful of line endings. In general Python handles them correctly if you
+  just use `\n`, no matter the OS.
+
+\scriptsize
+
+```{ .python file=05_ErrorsDebugging/code/iris_correction.py }
+```
+
+\normalsize
+
+
 # Try things out
 
 Download the files accompanying the lecture slides to follow along today.
@@ -37,12 +53,214 @@ use Python for future projects.
 
 # Euclidean algorithm
 
-Given two natural numbers, find their greatest common divisor.
+Given two natural numbers, find their greatest common divisor[^gcd].
+
+It's a simple task for e.g. 12 and 8:
+
+$12 = 12 \cdot 1 = 6 \cdot 2 = 4 \cdot 3 = 3 \cdot 2 \cdot 2$
+$8 = 8 \cdot 1 = 4 \cdot 2 = 2 \cdot 2 \cdot 2$
+
+\begin{align}\text{gcd}(12, 8) &= \max\left(\left\{12, 6, 4, 3, 2, 1\right\} \cap \left\{8, 4, 2, 1\right\}\right) \\
+                               &= \max\left\{4, 2, 1\right\}\\
+                               &= 4\end{align}
+
+Let's try it for 2329 and 2091.
+
+[^gcd]: That is the number which divides both numbers and without remainder, i.e. if $\text{gcd}(a, b) = c$ then $c$ is the maximum value for which holds that $a \mod c = 0$ and $b \mod c = 0$.
 
 
-# Magic algorithm
+# Euclidean algorithm
+
+It's tedious for big numbers to write down all factorizations and compare the sets.
+
+Euclid had a nice idea which can be summarized as follows:
+
+> To find the greatest common divisor (gcd) of two integers, $a$ and $b$, find
+> out which one is smaller. Then subtract it from the other one as long as the
+> result will be greater than 0. Swap the numbers, as now the other one will be
+> smaller and do the same. Continue until you reach 0: the remaining number is
+> the gcd.
 
 
+# Euclidean algorithm
+
+1. $a = 2329, b = 2091$
+2. Since $a > b$: $a - b = 2329 - 2091 = 238$. Repeat but use $2091$ and $238$ now.
+3. $2091 > 238$: $2091 - 238 = 1851$. Keep going: $1851 - 238 = 1615$. Shortcut: $2091 - (8 \cdot 238) = 187$.
+4. $238 > 187$: $238 - 187 = 51$
+5. $187 > 51$: $187 - (3 \cdot 51) = 34$
+6. $51 - 34 = 17$
+7. $34 - 17 = 17$ !
+8. Since $17 = 17$, the result is: $17$
+
+
+# Euclidean algorithm
+
+```{ .python .exec }
+def gcd(a, b):
+    while a != b:
+        if a > b:
+            a -= b
+        else:
+            a, b = b, a
+    return a
+
+print(gcd(2329, 2091))
+```
+
+\note{
+Do you notice that subtracting $b$ again and again until it would fall below $0$ is nothing else but taking the modulo? Maybe we can improve on that.
+}
+
+
+# Euclidean algorithm
+
+```{ .python .exec }
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+print(gcd(2329, 2091))
+```
+
+\note{
+`a, b = b, a` is a nice Python feature to swap values.
+}
+
+
+# Euclidean algorithm -- recursive
+
+\tiny
+
+```{ .python .exec }
+def gcd(a, b):
+    if b != 0:
+        return gcd(b, a % b)
+    return a
+
+print(gcd(2329, 2091))
+```
+
+```{ .python .exec }
+def gcd(a, b):
+    return a if not b else gcd(b, a % b)
+
+print(gcd(2329, 2091))
+```
+
+\normalsize
+
+\note{
+Do you remember that `0` is evaluated to `False` in Python? So `not b` is essentially the same as `b == 0`.
+
+`a if condition else b` is a conditional expression and evaluates to `a` if the `condition` is `True`, otherwise it becomes `b`. Although it only describes the type of operator *ternary operator* is often used when talking about this specific form of conditional expression.
+}
+
+
+# Magic squares
+
+This is a magic square of order $n = 3$:
+
+\begin{center}$\begin{pmatrix} 8 & 1 & 6 \\ 3 & 5 & 7 \\ 4 & 9 & 2 \end{pmatrix}$\end{center}
+
+It uses exactly all numbers from $1$ to $n^2$, where $n \times n$ is the size of the square.
+
+All rows, columns and the main diagonals sum up to the same value ($15$).
+
+
+# Magic squares
+
+We can follow a nice algorithm to construct one for odd orders (i.e. $n = 1$, $n = 3$, ...):
+
+\small
+
+```{ .changelog }
+1. Write a $1$ into the middle of the first row.
+   That space is now the current space.
+2. Test if the upper right neighbor is empty.
+    3. If it is: write the next number into that space.
+       That space is now the current space.
+    4. If it is not: test if the bottom neighbor is empty.
+        5. If it is: write next number into that space.
+           That space is now the current space.
+        6. If it is not: You are done.
+7. Continue with step 2.
+```
+
+\normalsize
+
+
+# Magic squares
+
+\scriptsize
+
+```{ .python file=06_Packages/code/lecture/magicsquare.py }
+```
+
+\normalsize
+
+
+# Backtracking
+
+Another way to solve the magic square is backtracking.
+
+Backtracking is a general programming pattern or idiom:
+
+\small
+
+```{ .changelog }
+while the problem is not solved:
+    for all possible moves:
+        if legal move:
+            for all possible changes:
+                try a change
+                call the function recursively
+                if call was successful:
+                    return True
+                else:
+                    reset the change
+    return False
+```
+
+\normalsize
+
+\note{
+It can be applied to many problems: Sudoku solving, mazes (see exercise sheet),
+N-queens, ...
+}
+
+
+# Magic squares with backtracking
+
+\scriptsize
+
+```{ .python }
+def magic(square, position, number=1):
+    if solved(square):
+        return True
+    for yoff, xoff in [(-1, 1), (1, 0)]:
+        y = (position[0] + yoff) % len(square)
+        x = (position[1] + xoff) % len(square[0])
+        if square[y][x] == 0:
+            square[y][x] = number + 1
+            if magic(square, (y, x), number + 1):
+                return True
+            else:
+                square[y][x] = 0
+    return False
+```
+
+\normalsize
+
+\note{
+Even though this code is much longer than the solution before, I chose it as an easy
+to follow example for backtracking.
+
+Note that the initialization now needs to already put the 1 into the first position.
+
+For a complete example, take a look at the accompanying `magicsquare_bt.py`.
+}
 
 # Organizing code
 

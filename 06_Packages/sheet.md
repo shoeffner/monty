@@ -42,7 +42,7 @@ Your task is to finish these three files such that the file `solve_maze.py` solv
 - `mazesolver/__init__.py`
 
 
-You can find `# TODO instructions` in those files where you need to change the code. Note that the BONUS task (`store_maze`) is **not** necessary.
+You can find `# TODO instructions` in those files where you need to change the code. Note that the `BONUS` task (`store_maze`) is **not** necessary. Four non-bonus `TODO`s can be found, one of them in `io.py` and `__init__.py` each, two in `solver.py`. The bonus `TODO` is inside `io.py` but requires a change in `solve_maze.py` as well.
 
 There are several mazes in the `mazes` directory. They are simple text files where the maze is layouts as a grid of numbers. Each number represents a type of field. The field types are:
 
