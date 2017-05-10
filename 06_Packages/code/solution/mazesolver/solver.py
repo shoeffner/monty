@@ -1,3 +1,6 @@
+"""This module handles the maze solving."""
+
+
 def solve_maze(maze, y, x):
     """Solves a maze recursively.
 

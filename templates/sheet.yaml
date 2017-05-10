@@ -1,4 +1,6 @@
 ---
+header-includes:
+    - \usepackage{dirtree}
 panflute-path: 'templates/filters'
 panflute-filters:
     - pandoc-img-glob

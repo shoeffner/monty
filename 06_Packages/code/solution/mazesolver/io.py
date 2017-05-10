@@ -1,3 +1,10 @@
+"""This module handles the mazesolver's input and output.
+
+Mainly this means printing to the terminal and reading the
+starting configurations.
+"""
+
+
 import sys
 
 
@@ -56,7 +63,8 @@ def store_maze(maze, filename):
     The maze is stored in the same layout as described in load_maze(filename).
 
     Args:
-        A maze as lists of lists.
+        maze: A maze as lists of lists.
+        filename: The file to store the maze in.
     """
     with open(filename, 'w') as maze_file:
         print_maze(maze, maze_file)

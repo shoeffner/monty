@@ -429,7 +429,7 @@ We will mostly work with the core library, as it already has many cool things.
 
 # The last slide
 
-![Parser-tongue Harry [@sawyer2014]](https://pbs.twimg.com/media/ByZVWXgIIAA5Y2D.png)
+![Sally Forth [@marciuliano2013]](https://safr.kingfeatures.com/idn/cnfeed/zone/js/content.php?file=aHR0cDovL3NhZnIua2luZ2ZlYXR1cmVzLmNvbS9TYWxseUZvcnRoLzIwMTMvMTAvU2FsbHlfRm9ydGguMjAxMzEwMjRfOTAwLmdpZg==)
 
 
 # References

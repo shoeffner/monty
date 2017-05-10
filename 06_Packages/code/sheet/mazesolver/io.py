@@ -1,4 +1,8 @@
-import sys
+"""This module handles the mazesolver's input and output.
+
+Mainly this means printing to the terminal and reading the
+starting configurations.
+"""
 
 
 def load_maze(filename):
@@ -40,15 +44,14 @@ def load_maze(filename):
     return maze
 
 
-def print_maze(maze, file=sys.stdout):
-    """Prints the maze to the file.
+def print_maze(maze):
+    """Prints the maze.
 
     Args:
         maze: The maze to print.
-        file: The file to print to, defaults to sys.stdout.
     """
     for row in maze:
-        print(' '.join([str(v) for v in row]), file=file)
+        print(' '.join([str(v) for v in row]))
 
 
 def store_maze(maze, filename):
@@ -57,7 +60,8 @@ def store_maze(maze, filename):
     The maze is stored in the same layout as described in load_maze(filename).
 
     Args:
-        A maze as lists of lists.
+        maze: A maze as lists of lists.
+        filename: The file to store the maze in.
     """
-    with open(filename, 'w') as maze_file:
-        print_maze(maze, maze_file)
+    # TODO: BONUS: Write the solved maze to a file.
+    pass
