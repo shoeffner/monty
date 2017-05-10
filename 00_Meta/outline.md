@@ -17,7 +17,7 @@ Week of         Name                                Topics
 
 2017-04-17      `True` or `False`?                  Boolean variables; Comparisons; `If`/`Elif`/`Else`; Control Flow: `While`/`For`
 
-2017-04-24      Collections and File I/O            Reading and writing files; JSON/csv; Lists/Dictionaries
+2017-04-24      Collections and File I/O            Reading and writing files; Lists/Dictionaries/Tuples/Sets
 
 2017-05-01      Errors and Debugging                try/except; Error types; Spyder's debugging functions; Documentation and style; Tests
 
