@@ -41,7 +41,7 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Solution](files/BPP-05_ErrorsDebugging-Solution.pdf)
     - [Solution code](files/BPP-05_ErrorsDebugging-Solution.zip)
 
-6. Python Packages
+6. Python Packages ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=fb67ee18-5866-4965-a81c-429e18824ed8))
     - [Lecture slides](files/BPP-06_Packages.pdf)
     - [Lecture code](files/BPP-06_Packages.zip)
     - [Homework sheet](files/BPP-06_Packages-Sheet.pdf)
