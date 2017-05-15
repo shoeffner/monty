@@ -1,5 +1,13 @@
 % Exercise Sheet 06 Solutions -- Python Packages
 
 
-# Exercise 1:
+# Exercise 1: Sorting Bond movies
+
+```{ .python .exec wd=07_SortingOOP/code/sheet file=07_SortingOOP/code/solution/movies.py }
+```
+
+# Exercise 2: Castles crashed... again!
+
+```{ .python .exec file=07_SortingOOP/code/solution/knights.py }
+```
 
