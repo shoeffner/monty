@@ -4,10 +4,14 @@
 # Homework issues
 
 - `__init__.py` is executed whenever you import that containing directory
-- `import mazesolver.io` could have also been `from . import io`, as it is
-  slightly more flexible. I updated the solutions accordingly.
+- `import mazesolver.io` could have also been
+    ```python
+    from . import io
+    ```
+  , as it is slightly more flexible. We updated the solutions accordingly.
 
-\note{`from . import io` means: "From the directory the current module is in (`__init__.py`'s directory) import the module `io` (here `io.py`)"}
+\note{`from . import io` means: "From the directory the current module is in
+(`__init__.py`'s directory) import the module `io` (here `io.py`)"}
 
 
 # Homework issues: Values and references
@@ -42,6 +46,23 @@ my_other_list[2] = 1  # changes BOTH lists
 print(my_other_list)
 print(my_list)
 ```
+
+
+# Homework issues: The given code is not set in stone
+
+- When there's something like:
+    ```{ .python }
+    maze = [[]]
+    return maze
+    ```
+  then it is mostly for syntactic purposes. Just change it, even if the `TODO`
+  comes after.
+- Same goes for `pass`.
+
+\note{
+`pass` is a `NOOP`, a "**No Op**eration" statement. Its only purpose is to make
+unfinished code syntactically correct.
+}
 
 
 # Sorting
