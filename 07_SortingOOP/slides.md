@@ -67,7 +67,18 @@ unfinished code syntactically correct.
 
 # Sorting
 
-# TODO: Sort example
+Why do we need to sort data?
+
+- Searching is easier.
+- Data is easier to understand.
+- Rankings can be performed.
+- ...
+
+
+# Sort example
+
+![Wikipedia's List of Bond Movies](img/bondmovies.png){ height=240px }
+
 
 # Bubble sort interactive
 
@@ -79,6 +90,17 @@ unfinished code syntactically correct.
 ```{ .python .exec }
 bubblelist = [3, 0, 1, 8, 7, 2, 5, 4, 6, 9]
 ```
+
+
+# Bubble sort
+
+\scriptsize
+
+```{ .python .exec file=07_SortingOOP/code/bubblesort.py}
+```
+
+\normalsize
+
 
 # The last slide
 
