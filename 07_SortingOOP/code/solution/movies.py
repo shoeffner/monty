@@ -35,10 +35,10 @@ def movie_sort(movies, key=lambda movie: movie.year):
     swapped = True
     while swapped:
         swapped = False
-        for i, movie in enumerate(sorted_movies[:-1]):
-            if key(movie) > key(sorted_movies[i + 1]):
-                sorted_movies[i], sorted_movies[i + 1] = \
-                    sorted_movies[i + 1], sorted_movies[i]
+        for i in range(len(sorted_movies[1:])):
+            if key(sorted_movies[i - 1]) > key(sorted_movies[i]):
+                sorted_movies[i], sorted_movies[i - 1] = \
+                    sorted_movies[i - 1], sorted_movies[i]
                 swapped = True
     return sorted_movies
 
