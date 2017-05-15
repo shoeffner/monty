@@ -1,4 +1,4 @@
-% Exercise Sheet 06 Solutions -- Python Packages
+% Exercise Sheet 06 Solutions -- Sorting and Object Oriented Programming
 
 
 # Exercise 1: Sorting Bond movies
