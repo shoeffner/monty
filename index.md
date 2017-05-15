@@ -47,6 +47,11 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Homework sheet](files/BPP-06_Packages-Sheet.pdf)
     - [Homework code](files/BPP-06_Packages-Sheet.zip)
 
+7. Sorting and Object Oriented Programming
+    - [Homework sheet](files/BPP-07_SortingOOP-Sheet.pdf)
+    - [Homework code](files/BPP-07_SortingOOP-Sheet.zip)
+
+
 Unfortunately there is no recording of the first session available.
 
 *Note:* Once the class is done, we will make the source files available as well
