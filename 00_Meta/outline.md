@@ -23,9 +23,9 @@ Week of         Name                                Topics
 
 2017-05-08      Python Packages                     Using other packages; Complex programs; Python modules
 
-2017-05-15      Object Oriented Programming         Classes and Instances
+2017-05-15      Sorting and OOP                     Sorting; Classes and Instances
 
-2017-05-22      Applied Computer Science I          Text and math to code; Abstract data types; Data processing; Python Standard Library
+2017-05-22      Practical Python                    Built-ins; Python Standard Library; Abstract data types
 
 2017-05-29      Applied Data Science I              Simple data analyses: mean, median, mode, percentiles; plotting
 
