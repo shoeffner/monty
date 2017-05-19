@@ -46,11 +46,13 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Lecture code](files/BPP-06_Packages.zip)
     - [Homework sheet](files/BPP-06_Packages-Sheet.pdf)
     - [Homework code](files/BPP-06_Packages-Sheet.zip)
+    - [Solution](files/BPP-06_Packages-Solution.pdf)
+    - [Solution code](files/BPP-06_Packages-Solution.zip)
 
-7. Sorting and Object Oriented Programming
+7. Sorting and Object Oriented Programming ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=fd2c9873-dce6-467c-94a2-fb90f457c914) (No beamer recording available))
     - [Homework sheet](files/BPP-07_SortingOOP-Sheet.pdf)
     - [Homework code](files/BPP-07_SortingOOP-Sheet.zip)
-
+    - [Lecture slides](files/BPP-07_SortingOOP.pdf)
 
 Unfortunately there is no recording of the first session available.
 
