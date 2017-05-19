@@ -21,7 +21,28 @@ class Movie:
         return self.revenue - self.budget
 
 
-def movie_sort(movies, key=lambda movie: movie.year):
+def movie_sort(movies):
+    """Sorts a list of movies by their release date using bubble sort.
+
+    Args:
+        movies: a list of movies.
+
+    Returns:
+        A sorted list of movies.
+    """
+    sorted_movies = movies.copy()
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(1, len(sorted_movies[1:])):
+            if sorted_movies[i - 1].year > sorted_movies[i].year:
+                sorted_movies[i], sorted_movies[i - 1] = \
+                    sorted_movies[i - 1], sorted_movies[i]
+                swapped = True
+    return sorted_movies
+
+
+def movie_sort_bonus(movies, key=lambda movie: movie.year):
     """Sorts a list of movies by their release date using bubble sort.
 
     Args:
@@ -84,11 +105,12 @@ def bonus(movies):
             """Flips first and last name of an actor."""
             return ' '.join(movie.actor.split(' ')[::-1])
 
-        sorted_by_actor = movie_sort(movies, key=actor_selector)
+        sorted_by_actor = movie_sort_bonus(movies, key=actor_selector)
         print('\nSorted list (by actor, first 10):')
         print_movies(sorted_by_actor[:10])
 
-        sorted_by_income = movie_sort(movies, key=lambda movie: movie.income())
+        sorted_by_income = movie_sort_bonus(movies,
+                                            key=lambda movie: movie.income())
         print('\nSorted list (by income, first 10):')
         print_movies(sorted_by_income[:10])
     except TypeError:
