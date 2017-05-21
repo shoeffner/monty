@@ -2,12 +2,12 @@ class Movie:
     """A movie contains a title, a release year, an actor, budget and revenue.
     """
 
-    def __init__(self, title, year, actor, budget, revenue):
+    def __init__(self, title, year, actor, revenue, budget):
         self.title = title
         self.year = year
         self.actor = actor
-        self.budget = budget
         self.revenue = revenue
+        self.budget = budget
 
     def __str__(self):
         return self.title + ' (' + str(self.year) + ', ' + self.actor + ')'
