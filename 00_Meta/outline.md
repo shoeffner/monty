@@ -27,11 +27,11 @@ Week of         Name                                Topics
 
 2017-05-22      Practical Python                    Built-ins; Python Standard Library; Abstract data types
 
-2017-05-29      Applied Data Science I              Simple data analyses: mean, median, mode, percentiles; plotting
+2017-05-29      Errors and FSMs                     try/except/raise, finite state machines, regex
 
-2017-06-05      Algorithmic Complexity              Big-O Notation
+2017-06-05      tba
 
-2017-06-12      Applied Data Science II             More data analyses
+2017-06-12      tba
 
 2017-06-19      Project week 1                      Projects can be e.g. vocabulary trainers, simple games, esoteric language interpreters, image processing, applications from other subjects, ....
 
