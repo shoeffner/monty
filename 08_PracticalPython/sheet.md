@@ -26,19 +26,7 @@ Name your file `manyways.py`.
    and 3. `[2, 3, 4, 3, ..., 6]`.
 
 
-# Exercise 2: Calculator
-
-This week you learned that we can pass around functions to call them. You can
-also store them in a dictionary:
-
-```{ .python }
-my_functions = {
-    'add': lambda x, y: x + y,
-}
-```
-
-
-## Passing functions
+# Exercise 2: Passing functions
 
 In the previous exercise you already passed functions to e.g. `map`. There are several other functions in the Python library which expect functions, for example the `sorted` function.
 
