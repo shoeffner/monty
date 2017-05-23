@@ -28,6 +28,8 @@ Name your file `manyways.py`.
 4. Create a list which contains the sums of all pair-wise permutations of 1, 2,
    and 3. `[2, 3, 4, 3, ..., 6]`.
 
+*Note*: To use `string.ascii_lowercase`, you need to import `string`.
+
 
 # Exercise 2: Passing functions
 
