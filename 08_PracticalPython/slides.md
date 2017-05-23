@@ -66,17 +66,49 @@ print(cars)
 
 # Homework issues: x is not `callable`
 
-TODO
+A variable is callable if it is for example a function:
 
+```{ .python .exec }
+number = 5
+fun = sum
+class Car:
+    pass
+
+print('number is callable:', callable(number))
+print('fun is callable:', callable(fun))
+print('Car is callable:', callable(Car))
+```
+
+Why is `Car` callable?
+
+\note{
+`Car` is callable since calling a class (`Car()`) is creating a new instance.
+}
 
 # Homework issues: `*` (tuple unpacking)
 
-TODO
+```{ .python .exec }
+def add(a, b):
+    return a + b
+
+print(add(*[1, 2]))
+```
+
+`add(*[1, 2])` is equivalent to `add(1, 2)` -- Python "unpacks" the values into
+each function argument.
 
 
 # General questions: `if __name__ == '__main__':`
 
-TODO
+- Modules have `__name__`s, the one you run `__main__`, others their file or
+  directory names (without `.py`).
+- `import` executes files
+- To avoid random prints etc. on import, "secure" your code in `if` block:
+    * `if __name__ == '__main__':`
+- For extra karma you can put every code in that block into a function (usually `main`):
+    * `def main():`
+    * Call `main` inside the `if` block
+    * This avoids global scope *pollution*
 
 
 # Find the lowest number
@@ -209,20 +241,177 @@ use a key function. Now we will shed some light into it.
 
 # Passing functions around
 
+\scriptsize
+
+```{ .python .exec }
+def shout():
+    print('HELLO!')
+
+def whisper():
+    print('hello...')
+
+def do_something(what):
+    what()
+
+do_something(whisper)
+do_something(shout)
+```
+
+\normalsize
+
+\note{
+Python always passes by *object reference*. For some objects, those which are
+mutable, this means that we get references to those objects which we can use
+and modify. For others, like integers and strings (which are immutable) they
+get copied themselves.
+}
+
+
+# Mutable objects
+
+```{ .python .exec }
+def mutate(some_list):
+    some_list.append(1)
+
+my_list = []
+mutate(my_list)
+mutate(my_list)
+print(my_list)
+```
+
+
+# No reassignment possible
+
+```{ .python .exec }
+def cantreassign(some_list)
+    some_list = [1, 2, 3]
+
+my_list = []
+cantreassign(my_list)
+print(my_list)
+```
+
+
+# Using function objects: `map` and `filter`
+
+Python has two interesting functions: `map` and `filter`
+
+Both take two arguments: A function, and an iterable (e.g. a list, a string,
+...)
+
+
+# `map`
+
+`map` calls the passed function on each element and stores the results into
+a `map` object. This can be transformed into a list:
+
+```{ .python .exec }
+def square(x):
+    return x * x
+
+in_list = [1, 2, 3, 4, 5]
+out_list = list(map(square, in_list))
+print(out_list)
+```
+
+
+# `filter`
+
+`filter` calls the passed function on each element and stores those elements,
+for which the result is not `False`, into a `filter` object. This can be
+transformed into a list.
+
+```{ .python .exec }
+def is_even(x):
+    return not x & 1
+
+in_list = [1, 2, 3, 4, 5]
+out_list = list(filter(is_even, in_list))
+print(out_list)
+```
+
+
+# `map` and `filter`
+
+Chaining is possible (even without explicit list conversions in between):
+
+```{ .python .exec }
+def is_even(x):
+    return not x & 1
+
+def square(x):
+    return x * x
+
+in_list = [1, 2, 3, 4, 5]
+out_list = list(map(square, filter(is_even, in_list)))
+print(out_list)
+```
+
+
+# Using function objects: Comparison to lists
+
+```{ .python .exec }
+def is_even(x): return not x & 1
+
+def square(x): return x * x
+
+in_list = [1, 2, 3, 4, 5]
+out_list = list(map(square, filter(is_even, in_list)))
+# is equivalent to
+acc_list = []
+for x in in_list:
+    if is_even(x):
+        acc_list.append(square(x))
+
+print(out_list)
+print(acc_list)
+```
+
+\note{
+Don't write functions like this, I just save some space.
+}
+
+
+# Using function objects: Comparison to list comprehensions
+
+```{ .python .exec }
+def is_even(x): return not x & 1
+
+def square(x): return x * x
+
+in_list = [1, 2, 3, 4, 5]
+out_list = list(map(square, filter(is_even, in_list)))
+# is equivalent to
+acc_list = [square(x) for x in in_list if is_even(x)]
+
+print(out_list)
+print(acc_list)
+```
+
+
+\note{
+You can read up a little bit more about how to unroll list comprehensions here:
+https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
+
+Take a look at the for loop inside the for loop for a hint for the homework ;-)
+}
+
+
+# lambdas
+
 TODO
 
 
-# List comprehensions, loops, `map` and `filter`
+# `zip`
+
+One powerful and yet a little bit difficult to grasp functions is `zip`.
+
+Imagine a zipper:
 
 TODO
 
 
-# zip
-
-TODO
-
-
-# dir
+# `dir`
 
 TODO
 
