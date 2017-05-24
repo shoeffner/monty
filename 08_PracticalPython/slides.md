@@ -48,6 +48,8 @@ Here, the object is a list! The list's `__str__` function calls its elements'
 
 `__repr__` should return a string which can be used to create an object which is similar:
 
+\scriptsize
+
 ```{ .python .exec }
 class Car:
     def __init__(self, color):
@@ -62,6 +64,8 @@ class Car:
 cars = [Car(c) for c in ('blue', 'red', 'yellow')]
 print(cars)
 ```
+
+\normalsize
 
 
 # Homework issues: x is not `callable`
@@ -283,7 +287,7 @@ print(my_list)
 # No reassignment possible
 
 ```{ .python .exec }
-def cantreassign(some_list)
+def cantreassign(some_list):
     some_list = [1, 2, 3]
 
 my_list = []
@@ -350,6 +354,8 @@ print(out_list)
 
 # Using function objects: Comparison to lists
 
+\scriptsize
+
 ```{ .python .exec }
 def is_even(x): return not x & 1
 
@@ -367,12 +373,16 @@ print(out_list)
 print(acc_list)
 ```
 
+\normalsize
+
 \note{
 Don't write functions like this, I just save some space.
 }
 
 
 # Using function objects: Comparison to list comprehensions
+
+\small
 
 ```{ .python .exec }
 def is_even(x): return not x & 1
@@ -388,6 +398,7 @@ print(out_list)
 print(acc_list)
 ```
 
+\normalsize
 
 \note{
 You can read up a little bit more about how to unroll list comprehensions here:
@@ -397,32 +408,194 @@ Take a look at the for loop inside the for loop for a hint for the homework ;-)
 }
 
 
-# lambdas
+# Nested functions
 
-TODO
+```{ .python .exec }
+def hello():
+    hi = 'Hello'
+    def world():
+        return 'World'
+    print(hi + world())
+
+hello()
+world()
+```
+
+\note{
+Functions are just normal variables, so it's even possible to nest them, i.e.
+having function declarations inside of function declarations.
+
+They are only available inside the scope they were declared (except for when
+you return them and use them somewhere else).
+}
+
+# Nested functions can access variables
+
+```{ .python .exec }
+def times(x0, x1):
+    def add(y):
+        return y + x1
+    result = 0
+    for i in range(x0):
+        x1 += 1
+        result = add(result)
+    return result, x1
+
+print(*times(4, 5))
+```
+
+\note{
+They can access variables inside the scope they were declared.
+
+In the example, the result is 30 and 9 because:
+
+- `range(4)` has 4 values
+- `x1` is incremented in each of the four iterations *before* doing the addition
+- `x1` thus takes the values: 6, 7, 8, 9.
+- $6 + 7 + 8 + 9 = 30$.
+}
+
+
+# You can return nested functions
+
+```{ .python .exec }
+def create_adder():
+    def adder(x, y):
+        return x + y
+    return adder
+
+my_add = create_adder()
+print(my_add(5, 7))
+```
+
+
+# Lambdas
+
+```{ .python .exec }
+add = lambda x, y: x + y
+print(add(4, 5))
+
+print((lambda x, y: x + y)(9, 3))
+```
+
+\note{
+You have seen that it's possible to pass functions around.
+
+This is cool, but sometimes you don't want them to have names and clutter your
+scope or you feel like this is not a function worth reusing much.
+
+This is where lambdas come into play: small anonymous functions.
+
+They work like normal functions but are slightly limited:
+
+- They don't have a name
+- They can only have one statement (which is automatically the return statement)
+}
+
+
+# Why nested functions and lambdas?
+
+- Nested functions and lambdas are used as simple functions for e.g. the
+  `sorted`'s `key` argument.
+- They are often used to be passed around.
+- They allow *inline* specification of functions you don't really feel worth to
+  be proper functions, e.g. adding two values or combining them into tuples.
 
 
 # `zip`
 
-One powerful and yet a little bit difficult to grasp functions is `zip`.
+One powerful functions is `zip`.
 
-Imagine a zipper:
+Often you will that you have some data which looks like this:
 
-TODO
+`[(x0, y0), (x1, y1), (x2, y2)]` or `[(x0, y0, z0), (x1, y1, z1), (x2, y2, z3)]`
+
+Or sometimes it will be separate lists:
+
+`[x0, x1, x2]`, `[y0, y1, y2]`, and `[z0, z1, z2]`.
+
+And of course, your favorite plotting library always takes it the other way.
+
+
+# `zip`
+
+```{ .python .exec }
+x = [1, 3, 5]
+y = [2, 4, 6]
+c = list(zip(x, y))
+print(c)
+
+# reverse
+x_n, y_n = zip(*c)
+print(list(x_n), list(y_n))
+```
+
+\note{
+`zip` works like a zipper. If you have to sides of a zipper `[1, 3, 5]` and
+`[2, 4, 6]` it will create pairs of those *tooth* which belong together:
+`list(zip([1, 3, 5], [2, 4, 6]))` results in `[(1, 2), (3, 4), (5, 6)]`.
+
+It is generalized to higher dimensions: If you have $n$ lists with $m$
+elements, you will get one list with $m$ tuples containing $n$ elements --
+always the matching ones. That means the `i`-th element of all $n$ lists will
+be inside the `i`-th tuple.
+
+Using tuple unpacking (twice, once to pass the arguments and once implicitly
+using the return values) you can reverse the process.
+}
+
+
+# `zip` in higher dimensions
+
+```{ .python .exec }
+x = [1, 4, 7]
+y = [2, 5, 8]
+z = [3, 6, 9]
+c = list(zip(x, y, z))
+print(c)
+
+# reverse
+x_n, y_n, z_n = zip(*c)
+print(list(x_n), list(y_n), list(z_n))
+```
 
 
 # `dir`
 
-TODO
+The `dir` function is the last built-in function we discuss today.
+It allows you to inspect attributes of an object:
 
+\scriptsize
+
+```{ .python .exec }
+from textwrap import fill
+dir_out = dir('abc')
+print(fill(', '.join(dir_out)))
+```
+
+\normalsize
+
+\note{
+While this is not really something you use in practice, it allows you to debug
+some of your programs or to get some ideas of what might be available for your
+objects.
+
+In the example you can see many functions and attributes `str` objects have.
+}
 
 
 # Your eighth homework
 
+Today we discussed the differences between
 
-# The last slide
+* `map`, `filter`, `lambda` (and other functions)
+* lists with accumulators
+* list comprehensions
 
-![](img/builtin_overview.png)
+- Implement some simple lists using all of the above methods to get an idea of
+  how to transform between them and which are more appropriate in which
+  situation.
+- Use a custom function to sort cars by their comfort.
 
 
 # References
