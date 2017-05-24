@@ -32,6 +32,8 @@ def lambdas():
 
     list3 = list(itertools.product(range(1, 4), range(1, 4)))
 
+    # alternatively, you can reuse list3:
+    # list4 = list(map(sum, list3))
     list4 = list(map(sum, itertools.product(range(1, 4), range(1, 4))))
 
     return list1, list2, list3, list4
