@@ -1,4 +1,4 @@
-% Exercise Sheet 09 -- Generators and Finite State Machines
+% Exercise Sheet 09 -- Errors and Finite State Machines
 
 # Submission
 

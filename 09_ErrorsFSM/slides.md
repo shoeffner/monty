@@ -1,4 +1,4 @@
-% Generators and Finite State Machines
+% Errors and Finite State Machines
 
 
 # Your ninth homework
