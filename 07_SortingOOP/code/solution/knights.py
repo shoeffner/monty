@@ -96,9 +96,13 @@ if __name__ == '__main__':
             # The * unpacks. Calling attack(*[red, blue]) is equivalent to
             # attack(red, blue).
             # As this was hard to read, especially with the [::1] or [::-1],
-            # we changed this to a more readable version:
-            attacker, attacked = (red, blue) if half_round & 1 else (blue, red)
-            attack(attacker, attacked)
+            # we changed this to a more readable version (which is probably
+            # better anyways:
+            if half_round & 1:
+                attack(red, blue)
+            else:
+                attack(blue, red)
+            # Original:
             # attack(*([red, blue][::1 if half_round & 1 else -1]))
         half_round += 1
 

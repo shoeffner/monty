@@ -18,6 +18,7 @@ films](https://en.wikipedia.org/wiki/List_of_James_Bond_films#Box_office_and_bud
 
 Create a class `Movie` which models a movie:
 
+- A movie has a `title`.
 - A movie has a release `year`.
 - A movie has lead `actor`.
 - A movie has a `budget` (a float, in US dollars).
