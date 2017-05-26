@@ -146,6 +146,44 @@ When writing your own programs, you will mostly have to deal with exceptions whe
 But there are other situations: Reading files, downloading data, program interruptions, ...
 
 
+# Avoiding a common exception: Combining strings and numbers
+
+A common pattern we used so far:
+
+```{ .python .exec }
+wheels = 4
+description = 'My car has ' + wheels + ' wheels.'
+print(description)
+```
+
+```{ .python .exec }
+wheels = 4
+description = 'My car has ' + str(wheels) + ' wheels.'
+print(description)
+```
+
+
+# Format strings
+
+```{ .python .exec }
+wheels = 4
+description = 'My car has {} wheels.'
+print(description.format(wheels))
+
+print('My car also has {}'.format(wheels)).
+```
+
+\note{
+TODO: explain {}
+}
+
+# Format strings are a powerful tool
+
+TODO: Actual formatting (e.g. .2f, padding, etc.)
+
+TODO: How to read the format spec
+
+
 # Paradigm shift
 
 We have now learned a huge set of tools in Python:
