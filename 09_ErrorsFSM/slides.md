@@ -150,6 +150,8 @@ But there are other situations: Reading files, downloading data, program interru
 
 A common pattern we used so far:
 
+\scriptsize
+
 ```{ .python .exec }
 wheels = 4
 description = 'My car has ' + wheels + ' wheels.'
@@ -162,6 +164,8 @@ description = 'My car has ' + str(wheels) + ' wheels.'
 print(description)
 ```
 
+\normalsize
+
 
 # Format strings
 
@@ -170,18 +174,44 @@ wheels = 4
 description = 'My car has {} wheels.'
 print(description.format(wheels))
 
-print('My car also has {}'.format(wheels)).
+print('My car has {wheels}.'.format(wheels=6))
 ```
 
 \note{
-TODO: explain {}
+The `{}` are delimiters. Here they just serve as placeholders, but we can do
+much more with them. Notice the `wheels` in the second case? It allows to name an argument.
+
+Consider: `'I am at ({x}, {y})'.format(y=2, x=5)`.
 }
+
 
 # Format strings are a powerful tool
 
-TODO: Actual formatting (e.g. .2f, padding, etc.)
+```{ .python .exec }
+print('{:.3}'.format(1/3))
+print('{:0>8.3}'.format(4/3))
+print('{:*^25}'.format('Hello'))
+```
 
-TODO: How to read the format spec
+\note{
+The `:` means: now comes a format rule!
+The format rules then follow a special syntax. The examples here go as follows:
+
+- `.3` Format with 3 decimal places ("After decimal separator, use up to 3 digits").
+- `0>8.3` Pad with `0`s (put zeros to fill the width), align right (`>`), make it `8` characters long (at least), and have `3` after the decimal separator. Note that 8 is the *total* length, so there will be $8-3-1$ characters (or more if needed) left of the `.`.
+- `*^25` Pad with `*`s, align centered (`^`), make it `25` wide.
+}
+
+
+# Format specifications
+
+![https://docs.python.org/3.6/library/string.html#format-string-syntax](img/stringsyntax.png)
+
+\note{
+Now you can create output which looks like you want without having to weirdly concatenate strings and check spaces, etc.
+
+There is much more inside the documentation, we will take a look at some of it now.
+}
 
 
 # Paradigm shift
@@ -201,7 +231,7 @@ If you want to go into more details about all those things, I recommend the
 [Python Tutorial](https://docs.python.org/3/tutorial/). It covers what we did
 and sometimes a little bit more.
 
-For the rest of the course, we will focus on applications.
+For the rest of the course, we will mostly focus on applications.
 
 
 # Your ninth homework
