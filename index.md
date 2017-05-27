@@ -49,14 +49,14 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Solution](files/BPP-06_Packages-Solution.pdf)
     - [Solution code](files/BPP-06_Packages-Solution.zip)
 
-7. Sorting and Object Oriented Programming ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=fd2c9873-dce6-467c-94a2-fb90f457c914) (No beamer recording available))
+7. Sorting and Object Oriented Programming ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=fd2c9873-dce6-467c-94a2-fb90f457c914) (No beamer))
     - [Lecture slides](files/BPP-07_SortingOOP.pdf)
     - [Homework sheet](files/BPP-07_SortingOOP-Sheet.pdf)
     - [Homework code](files/BPP-07_SortingOOP-Sheet.zip)
     - [Solution](files/BPP-07_SortingOOP-Solution.pdf)
     - [Solution code](files/BPP-07_SortingOOP-Solution.zip)
 
-8. Practical Python
+8. Practical Python ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=5b8bb389-4f7d-4f21-9837-0c087310dc88) (No beamer))
     - [Lecture slides](files/BPP-08_PracticalPython.pdf)
     - [Homework sheet](files/BPP-08_PracticalPython-Sheet.pdf)
     - [Homework code](files/BPP-08_PracticalPython-Sheet.zip)
