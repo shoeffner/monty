@@ -1,6 +1,7 @@
 ---
 header-includes:
     - \usepackage{dirtree}
+    - \usetikzlibrary{arrows,automata}
 panflute-path: 'templates/filters'
 panflute-filters:
     - pandoc-img-glob
