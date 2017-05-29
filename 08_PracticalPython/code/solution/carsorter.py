@@ -59,9 +59,9 @@ def comfort_evaluation(car):
         A comfort value. For a car with three doors, four seats and a small
         luggage boot, this would be 2 + 2 + 1 = 5.
     """
-    doors = {2: 1, 3: 2, 4: 3, '5more': 4}[car.doors]
-    seats = {2: 1, 4: 2, 'more': 3}[car.seats]
-    luggage = {'small': 1, 'med': 2, 'big': 3}[car.luggage]
+    doors = [2, 3, 4, '5more'].index(car.doors) + 1
+    seats = [2, 4, 'more'].index(car.seats) + 1
+    luggage = ['small', 'med', 'big'].index(car.luggage) + 1
     return doors + seats + luggage
 
 
