@@ -10,7 +10,7 @@ Note that the schedule presented below is subject to change, depending on how fa
 
 ------------------------------------------------------------------------------------------------------
 Week of         Name                                Topics
---------------- ----------------------------------- --------------------------------------------------
+--------------- ----------------------------------  --------------------------------------------------
 2017-04-03      `print('Hello World!')`             Organization; Motivation; Installation of Python; Getting started with Hello World programs
 
 2017-04-10      Variables, Assignments, Functions   Basic data types: strings, integers, floats; Arithmetics; Concept of variables and assignments (in comparison to mathematical equality); Functions
@@ -27,9 +27,9 @@ Week of         Name                                Topics
 
 2017-05-22      Practical Python                    Built-ins; Python Standard Library; Abstract data types
 
-2017-05-29      Errors and FSMs                     try/except/raise, finite state machines, regex
+2017-05-29      Errors and Finite State Machines    try/except/raise, finite state machines, regex
 
-2017-06-05      tba
+2017-06-05      Generators and Standard Library     Generators
 
 2017-06-12      tba
 
@@ -75,4 +75,3 @@ post one on the internet)?
 
 These are all references used throughout the class. The list will grow from
 time to time.
-

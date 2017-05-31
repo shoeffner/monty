@@ -14,6 +14,7 @@ header-includes:
     - \newcommand{\pycode}[1]{\lstinputlisting[language=python]{#1}}
     - \newcommand{\cliqr}[1]{}
     - \usepackage{dirtree}
+    - \usetikzlibrary{arrows,automata}
 panflute-path: 'templates/filters'
 panflute-filters:
     - pandoc-beamer-notes
