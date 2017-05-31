@@ -1,9 +1,53 @@
 % Errors and Finite State Machines
 
 
-# Homework issues
+# Quick homework issues
 
-TODO
+- Don't write your own sorting algorithms, just use what is their
+- Don't remove all print statements -- we do expect *some* output ;-)
+- Try to structure your code using functions
+
+
+# Homework issues: Changing attributes
+
+```{ .python }
+def comfort_evaluation(car):
+    if car.seats == 2:
+        car.seats = 1
+    elif car.seats == 'more':
+        car.seats = 2
+    ...
+    return car.seats + car.luggage + car.doors
+```
+
+What happens if we call the function twice for the same car which had `'more'` seats?
+
+\note{
+Don't change values if you just want to read them! Sometimes you want to use them somewhere else, or someone else wrote some code where it's still important to have `'more'`.
+
+In this example on the first evaluation, `car.seats` would be set to 2, on the second it would then be set to 1!
+}
+
+
+# Mutability
+
+```{ .python .exec }
+def do(l):
+    l[0] = 3
+
+l = [1, 2, 3]
+do(l)
+print(l)
+```
+
+For some more explanations and examples, check [Immutable vs Mutable types](https://stackoverflow.com/q/8056130/3004221).
+
+\note{
+- Lists and objects are mutable, that means they can be modified inside
+  functions unless you copy them.
+- int, str, float, etc. are not mutable (immutable), they always stay what they
+  were before the function call.
+}
 
 
 # Handling exceptions
@@ -656,5 +700,3 @@ Where do you think do we find DFA?
 - Coffee machines are also some automaton. Help us to decide which "recipes"
   work best for our coffee!
 
-
-# References
