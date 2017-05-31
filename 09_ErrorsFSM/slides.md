@@ -139,6 +139,101 @@ Rule of thumb: Handle only what you can handle with an algorithm.
 }
 
 
+# Finally
+
+\scriptsize
+
+```{ .python .exec }
+def read(filename):
+    print('Opening')
+    handle = open(filename)
+    try:
+        print('Reading')
+        return handle.read().splitlines()
+    finally:
+        print('Closing')
+        handle.close()
+
+read('Makefile')
+```
+
+\normalsize
+
+\note{
+Statements inside a finally block will always be executed, regardless of
+exceptions before or not.
+
+It even works after returns!
+
+It is most commonly used to ensure files and other connections are closed. But
+beware: `with` is almost always better!
+}
+
+
+# Finally
+
+\tiny
+
+Exception:
+```{ .python .exec }
+try:
+    a = int('abc')
+except ValueError:
+    a = -1
+finally:
+    print('Finally!')
+print(a)
+```
+
+No exception:
+```{ .python .exec }
+try:
+    a = int('1')
+except ValueError:
+    a = -1
+finally:
+    print('Finally!')
+print(a)
+```
+
+\normalsize
+
+
+# Raising your own exceptions
+
+\scriptsize
+
+```{ .python .exec }
+class CarException(Exception): pass
+
+class Car:
+    def __init__(self, broken=False):
+        self.broken = broken
+
+    def drive(self):
+        if self.broken:
+            raise CarException('Broken cars do not drive!')
+        print('Driving!')
+
+for car in [Car(), Car(True)]:
+    try:
+        car.drive()
+    except CarException as ce:
+        print(ce)
+```
+
+\normalsize
+
+\note{
+`class CarException(Exception)` means that the class `CarException` *inherits*
+all properties the class `Exception` has. We won't discuss inheritance in more
+details. But it is important so that you can `raise` exceptions.
+
+The string in the exception you raise should be meaningful: It's the error
+message other people will see.
+}
+
+
 # Use cases for exception handling
 
 When writing your own programs, you will mostly have to deal with exceptions when facing user input.
@@ -146,7 +241,7 @@ When writing your own programs, you will mostly have to deal with exceptions whe
 But there are other situations: Reading files, downloading data, program interruptions, ...
 
 
-# Avoiding a common exception: Combining strings and numbers
+# Combining strings and numbers
 
 A common pattern we used so far:
 
