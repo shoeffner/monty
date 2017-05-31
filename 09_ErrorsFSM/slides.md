@@ -332,8 +332,8 @@ Consider: `'I am at ({x}, {y})'.format(y=2, x=5)`.
 # Format strings are a powerful tool
 
 ```{ .python .exec }
-print('{:.3}'.format(1/3))
-print('{:0>8.3}'.format(4/3))
+print('{:.3f}'.format(1/3))
+print('{:0>8.3f}'.format(4/3))
 print('{:*^25}'.format('Hello'))
 ```
 
@@ -341,8 +341,12 @@ print('{:*^25}'.format('Hello'))
 The `:` means: now comes a format rule!
 The format rules then follow a special syntax. The examples here go as follows:
 
-- `.3` Format with 3 decimal places ("After decimal separator, use up to 3 digits").
-- `0>8.3` Pad with `0`s (put zeros to fill the width), align right (`>`), make it `8` characters long (at least), and have `3` after the decimal separator. Note that 8 is the *total* length, so there will be $8-3-1$ characters (or more if needed) left of the `.`.
+- `.3f` Format as `float` (`f`) with 3 decimal places ("After decimal
+  separator, use up to 3 digits").
+- `0>8.3` Pad with `0`s (put zeros to fill the width), align right (`>`), make
+  it `8` characters long (at least), and have `3` after the decimal separator.
+  Note that 8 is the *total* length, so there will be $8-3-1$ characters (or
+  more if needed) left of the `.`.
 - `*^25` Pad with `*`s, align centered (`^`), make it `25` wide.
 }
 
@@ -613,6 +617,7 @@ can nicely draw it:
               edge              node {b} (E)
           (D) edge [loop right] node {0, 1} (D)
               edge [bend left]  node {b} (E)
+          (E) edge [loop below] node {0, 1, b} (E)
           ;
 \end{tikzpicture}
 \end{center}
