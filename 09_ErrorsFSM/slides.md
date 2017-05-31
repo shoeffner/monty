@@ -3,7 +3,7 @@
 
 # Quick homework issues
 
-- Don't write your own sorting algorithms, just use what is their
+- Don't write your own sorting algorithms, just use what is there
 - Don't remove all print statements -- we do expect *some* output ;-)
 - Try to structure your code using functions
 
