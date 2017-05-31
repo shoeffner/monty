@@ -336,7 +336,325 @@ and sometimes a little bit more.
 For the rest of the course, we will mostly focus on applications.
 
 
+# Finite State Machines (FSM/FSA)
+
+- Abstract machines
+- Can decide (acceptors/classifiers) or produce output (transductors)
+- Have a finite number of distinct states
+- Can perform state transitions to change state
+    * They can be deterministic or non-deterministic
+- Here: focus on *deterministic acceptors*[^dfa]
+
+[^dfa]: Deterministic Finite Automaton (DFA)
+
+\note{
+- Sometimes called *Finite State Automaton* (FSA)
+- The formal things now will be a little bit boring for people following the
+  Computer Science D class by Prof. Chimani or the Computational Linguistics
+  class by Dr. phil. Gregoromichelaki, but we will make some more practical
+  considerations.
+- You can already guess: This is a cool link to other subjects!
+}
+
+
+# DFA and formal languages
+
+- DFA decides if a word $w$ is possible in formal language $\mathcal{L}$
+- $\mathcal{L}$ is defined over alphabet $\Sigma$ like this: $\mathcal{L} \subseteq \Sigma^*$
+- $\mathcal{L}$ is described by a set of rules
+- DFA checks if $w$ follows rule set or not
+
+
+\note{
+- $\Sigma$ can be something like $\{a, b\}$
+- $\Sigma^*$ is then the set of all possible combinations of $a$ and $b$ and
+  the empty set $\emptyset$
+- Examples are: $aaababb$, $a$, $\emptyset$, $bbbb$, $ab$, ...
+}
+
+
+# The formal language "Python binaries"
+
+The formal language "Python binaries" $\mathcal{L}_{pb}$ is defined over the
+alphabet $\Sigma = \{0, 1, b\}$. It has the following rules:
+
+1. The empty word ($\emptyset$) is not part of $\mathcal{L}_{pb}$.
+1. Each word must start with $0b$.
+1. After $b$, a $1$ or a $0$ must follow.
+1. After any $1$ or $0$ (not the first), there may follow another $1$ or
+   $0$.
+
+Considering the rules above. Which of these words are part of $\mathcal{L}_{pb}$?
+
+a. $w_0 = 0b001101$
+b. $w_1 = 0b110$
+c. $w_2 = 01110011$
+d. $w_3$ = $b0b101b$
+e. $w_4 = 0b0000011$
+f. $w_5 = 0b$
+
+\note{
+Valid: $w_0, w_1, w_4$.
+
+Invalid: $w_2$ (no $b$), $w_3$ (too many $b$), $w_5$ (no $0$ or $1$ after $b$).
+}
+
+
+# DFA for "Python binaries"
+
+A DFA $\mathcal{A}$ is a quintuple[^wtf]:
+
+$\mathcal{A} = \left(\Sigma, S, S_0 \in S, \delta : S \times \Sigma \rightarrow S, G \subseteq S\right)$
+
+with:
+
+- $\Sigma$: the input alphabet, here $\Sigma = \{ 0, 1, b \}$
+- $S$: the set of states, we discuss this on the next slide
+- $S_0 \in S$: the start state, also next slide
+- $\delta$: the transition function which describes when to move where
+- $G$: the set of goal states, if these are reached, the DFA accepts
+
+[^wtf]: No worries, it's not that hard!
+
+
+# Drawing a DFA as a directed graph
+
+\begin{center}
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+    \node[initial,state]   (A)              {A};
+    \node[state]           (B) [right of=A] {B};
+    \node[state]           (C) [right of=B] {C};
+    \node[state,accepting] (D) [right of=C] {D};
+
+    \path (A) edge              node {0} (B)
+          (B) edge              node {b} (C)
+          (C) edge              node {0, 1} (D)
+          (D) edge [loop above] node {0, 1} (D)
+          ;
+\end{tikzpicture}
+\end{center}
+
+We can now identify our states easily:
+
+- $S = \{A, B, C, D\}$
+- $S_0 = A$
+- $G = \{D\}$
+
+
+# Creating a grammar
+
+\begin{center}
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+    \node[initial,state]   (A)              {A};
+    \node[state]           (B) [right of=A] {B};
+    \node[state]           (C) [right of=B] {C};
+    \node[state,accepting] (D) [right of=C] {D};
+
+    \path (A) edge              node {0} (B)
+          (B) edge              node {b} (C)
+          (C) edge              node {0, 1} (D)
+          (D) edge [loop above] node {0, 1} (D)
+          ;
+\end{tikzpicture}
+\end{center}
+
+**Grammar:**
+\vspace{-3em}
+\begin{align*} A &\rightarrow 0B \\
+    B &\rightarrow bC \\
+    C &\rightarrow 0D\, |\, 1D \\
+    D &\rightarrow 0D\, |\, 1D\, |\, \epsilon
+\end{align*}
+
+\note{
+A $|$ denotes an `or`, $\epsilon$ means no input. Rules can either be of the
+form $S \rightarrow \sigma \in \Sigma \times S$, $S \rightarrow \sigma \in
+\Sigma$, or $S \rightarrow \epsilon$. The last two rules, which don't have new
+states defined, are called "terminal" rule.
+
+There are also many algorithms to convert between grammars, diagrams, rules,
+etc.; the problems we discuss are usually easily solved by "looking closely".
+}
+
+
+# Writing a transition function
+
+\scriptsize
+
+\begin{center}
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+    \node[initial,state]   (A)              {A};
+    \node[state]           (B) [right of=A] {B};
+    \node[state]           (C) [right of=B] {C};
+    \node[state,accepting] (D) [right of=C] {D};
+
+    \path (A) edge              node {0} (B)
+          (B) edge              node {b} (C)
+          (C) edge              node {0, 1} (D)
+          (D) edge [loop above] node {0, 1} (D)
+          ;
+\end{tikzpicture}
+\end{center}
+
+**Grammar:**
+\vspace{-3em}
+\begin{align*} A &\rightarrow 0B \\
+    B &\rightarrow bC \\
+    C &\rightarrow 0D\, |\, 1D \\
+    D &\rightarrow 0D\, |\, 1D\, |\, \epsilon
+\end{align*}
+
+\scriptsize
+
+**Transition function:**
+
+$\delta$ b 0 1
+-------- - - -
+A        ? B ?
+B        C ? ?
+C        ? D D
+D        ? D D
+
+\normalsize
+
+\note{
+You can read the transfer function like this:
+
+Given a state (first column) and an input (first row), the state changes to the
+state which is defined if we take state and input as coordinates.
+For example, given state $B$ and input $0$, the next state would be $C$. State
+$A$ and input $b$ result in state $B$. And so on. Formally each cell defines
+a rule of the form $S \times \Sigma \rightarrow S$, e.g. $B \times
+b \rightarrow C$ and $C \times 0 \rightarrow D$.
+
+What about the question marks?
+}
+
+
+# Implicit error states
+
+\scriptsize
+
+*Solution*: Add another state
+
+$\delta$      b             0             1
+------------- ------------- ------------- -------------
+A             \color{cyan}E B             \color{cyan}E
+B             C             \color{cyan}E \color{cyan}E
+C             \color{cyan}E D             D
+D             \color{cyan}E D             D
+\color{cyan}E \color{cyan}E \color{cyan}E \color{cyan}E
+
+$E$ is the implicit error state. It is difficult to imagine it in a grammar as
+it would not have a nice terminal rule (a single element of $\Sigma$), but we
+can nicely draw it:
+
+\begin{center}
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+    \node[initial,state]   (A)              {A};
+    \node[state]           (B) [right of=A] {B};
+    \node[state]           (C) [right of=B] {C};
+    \node[state,accepting] (D) [right of=C] {D};
+    \node[state]           (E) [node distance=1cm, below of=C] {\color{cyan}E};
+
+    \path (A) edge              node {0} (B)
+              edge [bend right] node {1, b} (E)
+          (B) edge              node {b} (C)
+              edge [bend right] node {0, 1} (E)
+          (C) edge              node {0, 1} (D)
+              edge              node {b} (E)
+          (D) edge [loop right] node {0, 1} (D)
+              edge [bend left]  node {b} (E)
+          ;
+\end{tikzpicture}
+\end{center}
+
+\normalsize
+
+\note{
+The implicit error state is useful when we program our FSA.
+
+To find out what leads to error state, imagine all possible inputs for each
+state: Those which are not "legal" according to the grammar rules lead to the
+error state (sometimes called "trap").
+}
+
+
+# Implementing $\delta$
+
+\tiny
+
+$\delta$ b 0 1
+-------- - - -
+A        E B E
+B        C E E
+C        E D D
+D        E D D
+E        E E E
+
+```{ .python .exec }
+def delta(state, letter):
+    states, inputs = ['A', 'B', 'C', 'D', 'E'], ['b', '0', '1']
+    transition = [
+        ['E', 'B', 'E'],
+        ['C', 'E', 'E'],
+        ['E', 'D', 'D'],
+        ['E', 'D', 'D'],
+        ['E', 'E', 'E']
+    ]
+    return transition[states.index(state)][inputs.index(letter)]
+
+print('A x b -> {}'.format(delta('A', 'b')))
+print('A x 0 -> {}'.format(delta('A', '0')))
+print('C x 1 -> {}'.format(delta('C', '1')))
+```
+
+\normalsize
+
+
+# Implementing a DFA
+
+\tiny
+
+```{ .python .exec file=09_ErrorsFSM/code/binary.py }
+```
+
+\normalsize
+
+
+# Checking our examples
+
+```{ .python .exec wd=09_ErrorsFSM/code }
+import binary  # The file from last slide
+
+for b in ['0b001101', '0b110', '01110011',
+          'b0b101b', '0b0000011', '0b']:
+    print('{} {}'.format(b, binary.fsa(b)))
+```
+
+
+# Where do we find DFA?
+
+Where do you think do we find DFA?
+
+
+# Where do we find DFA?
+
+- coin vending machines
+- programming (remember the string format syntax?)
+- cars (e.g. wiper motors)
+- process descriptions
+- ...
+
+
 # Your ninth homework
+
+- Coffee machines are also some automaton. Help us to decide which "recipes"
+  work best for our coffee!
 
 
 # References
