@@ -261,6 +261,10 @@ print(description)
 
 \normalsize
 
+\note{
+Casting things to strings manually is very tedious. There's a better way!
+}
+
 
 # Format strings
 
@@ -274,7 +278,8 @@ print('My car has {wheels}.'.format(wheels=6))
 
 \note{
 The `{}` are delimiters. Here they just serve as placeholders, but we can do
-much more with them. Notice the `wheels` in the second case? It allows to name an argument.
+much more with them. Notice the `wheels` in the second case? It allows to name
+an argument.
 
 Consider: `'I am at ({x}, {y})'.format(y=2, x=5)`.
 }
@@ -303,9 +308,11 @@ The format rules then follow a special syntax. The examples here go as follows:
 ![https://docs.python.org/3.6/library/string.html#format-string-syntax](img/stringsyntax.png)
 
 \note{
-Now you can create output which looks like you want without having to weirdly concatenate strings and check spaces, etc.
+Now you can create output which looks like you want without having to weirdly
+concatenate strings and check spaces, etc.
 
-There is much more inside the documentation, we will take a look at some of it now.
+There is much more inside the documentation, we will take a look at some of it
+now.
 }
 
 
