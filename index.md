@@ -60,7 +60,13 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Lecture slides](files/BPP-08_PracticalPython.pdf)
     - [Homework sheet](files/BPP-08_PracticalPython-Sheet.pdf)
     - [Homework code](files/BPP-08_PracticalPython-Sheet.zip)
+    - [Solution](files/BPP-08_PracticalPython-Solution.pdf)
+    - [Solution code](files/BPP-08_PracticalPython-Solution.zip)
 
+9. Errors and Finite State Machines
+    - [Lecture slides](files/BPP-09_ErrorsFSM.pdf)
+    - [Homework sheet](files/BPP-09_ErrorsFSM-Sheet.pdf)
+    - [Homework code](files/BPP-09_ErrorsFSM-Sheet.zip)
 
 Unfortunately there is no recording of the first session available.
 
