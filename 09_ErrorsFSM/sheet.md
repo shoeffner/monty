@@ -54,7 +54,7 @@ will fail.
           (D) edge              node {C} (F)
           (E) edge [loop above] node {C} (E)
               edge              node {F} (F)
-          (F) edge [loop below] node {F} (F)
+          (F) edge [loop below] node {C} (F)
               edge              node {B} (G)
           (G) edge [loop below] node {C} (G)
           ;
