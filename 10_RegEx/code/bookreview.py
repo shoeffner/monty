@@ -19,11 +19,13 @@ def write_file(content, filename):
 
 
 def download(id):
+    # Bonus task: measure time. Start time.
     download_time = time.time()
 
     res = requests.get('https://www.gutenberg.org/cache/epub/{id}/pg{id}.txt'
                        .format(id=id))
 
+    # Bonus task: measure time. End time.
     download_time = time.time() - download_time
     return res.text, download_time
 
@@ -105,6 +107,7 @@ def print_info(id, author, title, download_time, words, counts, sentences):
 
 
 def main():
+    # Bonus task: Read ID from command line arguments.
     pgid = sys.argv[1]
     full_text, download_time = download(pgid)
 

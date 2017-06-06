@@ -29,56 +29,16 @@ You can find the documentations here:
 - parse: https://github.com/r1chardj0n3s/parse/blob/master/README.rst
 
 
-# Exercise 1: Making coffee revisited
-
-*Note*: For a more exhaustive problem description, please refer to sheet
-9 exercise 1 again.
-
-In the file `coffeerecipes.txt` is a list of coffee recipes which are used as
-inputs to the following FSA:
-
-\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2.8cm,
-                    semithick]
-    \node[initial,state] (A)              {A};
-    \node[state]         (B) [below of=A] {B};
-    \node[state]         (C) [right of=A] {C};
-    \node[state]         (D) [below of=C] {D};
-    \node[state]         (E) [right of=C] {E};
-    \node[state]         (F) [right of=D] {F};
-    \node[state,accepting]         (G) [right of=F] {G};
-
-    \path (A) edge              node {P} (C)
-              edge [loop above] node {C} (A)
-              edge              node {F} (B)
-          (B) edge              node {P} (D)
-              edge [loop below] node {C} (B)
-          (C) edge              node {C} (E)
-              edge              node {F} (D)
-          (D) edge              node {C} (F)
-          (E) edge [loop above] node {C} (E)
-              edge              node {F} (F)
-          (F) edge [loop below] node {C} (F)
-              edge              node {B} (G)
-          (G) edge [loop below] node {C} (G)
-          ;
-\end{tikzpicture}
-
-Check which of the recipes are correct by using regular expressions with the
-`re` module. Do not use last weeks solutions. Submit your code in a file named
-`coffeeregex.py`.
-
-
-# Exercise 2: Requests, `sys.argv`, and time
+# Exercise 1: Requests
 
 Go to [Project Gutenberg](https://www.gutenberg.org/) and search for some
 books. Pick a book! We picked @darwin, which has [ID 1228](https://www.gutenberg.org/ebooks/1228).
 
-Write a script `bookreview.py` which, given an ID[^pgid], performs
+Write a script `bookreview.py` which, given an ID, performs
 the following tasks, which are explained in more detail below:
 
 1. Download the book and save it as `{author}-{title}.txt`. You can
    extract the required information from the first line of the downloaded file.
-   Measure how long it takes and present the user the time.
 1. Preprocess the book by removing the preamble and license. Don't remove this
    information from the saved version.
 1. Search for all sentences containing the words in the `wordlist.txt`. Store
@@ -88,12 +48,9 @@ the following tasks, which are explained in more detail below:
 
 ## Running the program
 
-To analyze @darwin, we could run the program like this: `python bookreview.py
-1228`. To access the id `1228` from inside the program, you can use
-`sys.argv[1]`[^argparse] (you need to import `sys`).
-
-[^argparse]: If you want to be really fancy, take a look at `argparse`. But for
-this homework it is probably overkill.
+To analyze @darwin, we need to provide the ID 1228. You may pick another book
+if you like. Note that you may hard code the ID, but we recommend to use
+a variable -- especially if you attempt the bonus tasks (see below).
 
 
 ## Downloading the book
@@ -123,9 +80,9 @@ print('{}: {}'.format(author, title))
 
 The weird `\ufeff` is the byte order mark, it tells programs how to read the
 data inside the file. It is counted single character, so you can either skip it
-(`pgline[1:]`) or select it like in the example. You can use `repr(...)` to
-make it visible. If you have troubles, try to leave it out, skip it, parse
-parts, ... You will be able to get this done.
+(`pgline[1:]`) or parse around it like we do in the example. You can use
+`repr(...)` to make it visible. If you have troubles, try to leave it out, skip
+it, parse parts, ... You will be able to get this done.
 
 Use the author and title information to write the contents you downloaded to
 a file `{author}-{title}.txt`.
@@ -138,7 +95,8 @@ contents. These contain meta data and license statements. "Clean" the data by
 removing everything before and including `*** START OF THIS PROJECT GUTENBERG
 EBOOK {} ***` and everything from `*** END OF THIS PROJECT GUTENBERG EBOOK {}
 ***`. Note that the placeholder is the title in uppercase letters, i.e.
-`title.upper()`.
+`title.upper()`. You can just use `.index` on a string to find a substrings
+occurrence. Use it to slice the string: `bookcontent[start:end]`.
 
 
 ## Crawling the data
@@ -152,9 +110,19 @@ Write one example sentence per word into the file
 respective counts.
 
 
+# Bonus tasks
+
+1. Use `sys.argv` to read a custom book ID when running the program, e.g.
+   `python bookreview.py 1228` would use the ID `1228` which can be found in
+   the list `sys.argv` at position `1`.
+1. Measure the download duration using `time`. You can measure time by taking
+   difference between the start and end time of an action. `time.time()` gives
+   you the current time in seconds since January 1st, 1970, 00:00:00 UTC.
+
+
 ## Example output
 
-Here is an example output for program call `python bookreview.py 1228`.
+Here is an example output for program call `python bookreview.py` (or, if you finished the bonus tasks, `python bookreview.py 1228`).
 Your output can differ.
 
 *Output:*
