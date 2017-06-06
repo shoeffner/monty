@@ -63,12 +63,15 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Solution](files/BPP-08_PracticalPython-Solution.pdf)
     - [Solution code](files/BPP-08_PracticalPython-Solution.zip)
 
-9. Errors and Finite State Machines
+9. Errors and Finite State Machines ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=baffc4d8-dae7-459a-96b5-075a7cedd075) (No beamer))
     - [Lecture slides](files/BPP-09_ErrorsFSM.pdf)
     - [Homework sheet](files/BPP-09_ErrorsFSM-Sheet.pdf)
     - [Homework code](files/BPP-09_ErrorsFSM-Sheet.zip)
+    - [Solution](files/BPP-09_ErrorsFSM-Solution.pdf)
+    - [Solution code](files/BPP-09_ErrorsFSM-Solution.zip)
 
-Unfortunately there is no recording of the first session available.
+
+Unfortunately there is no recording of the first session available. Due to technical issues, no recordings of the beamer presentations are available for some sessions.
 
 *Note:* Once the class is done, we will make the source files available as well
 (i.e. the repository). But to keep the solutions *secret* while we go (as our
