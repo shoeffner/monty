@@ -70,6 +70,10 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Solution](files/BPP-09_ErrorsFSM-Solution.pdf)
     - [Solution code](files/BPP-09_ErrorsFSM-Solution.zip)
 
+10. Regular Expressions and HTTP
+    - [Homework sheet](files/BPP-10_RegEx-Sheet.pdf)
+    - [Homework code](files/BPP-10_RegEx-Sheet.zip)
+
 
 Unfortunately there is no recording of the first session available. Due to technical issues, no recordings of the beamer presentations are available for some sessions.
 
