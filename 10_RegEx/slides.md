@@ -108,5 +108,4 @@ TODO ?!
 
 # Your tenth homework
 
-- Solve the coffee brewing task again using regular expressions.
 - Download a book and find some sentences containing specific words.
