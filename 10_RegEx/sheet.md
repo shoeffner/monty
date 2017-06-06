@@ -79,10 +79,10 @@ print('{}: {}'.format(author, title))
 ```
 
 The weird `\ufeff` is the byte order mark, it tells programs how to read the
-data inside the file. It is counted single character, so you can either skip it
-(`pgline[1:]`) or parse around it like we do in the example. You can use
-`repr(...)` to make it visible. If you have troubles, try to leave it out, skip
-it, parse parts, ... You will be able to get this done.
+data inside the file. It is counted as a single character, so you can either
+skip it (`pgline[1:]`) or parse around it like we do in the example. You can
+use `repr(...)` to make it visible. If you have troubles, try to leave it out,
+skip it, parse parts, ... You will be able to get this done.
 
 Use the author and title information to write the contents you downloaded to
 a file `{author}-{title}.txt`.
