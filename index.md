@@ -70,12 +70,12 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Solution](files/BPP-09_ErrorsFSM-Solution.pdf)
     - [Solution code](files/BPP-09_ErrorsFSM-Solution.zip)
 
-10. Regular Expressions and HTTP
+10. Regular Expressions and HTTP ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=e341dd59-933d-4954-9abe-3dfe4321472d))
     - [Homework sheet](files/BPP-10_RegEx-Sheet.pdf)
     - [Homework code](files/BPP-10_RegEx-Sheet.zip)
 
 
-Unfortunately there is no recording of the first session available. Due to technical issues, no recordings of the beamer presentations are available for some sessions.
+Unfortunately there is no recording of the first session available. Due to technical issues, no recordings of the beamer presentations are available for sessions 7, 8, and 9.
 
 *Note:* Once the class is done, we will make the source files available as well
 (i.e. the repository). But to keep the solutions *secret* while we go (as our
