@@ -1,6 +1,6 @@
 % Basic Programming in Python: Course Outline
 % Sebastian Höffner ; Aline Vilks
-% Wed, 05 Apr 2017
+% Tue, 13 June 2017
 
 ---
 nocite: "@*"
@@ -25,13 +25,13 @@ Week of         Name                                Topics
 
 2017-05-15      Sorting and OOP                     Sorting; Classes and Instances
 
-2017-05-22      Practical Python                    Built-ins; Python Standard Library; Abstract data types
+2017-05-22      Practical Python                    Built-ins; Python Standard Library; string formats
 
-2017-05-29      Errors and Finite State Machines    try/except/raise, finite state machines, regex
+2017-05-29      Errors and Finite State Machines    try/except/raise, finite state machines
 
-2017-06-05      Generators and Standard Library     Generators
+2017-06-05      Regular Expressions / HTTP          `re` module, short intro to HTTP verbs, `requests.get`
 
-2017-06-12      tba
+2017-06-12      Dates, Times, Documentation         datetime, timezones, leapseconds, sphinx
 
 2017-06-19      Project week 1                      Projects can be e.g. vocabulary trainers, simple games, esoteric language interpreters, image processing, applications from other subjects, ....
 
