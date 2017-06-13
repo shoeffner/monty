@@ -16,10 +16,10 @@ datesheet = $(shell echo Deadline: `[ -f $(path)/dates.txt ] && tail -n1 $(path)
 
 ENGINE ?= pdflatex
 
-%: builddir% slides% notes% sheet% solution% zip%
+%: builddir% notes% zip%
 	@echo 'Done.'
 
-all: clean outline 01 02 03 04 05 06 07 08 09
+all: clean outline 01 02 03 04 05 06 07 08 09 10 11
 	@
 
 outline: builddir%
