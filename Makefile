@@ -36,20 +36,29 @@ proposals: builddir%
 		00_Meta/projectideas.md \
 		$(tpl)/meta.yaml
 
-zip%: builddir% sheet% solution%
+zip%: builddir% sheet% solution% slides%
 	@if [ -f $(rsheet).list ]; then \
 		echo Zipping exercises for $(path) ; \
-		awk '{print "$(path)/" $$0}' $(rsheet).list | zip -@ $(sheet).zip ; \
+		awk '{print "$(path)/" $$0}' $(rsheet).list | zip -r -@ $(sheet).zip > /dev/null ; \
+		if [ -f $(rsheet).xlist ]; then \
+			awk '{print "$(path)/" $$0}' $(rsheet).xlist | zip -d -@ $(sheet).zip ; \
+		fi; \
 		zip -j $(sheet).zip $(sheet).pdf ; \
 	fi; \
 	if [ -f $(rsolution).list ]; then \
 		echo Zipping solutions for $(path) ; \
-		awk '{print "$(path)/" $$0}' $(rsolution).list | zip -@ $(solution).zip ; \
+		awk '{print "$(path)/" $$0}' $(rsolution).list | zip -r -@ $(solution).zip ; \
+		if [ -f $(rsolution).xlist ]; then \
+			awk '{print "$(path)/" $$0}' $(rsolution).xlist | zip -d -@ $(sheet).zip ; \
+		fi; \
 		zip -j $(solution).zip $(solution).pdf ; \
 	fi; \
 	if [ -f $(rslides).list ]; then \
 		echo Zipping slides for $(path) ; \
 		awk '{print "$(path)/" $$0}' $(rslides).list | zip -@ $(slides).zip ; \
+		if [ -f $(rslides).xlist ]; then \
+			awk '{print "$(path)/" $$0}' $(rslides).xlist | zip -d -@ $(sheet).zip ; \
+		fi; \
 		zip -j $(slides).zip $(slides).pdf ; \
 	fi
 
