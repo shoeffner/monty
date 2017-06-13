@@ -1,0 +1,3 @@
+code/crashers/src/__pycache__/*
+code/crashers/docs/_build/*
+code/crashers/docs/modules/*
