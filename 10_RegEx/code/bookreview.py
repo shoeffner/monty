@@ -69,8 +69,8 @@ def find_sentences(content):
     sentences = []
 
     for word in words:
-        results = re.findall(r'[^.]* {} [^.]*\.'.format(word),
-                             content, re.DOTALL)
+        results = re.findall(r'[^.!?]*\b{}\b[^.!?]*[.!?]'.format(word),
+                             content, re.DOTALL | re.IGNORECASE)
         if results:
             counts.append(len(results))
             sentences.append(results[0])

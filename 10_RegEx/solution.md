@@ -9,19 +9,19 @@
 *Output:*
 
 ```
-Downloaded 1228, Charles Darwin: On the Origin of Species, in 7.118 s.
+Downloaded 1228, Charles Darwin: On the Origin of Species, in 2.009 s.
 
 The word counts are:
-  he        81
-  she       14
+  he       120
+  she       18
   love       3
-  live      21
+  live      29
   hate       0
-  food      21
-  body      16
+  food      48
+  body      34
   wise       0
-  plant     33
-  rich       4
+  plant     59
+  rich       5
   legend     0
 
 Some example sentences:
@@ -31,13 +31,8 @@ me a memoir on this subject, with a request that I would forward it
 to Sir Charles Lyell, who sent it to the Linnean Society, and it is
 published in the third volume of the Journal of that Society.
 
- Though nature grants vast periods of time
-for the work of natural selection, she does not grant an indefinite
-period; for as all organic beings are striving, it may be said, to seize
-on each place in the economy of nature, if any one species does
-not become modified and improved in a corresponding degree with its
-competitors, it will soon be exterminated.
-
+ She can act on every internal organ, on every shade of
+constitutional difference, on the whole machinery of life.
 ```
 
 
