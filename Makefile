@@ -29,6 +29,12 @@ outline: builddir%
 		00_Meta/outline.md \
 		$(tpl)/meta.yaml
 
+proposals: builddir%
+	@pandoc \
+		--bibliography=$(tpl)/bibliography.bib \
+		-o $(build)/BPP-ProjectIdeas.pdf \
+		00_Meta/projectideas.md \
+		$(tpl)/meta.yaml
 
 zip%: builddir% sheet% solution%
 	@if [ -f $(rsheet).list ]; then \
