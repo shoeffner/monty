@@ -71,8 +71,17 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Solution code](files/BPP-09_ErrorsFSM-Solution.zip)
 
 10. Regular Expressions and HTTP ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=e341dd59-933d-4954-9abe-3dfe4321472d))
+    - [Lecture slides](files/BPP-10_RegEx.pdf)
     - [Homework sheet](files/BPP-10_RegEx-Sheet.pdf)
     - [Homework code](files/BPP-10_RegEx-Sheet.zip)
+    - [Solution](files/BPP-10_RegEx-Solution.pdf)
+    - [Solution code](files/BPP-10_RegEx-Solution.zip)
+
+11. Datetime and documentation
+    - [Lecture slides](files/BPP-11_DatetimeDocs.pdf)
+    - [Final project ideas](files/BPP-ProjectIdeas.pdf)
+    - [Homework sheet (final projects)](files/BPP-11_DatetimeDocs-Sheet.pdf)
+    - [Homework code (example final project)](files/BPP-11_DatetimeDocs-Sheet.zip)
 
 
 Unfortunately there is no recording of the first session available. Due to technical issues, no recordings of the beamer presentations are available for sessions 7, 8, and 9.
