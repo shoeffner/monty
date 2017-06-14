@@ -498,13 +498,13 @@ It requires a little bit more work to test your own functions: You need some *se
 You can also run the timeit tool from the command line:
 
 ```{ .bash }
-python -m timeit -s '123 + 456'
+python -m timeit '123 + 456'
 ```
 
 *Output:*
 
 ```{ .changelog }
-100000000 loops, best of 3: 0.00857 usec per loop
+100000000 loops, best of 3: 0.0128 usec per loop
 ```
 
 \note{
