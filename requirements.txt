@@ -4,3 +4,4 @@ pandoc-beamer-notes>=0.1.1
 pandoc-source-exec>=0.1.2
 requests
 parse
+parsedatetime
