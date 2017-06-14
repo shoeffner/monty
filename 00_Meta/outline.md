@@ -31,7 +31,7 @@ Week of         Name                                Topics
 
 2017-06-05      Regular Expressions / HTTP          `re` module, short intro to HTTP verbs, `requests.get`
 
-2017-06-12      Dates, Times, Documentation         datetime, timezones, leapseconds, sphinx
+2017-06-12      Dates, Documentation                datetime, sphinx
 
 2017-06-19      Project week 1                      Projects can be e.g. vocabulary trainers, simple games, esoteric language interpreters, image processing, applications from other subjects, ....
 
