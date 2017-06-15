@@ -77,7 +77,7 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Solution](files/BPP-10_RegEx-Solution.pdf)
     - [Solution code](files/BPP-10_RegEx-Solution.zip)
 
-11. Datetime and documentation
+11. Datetime and documentation ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=d1507d53-f910-49ac-95e9-7670c3a693d2))
     - [Lecture slides](files/BPP-11_DatetimeDocs.pdf)
     - [Final project ideas](files/BPP-ProjectIdeas.pdf)
     - [Homework sheet (final projects)](files/BPP-11_DatetimeDocs-Sheet.pdf)
