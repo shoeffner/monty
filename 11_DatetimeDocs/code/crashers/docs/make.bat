@@ -11,6 +11,7 @@ set SOURCEDIR=.
 set CODEDIR=..\src
 set BUILDDIR=_build
 set SPHINXPROJ=CastleCrashersPrincessEdition
+set SPHINXAPI=sphinx-apidoc
 
 if "%1" == "" goto help
 
