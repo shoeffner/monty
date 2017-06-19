@@ -32,7 +32,7 @@ You can find the documentations here:
 # Exercise 1: Requests
 
 Go to [Project Gutenberg](https://www.gutenberg.org/) and search for some
-books. Pick a book! We picked @darwin, which has [ID 1228](https://www.gutenberg.org/ebooks/1228).
+books. Pick a book! We picked @darwin1859, which has [ID 1228](https://www.gutenberg.org/ebooks/1228).
 
 Write a script `bookreview.py` which, given an ID, performs
 the following tasks, which are explained in more detail below:
@@ -48,7 +48,7 @@ the following tasks, which are explained in more detail below:
 
 ## Running the program
 
-To analyze @darwin, we need to provide the ID 1228. You may pick another book
+To analyze @darwin1859, we need to provide the ID 1228. You may pick another book
 if you like. Note that you may hard code the ID, but we recommend to use
 a variable -- especially if you attempt the bonus tasks (see below).
 
