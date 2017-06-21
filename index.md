@@ -83,8 +83,15 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Homework sheet (final projects)](files/BPP-11_DatetimeDocs-Sheet.pdf)
     - [Homework code (example final project)](files/BPP-11_DatetimeDocs-Sheet.zip)
 
+12. Plotting
+    - [Lecture slides](files/BPP-12_Plotting.pdf)
+    - [Lecture code](files/BPP-12_Plotting.zip)
 
-Unfortunately there is no recording of the first session available. Due to technical issues, no recordings of the beamer presentations are available for sessions 7, 8, and 9.
+
+Unfortunately there is no recording of the first session available. Due to
+technical issues, no recordings of the beamer presentations are available for
+sessions 7, 8, and 9. The last session is not recorded because it covered only
+student presentations.
 
 *Note:* Once the class is done, we will make the source files available as well
 (i.e. the repository). But to keep the solutions *secret* while we go (as our
