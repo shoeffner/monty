@@ -1,6 +1,35 @@
 % Plotting
 
 
+# Installing matplotlib
+
+For Linux/Mac OS users `pip3 install matplotlib` should be enough.
+
+For Windows users you should go to http://www.lfd.uci.edu/~gohlke/pythonlibs/
+and download files for `numpy` and `matplotlib`. Install the files using `pip install FILES`.
+
+Alternatively, if you used anaconda as we recommended, you can also run:
+
+```{ .bash }
+conda config --add channels conda-forge
+conda install -c conda-forge matplotlib=2.0.2
+```
+
+All: For images, install `pillow` (again via pip or Gohlke's website).
+
+\note{
+Windows users: If you are unsure about the files,
+
+- pick `cp36-cp36m` for Python 3.6 and adjust accordingly
+- pick `win32` for 32 bit systems and `win_amd64` for 64 bit systems
+- check 32/64 bit like this:
+
+`python -c import sys;print('64bit' if sys.maxsize > 2**32 else '32bit')`
+
+Of course you have to replace `FILES` with the paths to the files you downloaded.
+}
+
+
 # First things first
 
 You should have received an email about the course evaluation. You can either
@@ -378,7 +407,7 @@ plt.plot([1, 2, 3])
 
 \normalsize
 
-![Example Figure](img/myfigure.png){ height=200px }
+![Example Figure](img/myfigure.png){ height=220px }
 
 \note{
 This does not work well with the auto slide creation, hence I included a screenshot.
@@ -419,6 +448,150 @@ create file outputs.
 Everything inside the window is the `canvas`, the most important part of the figure.
 
 All elements you can see here (except for "figure") are drawn onto the canvas.
+}
+
+
+# Object-oriented interface
+
+Each call we made returned some objects!
+
+```{ .python .exec .hideimports }
+import matplotlib.pyplot as plt
+
+figure = plt.figure('My figure')
+lines = plt.plot([1, 2, 3])
+print(figure)
+print(lines)
+```
+
+
+# Object-oriented interface
+
+\scriptsize
+
+Using `plt.plot(...)` is equivalent to `plt.gcf().gca().plot(...)`.
+
+```{ .python .hideimports }
+import matplotlib.pyplot as plt
+
+fig1 = plt.figure('Figure 1')
+fig2 = plt.figure('Figure 2')
+plt.plot([1, 2, 3])
+fig1.gca().plot([4, 1, 4])
+```
+
+\normalsize
+
+![Two figures](img/twofiguresoop.png) { height=150px }
+
+\note{
+`gcf` means "get current figure", `gca` means "get current axes"
+
+Each figure has an initial pair of axes ("x" and "y") which can be selected for drawing.
+}
+
+
+# Advantages of the Object-oriented interface
+
+- Keeping references to different axes objects allows changing data in continuous programs
+- It becomes easier to keep track to which figure is plotted
+- We can build interactive figures much easier
+
+
+# Changing data of a plot
+
+\scriptsize
+
+```{ .python .hideimports file=12_Plotting/code/scatter_pause.py }
+```
+
+\normalsize
+
+\note{
+We call each update a "frame".
+
+`canvas.draw()` forces the canvas to redraw everything on it.
+}
+
+# Using animations
+
+\scriptsize
+
+```{ .python file=12_Plotting/code/scatter_animation.py }
+```
+
+\normalsize
+
+\note{
+
+\small
+
+A FuncAnimation takes a figure and an update function. The third parameter is
+the frame numbers, they are passed to the update function in turn. The interval
+is the time in milliseconds between two frames.
+
+The update function should return all "artists" (plot elements) which should be
+updated.
+
+The return value is important for "`blit`ting". It can give you immense speed
+ups if you have complex figures: It only updates what changed,
+not the complete canvas. To disable it, just pass `blit=False` to the
+`FuncAnimation`.
+
+Important: Usually one would put everything into a class and not into the
+global scope as I did here!
+
+\normalsize
+
+}
+
+
+# Interactive figures: callback functions
+
+We just used a callback function!
+
+That means: we passed a function to another function (or class) to have it called by them!
+
+```{ .python }
+def update(frame_number):
+    scatter.set_data(x[frame_number], y[frame_number])
+    return scatter,
+
+ani = animation.FuncAnimation(fig, update, range(len(x)),
+                              interval=250, blit=True)
+```
+
+
+# Interactive figures: event loop
+
+GUIs[^gui] have an event loop:
+
+\begin{tikzpicture}[->,node distance = 4cm, auto, thick]
+    \tikzstyle{every state}=[fill=blue!10,draw=black,rectangle]
+    \node [state] (register) {register listeners};
+    \node [state,right of=register] (eventcheck) {any events?};
+    \node [state,right of=eventcheck] (notify) {notify listeners};
+    \draw (register) edge (eventcheck)
+            (eventcheck) edge [bend right] node {yes} (notify)
+            (notify) edge [bend right] (eventcheck)
+            (eventcheck)  edge [loop above]  node {no} (eventcheck);
+\end{tikzpicture}
+
+[^gui]: Graphical User Interface
+
+
+# Interactive figures: Connecting with matplotlib
+
+\scriptsize
+
+```{ .python file=12_Plotting/code/drawing.py }
+```
+
+\normalsize
+
+\note{
+You can find a list of all available events as well as some nice examples here:
+https://matplotlib.org/users/event_handling.html
 }
 
 

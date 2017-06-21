@@ -1,2 +1,4 @@
 code/iris_reader.py
 code/lin_reg.py
+code/scatter_pause.py
+code/scatter_animation.py
