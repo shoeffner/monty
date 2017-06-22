@@ -149,7 +149,7 @@ plt.plot(x, y1, x2, y2)
 
 Iris Data set [@fisher1936]:
 
-```{ .python wd=12_Plotting/code }
+```{ .python wd=12_Plotting/code .exec }
 import requests
 with open('iris.data', 'w') as iris:
     iris.write(requests.get(
