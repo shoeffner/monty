@@ -25,7 +25,7 @@ There are many more fine-grained definitions and notions!
 - Examples: spyder, webbrowsers, office programs...
 
 
-# GUI: Event driven
+# Event driven
 
 \begin{tikzpicture}[->,node distance = 4cm, auto, thick]
     \tikzstyle{every state}=[fill=blue!10,draw=black,rectangle]
@@ -39,12 +39,12 @@ There are many more fine-grained definitions and notions!
 \end{tikzpicture}
 
 
-# GUI: Event types
+# Event types
 
 What events do you think can happen?
 
 
-# GUI: Event types
+# Event types
 
 - Keyboard inputs/Mouse Inputs
 - Opening, Closing, Minimizing, Maximizing
@@ -55,7 +55,7 @@ What events do you think can happen?
 $\Rightarrow$ High complexity and flexibility needed!
 
 
-# GUI: Redraw
+# Redraw
 
 GUIs need to redraw changes, e.g. a button press:
 
@@ -63,11 +63,59 @@ GUIs need to redraw changes, e.g. a button press:
 
 
 
-# GUI: Redraw demo
+# Redraw demo
 
 \scriptsize
 
 ```{ .python file=code/button_only.py }
+```
+
+\normalsize
+
+\note{
+`Tk()` creates the window (the "root" element), `mainloop` runs the event loop
+and handles events.
+
+Since it runs indefinitely, it also keeps the program from closing!
+
+The Button can close the program (`quit` on the root element).
+}
+
+
+# Redraw: A tree approach
+
+\begin{center}
+    \begin{tikzpicture}[->,node distance=2cm, auto, thick]
+        \node [rectangle, draw=black] (root) {root};
+        \node [rectangle, draw=black, below left of=root] (f1) {frame};
+        \node [rectangle, draw=black, below right of=root] (f2) {frame};
+        \node [rectangle, draw=black, below of=f1] (b1) {button};
+        \node [rectangle, draw=black, below left of=f2] (b2) {button};
+        \node [rectangle, draw=black, below right of=f2] (lbl) {label};
+        \draw (root) edge (f1)
+            (root) edge (f2)
+            (f1) edge (b1)
+            (f2) edge (b2)
+            (f2) edge (lbl);
+    \end{tikzpicture}
+\end{center}
+
+- Each element has a parent (except root).
+- Each element knows its children.
+
+Why is this useful?
+
+\note{
+Using a tree is useful because on updates of an element only that element and
+its children need to be redrawn.
+}
+
+
+# The tree GUI
+
+\tiny
+
+```{ .python file=code/tree_example.py }
 ```
 
 \normalsize
