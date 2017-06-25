@@ -25,7 +25,7 @@ sys.path.insert(0, os.path.abspath('../src'))
 # -- General configuration ------------------------------------------------
 
 # General information about the project.
-project = 'Castle Crashers Princess Edition'
+project = 'Iris Visualizer'
 author = 'Sebastian Höffner, Aline Vilks'
 copyright = '2017, ' + author
 
