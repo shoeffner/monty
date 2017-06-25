@@ -33,11 +33,11 @@ Week of         Name                                Topics
 
 2017-06-12      Dates, Documentation                datetime, sphinx
 
-2017-06-19      Project week 1                      Projects can be e.g. vocabulary trainers, simple games, esoteric language interpreters, image processing, applications from other subjects, ....
+2017-06-19      Plotting (Project week 1)           Introduction to matplotlib and animations
 
-2017-06-26      Project week 2                      Continuation of previous week
+2017-06-26      GUI -- What next?                   GUI programming, revision of previous topics, possible future applications
 
-2017-07-03      What next?                          Project presentations; future applications
+2017-07-03      Project presentations               Project presentations
 ------------------------------------------------------------------------------------------------------
 
 
@@ -45,8 +45,8 @@ Week of         Name                                Topics
 
 - There are no grades for this class, only a Fail/Pass option.
 - To pass, work successful on nine (out of 13) homework sheets.
-- The final projects will span approximately three of the homework sheets (that
-  means they are included, not extra!)
+- The final projects will span three of the homework sheets (that means they
+  are included, not extra!)
 
 
 # Additional Material and Advice to learn Python
