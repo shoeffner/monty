@@ -222,8 +222,27 @@ label.grid(row=1, column=0, columspan=3)
 
 # Layout management example
 
+\tiny
+
 ```{ .python file=code/grid_example.py }
 ```
+
+\normalsize
+
+
+# Combing everything we learned
+
+In the accompanying zip there is an example project, `iris_viz`.
+
+It contains a lot of things we discussed during the lecture:
+
+- File I/O: It downloads the iris data set if it's not available
+- Plotting: It allows to plot iris data
+- GUIs
+- Error handling and documentation
+
+
+# File I/O
 
 
 

@@ -1,0 +1,3 @@
+code/iris_viz/src/__pycache__/*
+code/iris_viz/docs/_build/*
+code/iris_viz/docs/modules/*
