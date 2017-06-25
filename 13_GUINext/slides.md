@@ -55,12 +55,30 @@ What events do you think can happen?
 $\Rightarrow$ High complexity and flexibility needed!
 
 
+# Don't reinvent the wheel
+
+- Tkinter
+- Qt
+- native solutions
+
+\note{
+There are many GUI frameworks. The most common one in Python is Tkinter.
+
+Tkinter is just the Python "translation" of Tcl/Tk, which can be found here:
+https://tcl.tk/man/tcl8.5/TkCmd/contents.htm
+
+- Partial documentation: http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/index.html.
+- Introduction to Tkinter: http://effbot.org/tkinterbook/
+- Some example codes: https://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html
+- Official documentation: https://docs.python.org/3/library/tk.html
+}
+
+
 # Redraw
 
 GUIs need to redraw changes, e.g. a button press:
 
 ![](img/button_normal.png){width=150}![](img/button_pressed.png){width=150}
-
 
 
 # Redraw demo
@@ -120,6 +138,95 @@ its children need to be redrawn.
 
 \normalsize
 
+\note{
+The elements (or "Widgets") used here are:
+
+- Button: A button to click
+- Label: Contains descriptions text
+- Frame: Groups together different elements
+}
+
+
+# Buttons and event callbacks
+
+```{ .python }
+def print_action():
+    print('Hello World')
+
+tk.Button(root, text="Print!", command=print_action)
+```
+
+
+\note{
+Buttons take a callback function.
+
+Whenever you click a button, the function is executed.
+}
+
+
+# Labels
+
+```{ .python }
+tk.Label(root, text='This is static label text')
+```
+
+
+# Changing label texts
+
+\tiny
+
+```{ .python file=code/update_label.py }
+```
+
+\normalsize
+
+\note{
+`tk.StringVar` (and others: `IntVar`, `DoubleVar`) wrap Python data into
+a format Tcl/Tk can understand. They allow to update components if you change
+their values.
+
+Note that you need to change the argument name from `text` for the static
+solution to `textvariable`.
+}
+
+
+# Organizing interface components: Layout management
+
+Noticed the `pack` call everywhere?
+
+```{ .python }
+label = tk.Label(root, text='Some label')
+label.pack()
+```
+
+It registers the widget with the *geometry manager*
+
+\note{
+http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/layout-mgt.html
+
+The geometry manager determines where layout components need to be placed. You
+just need to tell it what to include (and in which relations) and it will do
+all the pixel level math for you.
+}
+
+
+# Layout management
+
+More common than the `pack()` method is `grid()`:
+
+```{ .python }
+label = tk.Label(root, text='Some label in the second row')
+label.grid(row=1, column=0, columspan=3)
+```
+
+
+# Layout management example
+
+```{ .python file=code/grid_example.py }
+```
+
+
+
 
 # What next?
 
@@ -131,5 +238,6 @@ its children need to be redrawn.
 - classes
 - databases
 - different programming languages
+
 
 # References
