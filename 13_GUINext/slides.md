@@ -241,22 +241,158 @@ It contains a lot of things we discussed during the lecture:
 - GUIs
 - Error handling and documentation
 
+Some examples are on the next slides, but we will skip those as I'll show it in
+the code.
+
 
 # File I/O
 
+```{ .python }
+try:
+    with open('iris.data', 'r') as iris_file:
+        data = iris_file.read()
+except FileNotFoundError:
+    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+    data = requests.get(url).text
+    with open('iris.data', 'w') as iris_file:
+        iris_file.write(data)
+```
 
 
+# Plotting
 
-# What next?
+\scriptsize
 
-- threading
-- inheritance
-- numpy
-- project euler and similar programming puzzles
-- other reads
-- classes
-- databases
-- different programming languages
+```{ .python }
+def update_plot(self):
+    axes = self.figure.gca()
+    axes.clear()
+    axes.set_title('Iris data')
+
+    x = self._x_selection.get()
+    y = self._y_selection.get()
+    axes.set_xlabel(self.labels[x] + ' in cm')
+    axes.set_ylabel(self.labels[y] + ' in cm')
+
+    for cl, col in zip(list(set(d[4] for d in self.data)),
+                        ['orange', 'green', 'blue']):
+        axes.scatter(*zip(*((d[x], d[y]) for d in self.data if d[4] == cl)),
+                        color=col, label=cl)
+
+    axes.legend()
+```
+
+\normalsize
+
+
+# GUI
+
+\scriptsize
+
+```{ .python }
+self.radios = []
+
+self._x_selection = tk.IntVar()
+self._x_selection.set(0)
+
+for row, label in enumerate(self.labels[:-1]):
+    self.radios.append(
+        tk.Radiobutton(self.frame_x, variable=self._x_selection,
+                        value=row, text=label, command=self.update_plot)
+    )
+```
+
+
+# Error handling
+
+```{ .python }
+def maybe_float(v):
+    try:
+        return float(v)
+    except ValueError:
+        return v
+```
+
+
+# The end is near
+
+You have seen what you can build with all you know now.
+It is time to do your own projects!
+
+
+# What we covered
+
+- Variables, functions, classes, modules, packages
+- Collections
+- Reading and writing files
+- Downloading data, parsing data, regex
+- Math, statistics, plotting
+- Times, dates
+- GUI programming
+- and more
+
+
+# What we did not cover -- and where to find it
+
+- Inheritance (Computer Science B)
+- Multithreading (Computer Science B)
+- Numpy (Neuroinformatics, Machine Learning, Computer Vision)
+- Software architectures, project design (Software engineering)
+- System architecture, hardware (Computer Science C)
+- Algorithms (Computer Science D, many other classes)
+- Databases (Database systems)
+- ...
+
+
+# Stay sharp and keep going
+
+> Program. The best kind of learning is learning by doing.
+>
+> ...
+>
+> Talk with other programmers; read other programs. This is more important than
+> any book or training course.
+>
+> ...
+>
+> Learn at least a half dozen programming languages.
+>
+
+[**Peter Norvig**: 21 days](http://norvig.com/21-days.html)
+
+
+# Challenges to improve your skills
+
+https://github.com/karan/Projects
+  ~ Small functions up to medium sized projects: Fibonacci sequence to RSS readers
+
+https://projecteuler.net/
+  ~ Lots of math problems, e.g. find the sum of the first 1000 prime numbers
+
+http://natureofcode.com/book/
+  ~ An introduction to more scientific programming (math, simulations, ...) than this class
+
+
+# My advice
+
+- If you just need Python for some data analyses, install numpy and get started!
+- If you enjoyed the class, try to join "Scientific Programming in Python" the next time it's offered.
+- If you want to dive deeper into programming, learn other programming
+  languages. Java, C++, Prolog, Haskell, Lisp, there are many many many more.
+
+- Join next week's lecture in 93/E42 to see all awesome projects!
+
+\note{
+For numpy, definitely checkout these awesome articles:
+
+- https://docs.scipy.org/doc/numpy-1.12.0/reference/arrays.indexing.html
+- https://scipy.github.io/old-wiki/pages/EricsBroadcastingDoc
+
+You don't need to master other programming languages, but it helps to get away
+from "Syntax" and start thinking about "Semantics" of code, you will become
+better at generalizing ideas and concepts instead of focusing on a particular
+parenthesis or bracket.
+}
 
 
 # References
