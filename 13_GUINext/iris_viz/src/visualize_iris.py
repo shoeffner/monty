@@ -8,7 +8,7 @@ def main():
     iris, labels = iris_data()
 
     root = tk.Tk()
-    IrisVisualizer(root, labels[:-1])
+    IrisVisualizer(root, labels, iris)
     root.mainloop()
 
 

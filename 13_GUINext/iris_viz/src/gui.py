@@ -9,25 +9,30 @@ from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg,
 
 class IrisVisualizer:
 
-    def __init__(self, root, iris_labels):
+    def __init__(self, root, iris_labels, iris_data):
         self.root = root
         self.root.title('Iris data visualizer')
 
-        self.init_canvas(plt.figure())
-        self.init_controls(iris_labels)
+        self.figure = plt.figure()
+        self.data = iris_data
+        self.labels = iris_labels
+
+        self.init_canvas()
+        self.init_controls()
+        self.update_plot()
 
         # Handles click on close properly
         self.root.protocol("WM_DELETE_WINDOW", self.close)
 
-    def init_canvas(self, figure):
+    def init_canvas(self):
         self.frame_figure = tk.Frame(self.root, bd=1, relief=tk.SUNKEN)
         self.frame_figure.grid(row=0, column=0,
                                sticky=tk.NW+tk.SW)
-        self.canvas = FigureCanvasTkAgg(figure, master=self.frame_figure)
+        self.canvas = FigureCanvasTkAgg(self.figure, master=self.frame_figure)
         self.canvas.show()
         self.canvas.get_tk_widget().pack()
 
-    def init_controls(self, iris_labels):
+    def init_controls(self):
         self.frame_controls = tk.Frame(self.root, bd=1, relief=tk.SUNKEN)
         self.frame_controls.grid(row=0, column=1,
                                  sticky=tk.NE+tk.SE)
@@ -51,7 +56,7 @@ class IrisVisualizer:
         self._x_selection = tk.IntVar()
         self._x_selection.set(0)
 
-        for row, label in enumerate(iris_labels):
+        for row, label in enumerate(self.labels[:-1]):
             self.radios.append(
                 tk.Radiobutton(self.frame_x, variable=self._x_selection,
                                value=row, text=label, command=self.update_plot)
@@ -60,7 +65,7 @@ class IrisVisualizer:
 
         self._y_selection = tk.IntVar()
         self._y_selection.set(1)
-        for row, label in enumerate(iris_labels):
+        for row, label in enumerate(self.labels[:-1]):
             self.radios.append(
                 tk.Radiobutton(self.frame_y, variable=self._y_selection,
                                value=row, text=label, command=self.update_plot)
@@ -72,4 +77,19 @@ class IrisVisualizer:
         self.root.destroy()
 
     def update_plot(self):
-        pass
+        axes = self.figure.gca()
+        axes.clear()
+        axes.set_title('Iris data')
+
+        x = self._x_selection.get()
+        y = self._y_selection.get()
+        axes.set_xlabel(self.labels[x] + ' in cm')
+        axes.set_ylabel(self.labels[y] + ' in cm')
+
+        for cl, col in zip(list(set(d[4] for d in self.data)),
+                           ['orange', 'green', 'blue']):
+            axes.scatter(*zip(*((d[x], d[y]) for d in self.data if d[4] == cl)),
+                         color=col, label=cl)
+
+        axes.legend()
+        self.figure.canvas.draw()
