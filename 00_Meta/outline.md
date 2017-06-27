@@ -1,12 +1,10 @@
 % Basic Programming in Python: Course Outline
 % Sebastian Höffner ; Aline Vilks
-% Tue, 13 June 2017
+% Tue, 27 June 2017
 
 ---
 nocite: "@*"
 ...
-
-Note that the schedule presented below is subject to change, depending on how far we get. We will try to keep it up to date so that you can always take a quick look at what we covered.
 
 ------------------------------------------------------------------------------------------------------
 Week of         Name                                Topics
@@ -72,6 +70,3 @@ post one on the internet)?
 
 
 # References
-
-These are all references used throughout the class. The list will grow from
-time to time.
