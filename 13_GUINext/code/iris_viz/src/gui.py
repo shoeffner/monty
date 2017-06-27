@@ -25,19 +25,17 @@ class IrisVisualizer:
         self.root.protocol("WM_DELETE_WINDOW", self.close)
 
     def init_canvas(self):
-        self.frame_figure = tk.Frame(self.root, bd=1, relief=tk.SUNKEN)
-        self.frame_figure.grid(row=0, column=0,
-                               sticky=tk.NW+tk.SW)
-        self.canvas = FigureCanvasTkAgg(self.figure, master=self.frame_figure)
-        self.canvas.show()
-        self.canvas.get_tk_widget().pack()
+        frame_figure = tk.Frame(self.root, bd=1, relief=tk.SUNKEN)
+        frame_figure.grid(row=0, column=0, sticky=tk.NW+tk.SW)
+        canvas = FigureCanvasTkAgg(self.figure, master=frame_figure)
+        canvas.show()
+        canvas.get_tk_widget().pack()
 
     def init_controls(self):
         self.frame_controls = tk.Frame(self.root, bd=1, relief=tk.SUNKEN)
-        self.frame_controls.grid(row=0, column=1,
-                                 sticky=tk.NE+tk.SE)
-        self.label_title = tk.Label(self.frame_controls, text='Axes')
-        self.label_title.grid(row=0, column=0, sticky=tk.W+tk.E)
+        self.frame_controls.grid(row=0, column=1, sticky=tk.NE+tk.SE)
+        tk.Label(self.frame_controls, text='Axes').grid(row=0, column=0,
+                                                        sticky=tk.W+tk.E)
 
         self.frame_x = tk.Frame(self.frame_controls, bd=1, relief=tk.SUNKEN)
         self.frame_x.grid(row=1, column=0, sticky=tk.W+tk.E)
@@ -51,26 +49,22 @@ class IrisVisualizer:
         self.label_y = tk.Label(self.frame_y, text='Y-Axis')
         self.label_y.grid(row=0, column=0)
 
-        self.radios = []
-
         self._x_selection = tk.IntVar()
         self._x_selection.set(0)
 
         for row, label in enumerate(self.labels[:-1]):
-            self.radios.append(
-                tk.Radiobutton(self.frame_x, variable=self._x_selection,
-                               value=row, text=label, command=self.update_plot)
-            )
-            self.radios[-1].grid(row=row, column=1, sticky=tk.W)
+            radio = tk.Radiobutton(self.frame_x, variable=self._x_selection,
+                                   value=row, text=label,
+                                   command=self.update_plot)
+            radio.grid(row=row, column=1, sticky=tk.W)
 
         self._y_selection = tk.IntVar()
         self._y_selection.set(1)
         for row, label in enumerate(self.labels[:-1]):
-            self.radios.append(
-                tk.Radiobutton(self.frame_y, variable=self._y_selection,
-                               value=row, text=label, command=self.update_plot)
-            )
-            self.radios[-1].grid(row=row, column=1, sticky=tk.W)
+            radio = tk.Radiobutton(self.frame_y, variable=self._y_selection,
+                                   value=row, text=label,
+                                   command=self.update_plot)
+            radio.grid(row=row, column=1, sticky=tk.W)
 
     def close(self):
         plt.close()

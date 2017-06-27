@@ -290,16 +290,11 @@ def update_plot(self):
 \scriptsize
 
 ```{ .python }
-self.radios = []
-
-self._x_selection = tk.IntVar()
-self._x_selection.set(0)
-
 for row, label in enumerate(self.labels[:-1]):
-    self.radios.append(
-        tk.Radiobutton(self.frame_x, variable=self._x_selection,
-                        value=row, text=label, command=self.update_plot)
-    )
+    radio = tk.Radiobutton(self.frame_x, variable=self._x_selection,
+                            value=row, text=label,
+                            command=self.update_plot)
+    radio.grid(row=row, column=1, sticky=tk.W)
 ```
 
 
