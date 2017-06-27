@@ -49,15 +49,15 @@ zip%: builddir% sheet% solution% slides%
 		echo Zipping solutions for $(path) ; \
 		awk '{print "$(path)/" $$0}' $(rsolution).list | zip -r -@ $(solution).zip ; \
 		if [ -f $(rsolution).xlist ]; then \
-			awk '{print "$(path)/" $$0}' $(rsolution).xlist | zip -d -@ $(sheet).zip ; \
+			awk '{print "$(path)/" $$0}' $(rsolution).xlist | zip -d -@ $(solution).zip ; \
 		fi; \
 		zip -j $(solution).zip $(solution).pdf ; \
 	fi; \
 	if [ -f $(rslides).list ]; then \
 		echo Zipping slides for $(path) ; \
-		awk '{print "$(path)/" $$0}' $(rslides).list | zip -@ $(slides).zip ; \
+		awk '{print "$(path)/" $$0}' $(rslides).list | zip -r -@ $(slides).zip ; \
 		if [ -f $(rslides).xlist ]; then \
-			awk '{print "$(path)/" $$0}' $(rslides).xlist | zip -d -@ $(sheet).zip ; \
+			awk '{print "$(path)/" $$0}' $(rslides).xlist | zip -d -@ $(slides).zip ; \
 		fi; \
 		zip -j $(slides).zip $(slides).pdf ; \
 	fi
