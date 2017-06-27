@@ -10,6 +10,13 @@ from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg,
 class IrisVisualizer:
 
     def __init__(self, root, iris_labels, iris_data):
+        """Initializes the IrisVisualizer.
+
+        Args:
+            root: The tk-parent.
+            iris_labels: The labels for the iris data set (Sepal Width, etc.)
+            iris_data: The iris data as a list of lists.
+        """
         self.root = root
         self.root.title('Iris data visualizer')
 
@@ -25,13 +32,28 @@ class IrisVisualizer:
         self.root.protocol("WM_DELETE_WINDOW", self.close)
 
     def init_canvas(self):
+        """Initializes the matplotlib canvas.
+
+        Adapted from
+        https://matplotlib.org/examples/user_interfaces/embedding_in_tk.html
+
+        Generates a frame and palces a figure canvas and a navigation toolbar
+        inside it.
+        """
         frame_figure = tk.Frame(self.root, bd=1, relief=tk.SUNKEN)
         frame_figure.grid(row=0, column=0, sticky=tk.NW+tk.SW)
         canvas = FigureCanvasTkAgg(self.figure, master=frame_figure)
         canvas.show()
         canvas.get_tk_widget().pack()
+        toolbar = NavigationToolbar2TkAgg(canvas, frame_figure)
+        toolbar.update()
+        canvas._tkcanvas.pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
     def init_controls(self):
+        """
+        Initializes the radio boxes to choose x-axis and y-axis data
+        dimensions.
+        """
         self.frame_controls = tk.Frame(self.root, bd=1, relief=tk.SUNKEN)
         self.frame_controls.grid(row=0, column=1, sticky=tk.NE+tk.SE)
         tk.Label(self.frame_controls, text='Axes').grid(row=0, column=0,
@@ -67,10 +89,13 @@ class IrisVisualizer:
             radio.grid(row=row, column=1, sticky=tk.W)
 
     def close(self):
+        """Closes the plot and destroys the GUI."""
         plt.close()
         self.root.destroy()
 
     def update_plot(self):
+        """Clears the plot and redraws it, using the new data selected by
+        the checkboxes."""
         axes = self.figure.gca()
         axes.clear()
         axes.set_title('Iris data')
