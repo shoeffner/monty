@@ -1,6 +1,5 @@
 # Course material
 
-This website will be updated whenever we publish new sheets, solutions or lecture slides.
 If you find any mistakes, have some questions or anything else, feel free to drop me a line (shoeffner@uos.de).
 
 [Course outline](files/BPP-Outline.pdf) (subject to change)
@@ -83,17 +82,15 @@ If you find any mistakes, have some questions or anything else, feel free to dro
     - [Homework sheet (final projects)](files/BPP-11_DatetimeDocs-Sheet.pdf)
     - [Homework code (example final project)](files/BPP-11_DatetimeDocs-Sheet.zip)
 
-12. Plotting
+12. Plotting ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=8f83842b-1770-425a-9769-78eb796525ea))
     - [Lecture slides](files/BPP-12_Plotting.pdf)
     - [Lecture code](files/BPP-12_Plotting.zip)
 
+13. GUI – What next? ([Recording](https://video4.virtuos.uos.de/engage/theodul/ui/core.html?id=4ceed304-6835-4683-8693-4b2c7fee4e02))
+    - [Lecture slides](files/BPP-13_GUINext.pdf)
+    - [Lecture code](files/BPP-13_GUINext.zip)
 
 Unfortunately there is no recording of the first session available. Due to
 technical issues, no recordings of the beamer presentations are available for
 sessions 7, 8, and 9. The last session is not recorded because it covered only
 student presentations.
-
-*Note:* Once the class is done, we will make the source files available as well
-(i.e. the repository). But to keep the solutions *secret* while we go (as our
-students receive points for them), it seems to be a good option to publish the
-files on this page.
