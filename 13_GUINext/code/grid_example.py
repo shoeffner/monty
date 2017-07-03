@@ -17,3 +17,4 @@ if __name__ == '__main__':
     root = tk.Tk()
     GridWindow(root)
     root.mainloop()
+    root.destroy()

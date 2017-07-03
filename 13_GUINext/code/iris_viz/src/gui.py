@@ -82,6 +82,7 @@ class IrisVisualizer:
 
         self._y_selection = tk.IntVar()
         self._y_selection.set(1)
+
         for row, label in enumerate(self.labels[:-1]):
             radio = tk.Radiobutton(self.frame_y, variable=self._y_selection,
                                    value=row, text=label,
