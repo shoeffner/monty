@@ -3,8 +3,11 @@ email: shoeffner@uos.de
 description: >
   Course material for the class <em>Basic Programming in Python</em>.
   The class is taught during the summer term 2017 at the
-  <a href="http://uos.de">University of Osnabrück</a> by Aline Vilks and
+  <a href="https://uos.de">University of Osnabrück</a> by Aline Vilks and
   Sebastian Höffner.
+
+  You can find all raw files on
+  <a href="https://github.com/shoeffner/monty">GitHub</a>.
 theme: jekyll-theme-minimal
 exclude:
   - Gemfile
