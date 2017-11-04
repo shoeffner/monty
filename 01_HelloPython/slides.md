@@ -4,27 +4,32 @@
 
 But it takes a lot of time to become good at it.
 
-\note{
-- It's like sports: easy to run, but it takes a lot of practice to run a marathon.
+::: notes
 
+- It's like sports: easy to run, but it takes a lot of practice to run a marathon.
 - You need ten thousands of hours to master a skill -- we can only present you with your first 50 or so.
-}
+
+:::
 
 
 # Why programming?
 
 ## Programming in academia
 
-\note{
+::: notes
+
 - Course work focuses more on contents, less on tools
 - Data analysis becomes more fluent
 - Theses and papers become easier
 - You learn to automate things to be more productive
-}
+
+:::
+
 
 ## Programming outside of academia
 
-\note{
+::: notes
+
 - Understanding the principles helps with every day tasks:
     - using office programs
     - filing your tax returns
@@ -32,7 +37,8 @@ But it takes a lot of time to become good at it.
     - ...
 - Understanding technology makes things easier and less magic
 - Basically every job for academic people involves code
-}
+
+:::
 
 
 # Cliqr
@@ -41,9 +47,11 @@ But it takes a lot of time to become good at it.
 
 \cliqr{Did you take part in our questionnaire?}
 
-\note{
+::: notes
+
 Responses: https://goo.gl/VhpXY1
-}
+
+:::
 
 
 # Questionnaire results: speed
@@ -267,10 +275,12 @@ Keep in mind: the concepts are always very very similar!
 print('Hello World!')
 ```
 
-\note{
+::: notes
+
 You can use comments in your code: just start a line with `#` and it will be
 "ignored" by Python.
-}
+
+:::
 
 
 # Your first homework

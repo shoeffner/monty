@@ -22,11 +22,13 @@ def comfort_evaluation(car):
 
 What happens if we call the function twice for the same car which had `'more'` seats?
 
-\note{
+::: notes
+
 Don't change values if you just want to read them! Sometimes you want to use them somewhere else, or someone else wrote some code where it's still important to have `'more'`.
 
 In this example on the first evaluation, `car.seats` would be set to 2, on the second it would then be set to 1!
-}
+
+:::
 
 
 # Mutability
@@ -42,12 +44,14 @@ print(l)
 
 For some more explanations and examples, check [Immutable vs Mutable types](https://stackoverflow.com/q/8056130/3004221).
 
-\note{
+::: notes
+
 - Lists and objects are mutable, that means they can be modified inside
   functions unless you copy them.
 - int, str, float, etc. are not mutable (immutable), they always stay what they
   were before the function call.
-}
+
+:::
 
 
 # Handling exceptions
@@ -58,13 +62,15 @@ We discussed:
 * asserts
 * debugging
 
-\note{
+::: notes
+
 While most (maybe even all?) errors are called `Error`, you will find me calling them *exceptions*.
 
 Correct would be to call `SyntaxError`s errors and most other errors exceptions.
 
 But since there is no clear distinction between the two, I try to use *exception* on all slides.
-}
+
+:::
 
 
 # Expected exceptions
@@ -102,11 +108,13 @@ Please enter a number > 0: 0
 Please enter a number > 0: 1
 ```
 
-\note{
+::: notes
+
 `try` runs code until an exception occurs. If that exception was expected, we can catch it with `except`.
 
 Otherwise the program will crash, just as you have seen it many times with exceptions.
-}
+
+:::
 
 
 # Multiple exceptions
@@ -176,11 +184,13 @@ Which errors should be handled, which ones not?
 - `RecursionError`
 - and many more
 
-\note{
+::: notes
+
 You should never handle exceptions which occur because of the code syntax, nor should you handle exceptions which denote system limitations.
 
 Rule of thumb: Handle only what you can handle with an algorithm.
-}
+
+:::
 
 
 # Finally
@@ -203,7 +213,8 @@ read('Makefile')
 
 \normalsize
 
-\note{
+::: notes
+
 Statements inside a finally block will always be executed, regardless of
 exceptions before or not.
 
@@ -211,7 +222,8 @@ It even works after returns!
 
 It is most commonly used to ensure files and other connections are closed. But
 beware: `with` is almost always better!
-}
+
+:::
 
 
 # Finally
@@ -268,14 +280,16 @@ for car in [Car(), Car(True)]:
 
 \normalsize
 
-\note{
+::: notes
+
 `class CarException(Exception)` means that the class `CarException` *inherits*
 all properties the class `Exception` has. We won't discuss inheritance in more
 details. But it is important so that you can `raise` exceptions.
 
 The string in the exception you raise should be meaningful: It's the error
 message other people will see.
-}
+
+:::
 
 
 # Use cases for exception handling
@@ -305,9 +319,11 @@ print(description)
 
 \normalsize
 
-\note{
+::: notes
+
 Casting things to strings manually is very tedious. There's a better way!
-}
+
+:::
 
 
 # Format strings
@@ -320,13 +336,15 @@ print(description.format(wheels))
 print('My car has {wheels}.'.format(wheels=6))
 ```
 
-\note{
+::: notes
+
 The `{}` are delimiters. Here they just serve as placeholders, but we can do
 much more with them. Notice the `wheels` in the second case? It allows to name
 an argument.
 
 Consider: `'I am at ({x}, {y})'.format(y=2, x=5)`.
-}
+
+:::
 
 
 # Format strings are a powerful tool
@@ -337,7 +355,8 @@ print('{:0>8.3f}'.format(4/3))
 print('{:*^25}'.format('Hello'))
 ```
 
-\note{
+::: notes
+
 The `:` means: now comes a format rule!
 The format rules then follow a special syntax. The examples here go as follows:
 
@@ -348,20 +367,23 @@ The format rules then follow a special syntax. The examples here go as follows:
   Note that 8 is the *total* length, so there will be $8-3-1$ characters (or
   more if needed) left of the `.`.
 - `*^25` Pad with `*`s, align centered (`^`), make it `25` wide.
-}
+
+:::
 
 
 # Format specifications
 
 ![https://docs.python.org/3.6/library/string.html#format-string-syntax](img/stringsyntax.png)
 
-\note{
+::: notes
+
 Now you can create output which looks like you want without having to weirdly
 concatenate strings and check spaces, etc.
 
 There is much more inside the documentation, we will take a look at some of it
 now.
-}
+
+:::
 
 
 # Paradigm shift
@@ -395,14 +417,16 @@ For the rest of the course, we will mostly focus on applications.
 
 [^dfa]: Deterministic Finite Automaton (DFA)
 
-\note{
+::: notes
+
 - Sometimes called *Finite State Automaton* (FSA)
 - The formal things now will be a little bit boring for people following the
   Computer Science D class by Prof. Chimani or the Computational Linguistics
   class by Dr. phil. Gregoromichelaki, but we will make some more practical
   considerations.
 - You can already guess: This is a cool link to other subjects!
-}
+
+:::
 
 
 # DFA and formal languages
@@ -413,12 +437,14 @@ For the rest of the course, we will mostly focus on applications.
 - DFA checks if $w$ follows rule set or not
 
 
-\note{
+::: notes
+
 - $\Sigma$ can be something like $\{a, b\}$
 - $\Sigma^*$ is then the set of all possible combinations of $a$ and $b$ and
   the empty set $\emptyset$
 - Examples are: $aaababb$, $a$, $\emptyset$, $bbbb$, $ab$, ...
-}
+
+:::
 
 
 # The formal language "Python binaries"
@@ -441,11 +467,13 @@ d. $w_3$ = $b0b101b$
 e. $w_4 = 0b0000011$
 f. $w_5 = 0b$
 
-\note{
+::: notes
+
 Valid: $w_0, w_1, w_4$.
 
 Invalid: $w_2$ (no $b$), $w_3$ (too many $b$), $w_5$ (no $0$ or $1$ after $b$).
-}
+
+:::
 
 
 # DFA for "Python binaries"
@@ -516,7 +544,8 @@ We can now identify our states easily:
     D &\rightarrow 0D\, |\, 1D\, |\, \epsilon
 \end{align*}
 
-\note{
+::: notes
+
 A $|$ denotes an `or`, $\epsilon$ means no input. Rules can either be of the
 form $S \rightarrow \sigma \in \Sigma \times S$, $S \rightarrow \sigma \in
 \Sigma$, or $S \rightarrow \epsilon$. The last two rules, which don't have new
@@ -524,7 +553,8 @@ states defined, are called "terminal" rule.
 
 There are also many algorithms to convert between grammars, diagrams, rules,
 etc.; the problems we discuss are usually easily solved by "looking closely".
-}
+
+:::
 
 
 # Writing a transition function
@@ -568,7 +598,8 @@ D        ? D D
 
 \normalsize
 
-\note{
+::: notes
+
 You can read the transfer function like this:
 
 Given a state (first column) and an input (first row), the state changes to the
@@ -579,7 +610,8 @@ a rule of the form $S \times \Sigma \rightarrow S$, e.g. $B \times
 b \rightarrow C$ and $C \times 0 \rightarrow D$.
 
 What about the question marks?
-}
+
+:::
 
 
 # Implicit error states
@@ -624,13 +656,15 @@ can nicely draw it:
 
 \normalsize
 
-\note{
+::: notes
+
 The implicit error state is useful when we program our FSA.
 
 To find out what leads to error state, imagine all possible inputs for each
 state: Those which are not "legal" according to the grammar rules lead to the
 error state (sometimes called "trap").
-}
+
+:::
 
 
 # Implementing $\delta$

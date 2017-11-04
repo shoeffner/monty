@@ -25,13 +25,15 @@
 \end{tikzpicture}
 \end{center}
 
-\note{
+::: notes
+
 Last week we discussed the formal language "Python binaries" and how to check strings if they are part of it.
 
 Today we learn a powerful tool to not only check if a string matches a certain
 grammar (i.e. is part of a formal language), but also to find all matching
 sequences inside long texts: Regular expressions.
-}
+
+:::
 
 
 # Regular Expressions (regex)
@@ -69,7 +71,8 @@ re.fullmatch(pattern, string)  # Complete string
 
 [^redocs]: https://docs.python.org/3/library/re.html
 
-\note{
+::: notes
+
 The `re` module has many more elements to form a regular expression than what
 we will cover here, if you feel like it, feel free to explore it more for your
 own projects.
@@ -82,7 +85,8 @@ oriented interface where you *compile* a regex and perform actions on it:
 
 The compiled version can also be used like this: `re.fullmatch(regex, string)`.
 This is faster if you want to reuse the same regex multiple times.
-}
+
+:::
 
 
 # Regex: empty string
@@ -98,9 +102,11 @@ print(nonempty)
 print(empty)
 ```
 
-\note{
+::: notes
+
 The empty string only matches the empty string.
-}
+
+:::
 
 
 # Regex: Singleton languages
@@ -121,7 +127,8 @@ print(match[0])
 
 \normalsize
 
-\note{
+::: notes
+
 A singleton pattern matches single letters which are the same.
 
 **Reading the result**:
@@ -135,7 +142,8 @@ match:
 ~ what was matched (here the input string)
 
 Using the indexing, we can access groups (more later), the first group (0) is the match.
-}
+
+:::
 
 
 # Regex: Concatenation
@@ -149,12 +157,14 @@ print(nomatch)
 print(match[0])
 ```
 
-\note{
+::: notes
+
 We can just concatenate (i.e. append to teach other) patterns to match their
 concatenation.
 The pattern `a` matches `a`, the pattern `b` matches `b`, but pattern `ab` only
 matches `ab` and neither `a` nor `b`.
-}
+
+:::
 
 
 # Intermezzo: Set theory meets logic
@@ -204,9 +214,13 @@ matches `ab` and neither `a` nor `b`.
   0     1         0
   0     0         0
 
-\note{
+:Logical and
+
+::: notes
+
 Intersection is like the logical *and*. Notice the similarity between the symbols $\cap$ and $\wedge$!
-}
+
+:::
 
 
 # Intermezzo: Set theory meets logic
@@ -229,9 +243,13 @@ Intersection is like the logical *and*. Notice the similarity between the symbol
   0     1         1
   0     0         0
 
-\note{
+:Logical or
+
+::: notes
+
 Union is like the logical *or*. Notice the similarity between the symbols $\cup$ and $\vee$!
-}
+
+:::
 
 
 # Regex: Union
@@ -253,9 +271,11 @@ print(match2[0])
 
 \normalsize
 
-\note{
+::: notes
+
 We have seen that union is the logical or, hence the regex symbol for *union* is the `|` - a symbol which for many programmers intuitively maps to *or*.
-}
+
+:::
 
 
 # Regex: Wrap up of simple expressions
@@ -291,9 +311,11 @@ print(match5[0])
 
 \normalsize
 
-\note{
+::: notes
+
 The Kleene star can match no, one, or many characters of the same expression.
-}
+
+:::
 
 
 # Regex: extension of Kleene
@@ -308,9 +330,11 @@ print(match1[0])
 print(match2[0])
 ```
 
-\note{
+::: notes
+
 $+$ means: At least one. It is thus equivalent to the concatenation between a singleton language and the Kleene star.
-}
+
+:::
 
 
 # Example: Regex for "Python binaries"
@@ -356,11 +380,13 @@ print(match[0])
 print(fullmatch)
 ```
 
-\note{
+::: notes
+
 `re.match` matches at the beginning of the string.
 
 `re.fullmatch` matches the full string.
-}
+
+:::
 
 
 # Match vs. search vs. findall
@@ -377,10 +403,12 @@ print(search[0])
 print(findall)
 ```
 
-\note{
+::: notes
+
 `re.search` searches for the first occurrence.
 `re.findall` searches for all occurrences.
-}
+
+:::
 
 
 # Character sets
@@ -406,12 +434,14 @@ match = re.match('[0-9a-f][0-9a-f]', '4f')
 print(match[0])
 ```
 
-\note{
+::: notes
+
 Note that character sets are case sensitive. Inside character sets, special
 characters (`+`, `*`, etc.) have no special meaning.
 
 Very common are the numbers and the alphabets: `[0-9a-zA-Z]`.
-}
+
+:::
 
 
 # Negating a set
@@ -450,11 +480,13 @@ print(repr(match3[0]))
 
 \normalsize
 
-\note{
+::: notes
+
 *Hint*: To also match newlines, you can use the `re.DOTALL` flag:
 
 `re.match('.', '\n', flags=re.DOTALL)`
-}
+
+:::
 
 
 # Escaping
@@ -474,10 +506,12 @@ print(re.match('\\\\', '\\')[0])
 print(re.match('\\\'', '\'')[0])
 ```
 
-\note{
+::: notes
+
 For the `\\\\ ` pattern, we are escaping the escape character and the character
 to be escaped.
-}
+
+:::
 
 
 # Avoid some escaping
@@ -491,11 +525,13 @@ print(re.match(r'\\', '\\')[0])
 print(re.match(r'\'', '\'')[0])
 ```
 
-\note{
+::: notes
+
 Raw strings use `\ ` as literals, they usually ignore the escaping capabilities. But since a regex is compiled, it has a deeper level and the escaping still applies for it.
 
 An edge case are quotes: They are still escaped by backslashes but also remain in there. You can find more about this in the documentation https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals .
-}
+
+:::
 
 
 # Groups
@@ -512,9 +548,11 @@ print(match2.groups()[1])
 print(match2[2])  # ! next slide
 ```
 
-\note{
+::: notes
+
 Groups are denoted by `()`. They can be extracted from the results using the `groups()` function.
-}
+
+:::
 
 
 # Groups can be reused
@@ -527,7 +565,8 @@ print(re.match(r'(a*)b\1', 'aaba'))
 print(re.match(r'(a*)(b*)\1\2', 'aabaab')[0])
 ```
 
-\note{
+::: notes
+
 Groups can be accessed using `\1`, where 1 can be replaced by the group
 numbers. This is 1-indexed, i.e. the first is not 0 but 1 -- this is because
 the full match is considered a group as well, group 0! When we used the `[...]`
@@ -537,7 +576,8 @@ To be more precise: `group()` returns all groups, while `groups()` only returns
 *subgroups*, i.e. all but the full match.
 
 Note the `r` for the single backslashes, otherwise we'd need to escape them again.
-}
+
+:::
 
 
 # More specialties of \
@@ -609,11 +649,13 @@ print(re.search('a.*a', 'abbabba')[0])
 print(re.search('a.*?a', 'abbabba')[0])
 ```
 
-\note{
+::: notes
+
 Regex special characters try to match as much as possible by default. But
 sometimes we want minimal matches, we don't want to be *greedy* and take
 everything. We can then modify the expression and use `?` to allow this.
-}
+
+:::
 
 
 # Example: Romeo and Juliet
@@ -694,9 +736,11 @@ Task Force (IETF) to define internet standards and discuss them. RFC2616
 (https://www.ietf.org/rfc/rfc2616.txt) is a 175 pages long definition of the
 HTTP/1.1 standard.
 
-\note{
+::: notes
+
 There are classes focusing only on computer communication, so I will only scratch the very very surface.
-}
+
+:::
 
 
 # HTTP requests
@@ -744,7 +788,8 @@ Connection: keep-alive
 
 \normalsize
 
-\note{
+::: notes
+
 For this request you need a connection, which is a whole topic on how computers
 can communicate with each other. We assume that connection can be magically
 made.
@@ -754,7 +799,8 @@ A request contains a VERB, a resource, and the protocol, followed by the host na
 A response contains the protocol, the status code and message (`200 OK`), some
 meta data in `key: value` pairs, and the content. (Here I abbreviated
 everything a little bit.)
-}
+
+:::
 
 
 # HTTP verbs
@@ -797,11 +843,13 @@ response = requests.get(url)
 print(response)
 ```
 
-\note{
+::: notes
+
 Install `requests`, which is a much easier to use python package than Python's own urllib (it is even recommended in the documentation!). To install, just run `pip3 install requests`.
 
 You can find the awesome documentation here: http://docs.python-requests.org
-}
+
+:::
 
 
 # Retrieving the content
@@ -829,12 +877,14 @@ response = requests.get(url)
 print(response.content[:120])
 ```
 
-\note{
+::: notes
+
 Images are **binary data** (not simple text).
 
 Thus we have to use the *raw* content, not the text, as text already performs
 some conversions (all data sent over the internet is at first "binary").
-}
+
+:::
 
 
 # Downloading images
@@ -849,9 +899,11 @@ with open('pythonlogo.png', 'wb') as image_file:
 ```
 
 
-\note{
+::: notes
+
 Finally we can use the `b` in `open`!
-}
+
+:::
 
 # Download images
 

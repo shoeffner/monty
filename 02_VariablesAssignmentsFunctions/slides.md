@@ -9,11 +9,13 @@
 
 - To replay your code: `python my_code.py` -- or just click the play button in spyder!
 
-\note{
+::: notes
+
 During the first homework, you copied all your commands into files.
 
 You can run them, share them, modify them.
-}
+
+:::
 
 
 # Common mistakes & bonus solutions
@@ -68,12 +70,14 @@ liquid_in_mug = 'hot chocolate'
 print('My', mug, 'contains', liquid_in_mug)
 ```
 
-\note{
+::: notes
+
 You might know this concept from Logics, Mathematics, or Statistics classes.
 
 A variable is thus just a placeholder for a concept, while the value is its
 realization.
-}
+
+:::
 
 
 # Example: Names
@@ -110,12 +114,14 @@ print(my_fruit)
 print(your_fruit)
 ```
 
-\note{
+::: notes
+
 We can copy over one variable to another variable.
 
 However, be careful with assigning variables to variables, we will later learn
 that sometimes we hold the same fruit, not a copy!
-}
+
+:::
 
 
 # Variables and assignments
@@ -130,12 +136,14 @@ that sometimes we hold the same fruit, not a copy!
 
 $a = b$ (in math) is not the same as `a = b` (in code)
 
-\note{
+::: notes
+
 - Mathematical equality works different than assignments
 - In maths, both sides of the equality sign have to be equal
 - In programming, after "assigning b to a", `a` has the value of `b`
 - It does not matter what value `a` or `b` had before (in python)
-}
+
+:::
 
 
 # Variables and math
@@ -181,7 +189,8 @@ There are lots of math operators:
 `%`
   ~ Modulo `5 % 3`
 
-\note{
+::: notes
+
 They all work just as we are used from mathematics.
 
 Try out:
@@ -191,7 +200,8 @@ Try out:
 - `5 - 2 + 3`
 - `5 - (2 + 3)`
 - etc.
-}
+
+:::
 
 
 # Recap: modulo
@@ -217,11 +227,13 @@ What do these operators do?
 `**`
   ~ ?: `5 ** 3`
 
-\note{
+::: notes
+
 `//` is the integer division (floors the value / cuts off the remainder)
 
 `**` is exponentiation
-}
+
+:::
 
 # Python handles very large numbers
 
@@ -240,9 +252,11 @@ Try:
 
 [^remindersqrt]: Remember that $\sqrt[p]{x} = x^{\frac{1}{p}}$.
 
-\note{
-\pycode{sqrt_cbrt.py}
-}
+::: notes
+
+\pycode{02_VariablesAssignmentsFunctions/code/sqrt_cbrt.py}
+
+:::
 
 
 # Operator precedence and parentheses
@@ -250,11 +264,13 @@ Try:
 - What is $x$: $x = 5 \cdot 4 + 1$
 - What is $y$: $y = 5 \cdot (4 + 1)$
 
-\note{
+::: notes
+
 Multiplication has a higher precedence than addition.
 
 Parentheses overwrite precedence.
-}
+
+:::
 
 
 # Operator Precedences
@@ -287,7 +303,8 @@ print(sqrt_a)
 
 \cliqr{Do you like video games?}
 
-\note{
+::: notes
+
 - There are lots of useful math functions already implemented in Python.
 - Search the web for `python 3 math`. Do it now!
 - All functions listed there are available by calling `math.function(...)`
@@ -295,7 +312,8 @@ print(sqrt_a)
 - `math` is a **module**
 
 https://docs.python.org/3/library/math.html
-}
+
+:::
 
 
 # Let's solve a "real world" problem!
@@ -325,12 +343,14 @@ $d(L, S) = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 2. Assume one knight is a bit stronger than the others: with level 32 he got a
    strength value of 21. How much damage does he deal with a single strong attack?
 
-\note{
-\pycode{castlecrashers.py}
+::: notes
+
+\pycode{02_VariablesAssignmentsFunctions/code/castlecrashers.py}
 
 1. `31`
 2. `32`
-}
+
+:::
 
 
 # Fighting for princesses solution
@@ -343,14 +363,16 @@ $d(L, S) = \left\lfloor 5 + 1.15 S + 0.1 L \right\rfloor$
 
 How did you change the code to solve the second exercise?
 
-\note{
+::: notes
+
 Split your code into small parts which solve one task.
 
 - This follows a pattern called DNRY (Do Not Repeat Yourself)
 - Fewer mistakes/easy to fix: only need to change them in one place
 - We will learn later: It's easier to test
 - Makes code reusable
-}
+
+:::
 
 
 # Reusing code: Functions
@@ -380,9 +402,11 @@ print(result)
 
 \cliqr{What is the value of \texttt{result1}?}
 
-\note{
+::: notes
+
 - `result1` is `HelloWorld`
-}
+
+:::
 
 
 # Functions -- explained
@@ -402,13 +426,15 @@ print(result)
 ```
 
 
-\note{
+::: notes
+
 - Watch out for indentation
 - Take care of enough whitespace around a function (at least one line above and below)
 - You can have arbitrarily many arguments
 - We will discuss functions in much more details soon,
   but for now this should be sufficient
-}
+
+:::
 
 
 # Your second homework

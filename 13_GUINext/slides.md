@@ -61,7 +61,8 @@ $\Rightarrow$ High complexity and flexibility needed!
 - Qt
 - native solutions
 
-\note{
+::: notes
+
 There are many GUI frameworks. The most common one in Python is Tkinter.
 
 Tkinter is just the Python "translation" of Tcl/Tk, which can be found here:
@@ -71,7 +72,8 @@ https://tcl.tk/man/tcl8.5/TkCmd/contents.htm
 - Introduction to Tkinter: http://effbot.org/tkinterbook/
 - Some example codes: https://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html
 - Official documentation: https://docs.python.org/3/library/tk.html
-}
+
+:::
 
 
 # Redraw
@@ -90,14 +92,16 @@ GUIs need to redraw changes, e.g. a button press:
 
 \normalsize
 
-\note{
+::: notes
+
 `Tk()` creates the window (the "root" element), `mainloop` runs the event loop
 and handles events.
 
 Since it runs indefinitely, it also keeps the program from closing!
 
 The Button can close the program (`quit` on the root element).
-}
+
+:::
 
 
 # Redraw: A tree approach
@@ -123,10 +127,12 @@ The Button can close the program (`quit` on the root element).
 
 Why is this useful?
 
-\note{
+::: notes
+
 Using a tree is useful because on updates of an element only that element and
 its children need to be redrawn.
-}
+
+:::
 
 
 # The tree GUI
@@ -138,13 +144,15 @@ its children need to be redrawn.
 
 \normalsize
 
-\note{
+::: notes
+
 The elements (or "Widgets") used here are:
 
 - Button: A button to click
 - Label: Contains descriptions text
 - Frame: Groups together different elements
-}
+
+:::
 
 
 # Buttons and event callbacks
@@ -157,11 +165,13 @@ tk.Button(root, text="Print!", command=print_action)
 ```
 
 
-\note{
+::: notes
+
 Buttons take a callback function.
 
 Whenever you click a button, the function is executed.
-}
+
+:::
 
 
 # Labels
@@ -180,14 +190,16 @@ tk.Label(root, text='This is static label text')
 
 \normalsize
 
-\note{
+::: notes
+
 `tk.StringVar` (and others: `IntVar`, `DoubleVar`) wrap Python data into
 a format Tcl/Tk can understand. They allow to update components if you change
 their values.
 
 Note that you need to change the argument name from `text` for the static
 solution to `textvariable`.
-}
+
+:::
 
 
 # Organizing interface components: Layout management
@@ -201,13 +213,15 @@ label.pack()
 
 It registers the widget with the *geometry manager*
 
-\note{
+::: notes
+
 http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/layout-mgt.html
 
 The geometry manager determines where layout components need to be placed. You
 just need to tell it what to include (and in which relations) and it will do
 all the pixel level math for you.
-}
+
+:::
 
 
 # Layout management
@@ -377,7 +391,8 @@ http://natureofcode.com/book/
 
 - Join next week's lecture in 93/E42 to see all awesome projects!
 
-\note{
+::: notes
+
 For numpy, definitely checkout these awesome articles:
 
 - https://docs.scipy.org/doc/numpy-1.12.0/reference/arrays.indexing.html
@@ -387,7 +402,8 @@ You don't need to master other programming languages, but it helps to get away
 from "Syntax" and start thinking about "Semantics" of code, you will become
 better at generalizing ideas and concepts instead of focusing on a particular
 parenthesis or bracket.
-}
+
+:::
 
 
 # References

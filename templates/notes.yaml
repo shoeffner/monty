@@ -18,7 +18,6 @@ header-includes:
     - \usetikzlibrary{arrows,automata}
 panflute-path: 'templates/filters'
 panflute-filters:
-    - pandoc-beamer-notes
     - pandoc-img-glob
     - pandoc-code-glob
     - pandoc-source-exec

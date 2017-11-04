@@ -39,7 +39,8 @@ Agenda for today:
 - Two algorithms (Euclidean algorithm and magic square)
 - Python packages and modules
 
-\note{
+::: notes
+
 Even though it was announced: We will not use `matplotlib` just yet.
 
 Instead I will for the next two weeks or more focus more on programming -- in
@@ -48,7 +49,8 @@ Python and in general.
 This will, or so I hope, make it much easier for you to use any "library" like
 `matplotlib` in the future and make you better programmers even when you don't
 use Python for future projects.
-}
+
+:::
 
 
 # Euclidean algorithm
@@ -109,9 +111,11 @@ def gcd(a, b):
 print(gcd(2329, 2091))
 ```
 
-\note{
+::: notes
+
 Do you notice that subtracting $b$ again and again until it would fall below $0$ is nothing else but taking the modulo? Maybe we can improve on that.
-}
+
+:::
 
 
 # Euclidean algorithm
@@ -125,9 +129,11 @@ def gcd(a, b):
 print(gcd(2329, 2091))
 ```
 
-\note{
+::: notes
+
 `a, b = b, a` is a nice Python feature to swap values.
-}
+
+:::
 
 
 # Euclidean algorithm -- recursive
@@ -152,11 +158,13 @@ print(gcd(2329, 2091))
 
 \normalsize
 
-\note{
+::: notes
+
 Do you remember that `0` is evaluated to `False` in Python? So `not b` is essentially the same as `b == 0`.
 
 `a if condition else b` is a conditional expression and evaluates to `a` if the `condition` is `True`, otherwise it becomes `b`. Although it only describes the type of operator *ternary operator* is often used when talking about this specific form of conditional expression.
-}
+
+:::
 
 
 # Magic squares
@@ -226,10 +234,12 @@ while the problem is not solved:
 
 \normalsize
 
-\note{
+::: notes
+
 It can be applied to many problems: Sudoku solving, mazes (see exercise sheet),
 N-queens, ...
-}
+
+:::
 
 
 # Magic squares with backtracking
@@ -254,14 +264,16 @@ def magic(square, position, number=1):
 
 \normalsize
 
-\note{
+::: notes
+
 Even though this code is much longer than the solution before, I chose it as an easy
 to follow example for backtracking.
 
 Note that the initialization now needs to already put the 1 into the first position.
 
 For a complete example, take a look at the accompanying `magicsquare_bt.py`.
-}
+
+:::
 
 # Organizing code
 
@@ -292,10 +304,12 @@ hello = fun
 print(hello())
 ```
 
-\note{
+::: notes
+
 - Functions are just *objects* which also have a name, just like variables.
 - The difference is that functions are *callable*, that means we can use `function(...)` to execute the code behind it.
-}
+
+:::
 
 
 # Functions as variables
@@ -308,7 +322,8 @@ Spyder hides functions (and modules) in its variable explorer, but we can view t
 
 ![Spyder's variable explorer](img/spyder_variables_show_unsupported.png)
 
-\note{
+::: notes
+
 You can call `help` with any of these! Even with modules!
 
 
@@ -317,7 +332,8 @@ Those without spyder can use this code to check for what is imported:
 `store = set(globals().copy()) | set(('store', ))`
 `import ...  # whatever we do in the example ;-)`
 `print(set(globals()).difference(store))`
-}
+
+:::
 
 
 # Import
@@ -328,9 +344,11 @@ import statistics
 help(statistics)
 ```
 
-\note{
+::: notes
+
 In order to have a function or module available, we need to import it.
-}
+
+:::
 
 
 # Import
@@ -341,9 +359,11 @@ Importing a module means to execute everything "global":
 - Statements which are not inside a function
 - etc.
 
-\note{
+::: notes
+
 This is one of the reasons we can think of function names as variables, as the import just "passes them along".
-}
+
+:::
 
 
 # Python path
@@ -367,7 +387,8 @@ print(sys.path)
 
 \normalsize
 
-\note{
+::: notes
+
 We can import from anywhere inside our python path.
 
 Notice the `''` (empty string) as the first element. That's basically "the
@@ -377,7 +398,8 @@ Python searches in all of these from the first to the last for modules you try
 to import. As soon as it finds a match, that module is imported.
 
 Of course, on your computers it will look different than what you see here.
-}
+
+:::
 
 
 # Writing our own modules
@@ -389,9 +411,11 @@ Of course, on your computers it will look different than what you see here.
 
 \normalsize
 
-\note{
+::: notes
+
 This is now a module containing one function.
-}
+
+:::
 
 
 # Using a module
@@ -403,7 +427,8 @@ data = reader.read_data('example.data')
 print(data)
 ```
 
-\note{
+::: notes
+
 Using the `import` statement it is possible to employ functions from another
 file.
 
@@ -412,7 +437,8 @@ interested in the name, not in the type.
 
 To call the function, we need to specify the module name and the function
 name: The module name is just the name of the Python file: `module.function()`, here `reader.read_data(...)`.
-}
+
+:::
 
 
 # Reusing a function: directory structure
@@ -451,11 +477,13 @@ Consider the following directory tree:
 It is possible to `import lecture.reader`.
 However, `lecture.printer` does not work! It uses `import reader`.
 
-\note{
+::: notes
+
 Imports are relative to the current directory or to the directories inside the Python path.
 
 A directory can also be a module if it contains proper Python files, just as `lecture` is here.
-}
+
+:::
 
 
 # Import failure
@@ -481,7 +509,8 @@ Demo!
 
 \normalsize
 
-\note{
+::: notes
+
 We can already see that modules are bundled into meaningful parts.
 
 The `statistics` modules contains, who would have thought, statistics functions.
@@ -489,7 +518,8 @@ The `statistics` modules contains, who would have thought, statistics functions.
 The `os` module contains a lot of functions handling information from the
 operating system (OS). For some parts there is so much (e.g. path handling)
 that it even has some submodules (`os.path`).
-}
+
+:::
 
 
 # `__init__.py`
@@ -508,13 +538,15 @@ import lecture.reader
 import lecture.printer
 ```
 
-\note{
+::: notes
+
 We are not able to `import lecture` to gain access to `lecture.reader` or
 `lecture.printer`. But for the `os` package this was possible!
 
 If we want to do it properly, we also have to change the `import` statement in
 `printer.py`. (But we might have done so anyway two slides ago.)
-}
+
+:::
 
 
 # `if __name__ == '__main__':`
@@ -544,7 +576,8 @@ How often will `python a.py` print "Hello World!", and which ones?
 ```{ .python file=06_Packages/code/lecture/cliqr/a.py wd=06_Packages/code/lecture/cliqr .exec }
 ```
 
-\note{
+::: notes
+
 Explanation:
 
 - a imports b.
@@ -553,7 +586,8 @@ Explanation:
 - b, finishing c's import, can now print "Hello World! b"
 - a can now import c -- since b already did that, python does not execute c again.
 - a prints "Hello World! a"
-}
+
+:::
 
 
 # `if __name__ == '__main__':`
@@ -579,11 +613,13 @@ print('reader name:', reader.__name__)
 print('this name:', __name__)
 ```
 
-\note{
+::: notes
+
 Notice that the file we execute gets the name `__main__`.
 
 We can use this for a nice trick!
-}
+
+:::
 
 
 # `if __name__ == '__main__':`
@@ -600,10 +636,12 @@ import mymath
 print(mymath.add(32, 453))
 ```
 
-\note{
+::: notes
+
 Since the `__name__` variable will be `__main__` for the script we use, we can
 put everything which should not be executed into an if-block.
-}
+
+:::
 
 
 # `if __name__ == '__main__':`
@@ -626,11 +664,13 @@ A bundle of several modules is usually called a package.
 
 ![[pypi.python.org](https://pypi.python.org/pypi) -- the Python package Index](img/pypi.png){ height=150px }
 
-\note{
+::: notes
+
 While there are lots of packages (> 100,000) online available, many of them are very specific.
 
 We will mostly work with the core library, as it already has many cool things.
-}
+
+:::
 
 
 # Your sixth homework

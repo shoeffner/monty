@@ -37,11 +37,13 @@ cars = [Car(c) for c in ('blue', 'red', 'yellow')]
 print(cars)
 ```
 
-\note{
+::: notes
+
 The print functions tries to call `__str__` for all objects you give it.
 Here, the object is a list! The list's `__str__` function calls its elements'
 `__repr__` functions.
-}
+
+:::
 
 
 # Homework issues: `__repr__`
@@ -85,9 +87,11 @@ print('Car is callable:', callable(Car))
 
 Why is `Car` callable?
 
-\note{
+::: notes
+
 `Car` is callable since calling a class (`Car()`) is creating a new instance.
-}
+
+:::
 
 # Homework issues: `*` (tuple unpacking)
 
@@ -163,13 +167,15 @@ some_true = [True, False, True, False]
 all_true = [True, True, True, True]
 ```
 
-\note{
+::: notes
+
 A very common operation is to check if some values fulfill some condition, all
 match it, or none.
 
 Later we will see how we can easily create lists of boolean values like the
 ones above.
-}
+
+:::
 
 
 # Any & All
@@ -237,10 +243,12 @@ sorted_dicts = sorted(unsorted_dicts, key=get_age)
 print(sorted_dicts)
 ```
 
-\note{
+::: notes
+
 If you attempted the difficult bonus exercise last week, you already saw how to
 use a key function. Now we will shed some light into it.
-}
+
+:::
 
 
 # Passing functions around
@@ -263,12 +271,14 @@ do_something(shout)
 
 \normalsize
 
-\note{
+::: notes
+
 Python always passes by *object reference*. For some objects, those which are
 mutable, this means that we get references to those objects which we can use
 and modify. For others, like integers and strings (which are immutable) they
 get copied themselves.
-}
+
+:::
 
 
 # Mutable objects
@@ -375,9 +385,11 @@ print(acc_list)
 
 \normalsize
 
-\note{
+::: notes
+
 Don't write functions like this, I just save some space.
-}
+
+:::
 
 
 # Using function objects: Comparison to list comprehensions
@@ -400,12 +412,14 @@ print(acc_list)
 
 \normalsize
 
-\note{
+::: notes
+
 You can read up a little bit more about how to unroll list comprehensions here:
 https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 
 Take a look at the for loop inside the for loop for a hint for the homework ;-)
-}
+
+:::
 
 
 # Nested functions
@@ -421,13 +435,15 @@ hello()
 world()
 ```
 
-\note{
+::: notes
+
 Functions are just normal variables, so it's even possible to nest them, i.e.
 having function declarations inside of function declarations.
 
 They are only available inside the scope they were declared (except for when
 you return them and use them somewhere else).
-}
+
+:::
 
 # Nested functions can access variables
 
@@ -444,7 +460,8 @@ def times(x0, x1):
 print(*times(4, 5))
 ```
 
-\note{
+::: notes
+
 They can access variables inside the scope they were declared.
 
 In the example, the result is 30 and 9 because:
@@ -453,7 +470,8 @@ In the example, the result is 30 and 9 because:
 - `x1` is incremented in each of the four iterations *before* doing the addition
 - `x1` thus takes the values: 6, 7, 8, 9.
 - $6 + 7 + 8 + 9 = 30$.
-}
+
+:::
 
 
 # You can return nested functions
@@ -478,7 +496,8 @@ print(add(4, 5))
 print((lambda x, y: x + y)(9, 3))
 ```
 
-\note{
+::: notes
+
 You have seen that it's possible to pass functions around.
 
 This is cool, but sometimes you don't want them to have names and clutter your
@@ -490,7 +509,8 @@ They work like normal functions but are slightly limited:
 
 - They don't have a name
 - They can only have one statement (which is automatically the return statement)
-}
+
+:::
 
 
 # Why nested functions and lambdas?
@@ -530,7 +550,8 @@ x_n, y_n = zip(*c)
 print(list(x_n), list(y_n))
 ```
 
-\note{
+::: notes
+
 `zip` works like a zipper. If you have to sides of a zipper `[1, 3, 5]` and
 `[2, 4, 6]` it will create pairs of those *tooth* which belong together:
 `list(zip([1, 3, 5], [2, 4, 6]))` results in `[(1, 2), (3, 4), (5, 6)]`.
@@ -542,7 +563,8 @@ be inside the `i`-th tuple.
 
 Using tuple unpacking (twice, once to pass the arguments and once implicitly
 using the return values) you can reverse the process.
-}
+
+:::
 
 
 # `zip` in higher dimensions
@@ -575,13 +597,15 @@ print(fill(', '.join(dir_out)))
 
 \normalsize
 
-\note{
+::: notes
+
 While this is not really something you use in practice, it allows you to debug
 some of your programs or to get some ideas of what might be available for your
 objects.
 
 In the example you can see many functions and attributes `str` objects have.
-}
+
+:::
 
 
 # Your eighth homework

@@ -17,7 +17,8 @@ conda install -c conda-forge matplotlib=2.0.2
 
 All: For images, install `pillow` (again via pip or Gohlke's website).
 
-\note{
+::: notes
+
 Windows users: If you are unsure about the files,
 
 - pick `cp36-cp36m` for Python 3.6 and adjust accordingly
@@ -27,7 +28,8 @@ Windows users: If you are unsure about the files,
 `python -c import sys;print('64bit' if sys.maxsize > 2**32 else '32bit')`
 
 Of course you have to replace `FILES` with the paths to the files you downloaded.
-}
+
+:::
 
 
 # First things first
@@ -57,13 +59,15 @@ plt.plot([1, 2, 3])
 - `matplotlib`: https://matplotlib.org
 - `vtk`: http://www.vtk.org
 
-\note{
+::: notes
+
 - ggplot is close to R's ggplot2 library
 - matplotlib started out as a project to mimic MATLAB's plotting capabilities
 - vtk is a library for 3D plots
 
 We focus on matplotlib.
-}
+
+:::
 
 
 # Plotting data
@@ -77,14 +81,16 @@ plt.plot(y)
 
 *Important*: You need to call `plt.show()` at the end!
 
-\note{
+::: notes
+
 If you only supply one argument to `plot()`, it uses x from `0` to `N - 1` and
 assumes the data as `y` values.
 
 For my automatic slide generation I had to leave out the call to `plt.show()`,
 which actually brings up the figure where we plot to. You have to add it
 whenever you want to see what you plotted. (There's an exception called "interactive mode", which allows you to play around with plots more natural. You can enable it with `plt.ion()`.)
-}
+
+:::
 
 
 # Plotting data
@@ -110,13 +116,15 @@ plt.xlabel('x')
 plt.ylabel('$x^2$')
 ```
 
-\note{
+::: notes
+
 Please note that for space reasons I remove the imports from now on. It's `import matplotlib.pyplot as plt`.
 
 `pyplot` (which is our `plt`) always refers to the last active plot when making changes. We will see later, why this is important.
 
 Matplotlib supports LaTeX math formulae for many labels, e.g. titles.
-}
+
+:::
 
 
 # Adding labels
@@ -168,11 +176,13 @@ with open('iris.data', 'w') as iris:
 
 \normalsize
 
-\note{
+::: notes
+
 I will use this `iris_reader` on the following slides to get the data for the plots.
 
 You can also use it to tag along.
-}
+
+:::
 
 
 # Plotting iris data
@@ -186,9 +196,11 @@ plt.plot(y)
 plt.ylabel('sepal length')
 ```
 
-\note{
+::: notes
+
 It makes not much sense to just plot the sepal lengths. Let's plot it in relation to something.
-}
+
+:::
 
 
 # Plotting iris data
@@ -209,9 +221,11 @@ plt.ylabel('sepal width')
 
 \normalsize
 
-\note{
+::: notes
+
 This still doesn't seem right, what should we change?
-}
+
+:::
 
 
 # Scatter plots
@@ -289,9 +303,11 @@ plt.legend()
 
 \normalsize
 
-\note{
+::: notes
+
 You can move the legend around using the keyword `loc`, e.g. to `'center right'` or `'lower center'`.
-}
+
+:::
 
 
 # Changing colors
@@ -358,9 +374,11 @@ plt.plot(x, y, 'r')
 
 \normalsize
 
-\note{
+::: notes
+
 You can draw multiple plots into one "plot".
-}
+
+:::
 
 
 # Subplots
@@ -386,11 +404,13 @@ plt.scatter(x2, y2)
 \normalsize
 
 
-\note{
+::: notes
+
 You can also specify subplots to span multiple "cells", but it gets tricky.
 E.g. a subplot which spans the second row would look like this: `plt.subplot(2,
 1, 2)` (2 rows, 1 column, second position).
-}
+
+:::
 
 
 # Figure objects
@@ -409,12 +429,14 @@ plt.plot([1, 2, 3])
 
 ![Example Figure](img/myfigure.png){ height=220px }
 
-\note{
+::: notes
+
 This does not work well with the auto slide creation, hence I included a screenshot.
 
 The name `My figure` does not only set the title, it is also a unique
 identifier to reactivate the figure.
-}
+
+:::
 
 
 # Using a figure window
@@ -430,25 +452,29 @@ From left to right:
 - Subplot Configuration Tool (allows to change e.g. margin around plots)
 - Save (save the plot as png)
 
-\note{
+::: notes
+
 Depending on the "backend" your matplotlib uses, these might be slightly
 different in style or behavior.
 
 A backend is, in a simplified fashion, the software your matplotlib uses to
 create windows and draw into them. There are also backends which can only
 create file outputs.
-}
+
+:::
 
 
 # Parts of a Figure
 
 ![Parts of a Figure, Matplotlib FAQ](https://matplotlib.org/_images/anatomy1.png){ height=240px }
 
-\note{
+::: notes
+
 Everything inside the window is the `canvas`, the most important part of the figure.
 
 All elements you can see here (except for "figure") are drawn onto the canvas.
-}
+
+:::
 
 
 # Object-oriented interface
@@ -484,11 +510,13 @@ fig1.gca().plot([4, 1, 4])
 
 ![Two figures](img/twofiguresoop.png) { height=150px }
 
-\note{
+::: notes
+
 `gcf` means "get current figure", `gca` means "get current axes"
 
 Each figure has an initial pair of axes ("x" and "y") which can be selected for drawing.
-}
+
+:::
 
 
 # Advantages of the Object-oriented interface
@@ -507,11 +535,13 @@ Each figure has an initial pair of axes ("x" and "y") which can be selected for 
 
 \normalsize
 
-\note{
+::: notes
+
 We call each update a "frame".
 
 `canvas.draw()` forces the canvas to redraw everything on it.
-}
+
+:::
 
 # Using animations
 
@@ -522,7 +552,8 @@ We call each update a "frame".
 
 \normalsize
 
-\note{
+::: notes
+
 
 \small
 
@@ -543,7 +574,8 @@ global scope as I did here!
 
 \normalsize
 
-}
+
+:::
 
 
 # Interactive figures: callback functions
@@ -589,10 +621,12 @@ GUIs[^gui] have an event loop:
 
 \normalsize
 
-\note{
+::: notes
+
 You can find a list of all available events as well as some nice examples here:
 https://matplotlib.org/users/event_handling.html
-}
+
+:::
 
 
 # References

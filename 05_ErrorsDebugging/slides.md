@@ -25,12 +25,14 @@ print( a == 6 and b == 12 )
 print( (a == 6) & (b == 12) )
 ```
 
-\note{
+::: notes
+
 Long story short: use `and` where possible, only use bitwise `&` if you need it.
 
 Bitwise operators have a stronger binding than `==`, so `6 & b` is evaluated
 first. `and` has a weaker binding and is evaluated after `==`.
-}
+
+:::
 
 
 # Homework issues: bitwise `&` (and)
@@ -54,7 +56,8 @@ print(format(b, '06b'), b)
 print(format(a | b, '06b'), a | b)
 ```
 
-\note{
+::: notes
+
 For completeness for those really interested:
 
 - `>>` shifts all bits to the right, e.g. `4 >> 1 == 2`
@@ -62,7 +65,8 @@ For completeness for those really interested:
 - `^` is the exclusive or (XOR): `6 ^ 12 == 10`
 - `~` is the negation, which is a little bit confusing as it starts at the
   left-most 1 bit.
-}
+
+:::
 
 
 # Homework issues: File I/O, file mode `w`
@@ -77,7 +81,6 @@ we might need `b` as an addition to our mode, e.g. `open(filename, 'rb')`.
 
 [Documentation `open()`](https://docs.python.org/3.6/library/functions.html#open)
 
-\note{Intermezzo: slides from session 4}
 
 
 # Homework issues: absolute versus relative paths
@@ -98,7 +101,8 @@ Relative paths specify files relative to the current working directory:
 hangman_words.txt
 ```
 
-\note{
+::: notes
+
 You can always assume we have the files in the same directory as the scripts
 (unless otherwise mentioned), so just use their names.
 
@@ -106,7 +110,8 @@ Since my script to generate the slides is not too advanced yet, I have to
 resort to the slightly longer relative paths as shown on this slide. Sorry for
 that, but it makes my life much easier at the moment than fiddling around with
 my automation scripts.
-}
+
+:::
 
 
 # Homework issues: relative paths
@@ -128,11 +133,13 @@ filename = os.path.join('code', 'hangman_words.txt')
 print(filename)
 ```
 
-\note{
+::: notes
+
 For the best portability never use `/` or `\ ` yourself, but resort to the `os.path` module to `join` paths properly.
 
 However, I use `/` in the slides for brevity.
-}
+
+:::
 
 
 # Homework issues: variable naming
@@ -149,12 +156,14 @@ def beklemek(ne_kadar=10, nerede='sandalye'):
 beklemek(3)
 ```
 
-\note{
+::: notes
+
 Try to name your variables, write your comments, prints, etc. all in English.
 
 If you want and time allows we can discuss handling different output languages
 in a future session. But it's not really important for us.
-}
+
+:::
 
 
 # Homework issues: variable naming
@@ -169,10 +178,12 @@ print(ï, ũ)
 
 Where on your keyboard are $\phi$ and $\pi$?
 
-\note{
+::: notes
+
 Even though sometimes math symbols hold a lot of information, try to use
 only standard ASCII letters and numbers for your variable names.
-}
+
+:::
 
 
 # Error messages
@@ -191,13 +202,15 @@ print 'Hello World!'
 SyntaxError: Missing parentheses in call to 'print'
 ```
 
-\note{
+::: notes
+
 - `File "<stdin>", line 1`: Location in file
 - `print 'Hello World!'`: Faulty line
 - `^`: Where in the line?
 - `SyntaxError`: Error type
 - `Missing parentheses in call to 'print'`: Description
-}
+
+:::
 
 
 
@@ -213,10 +226,12 @@ def caller():
 caller()
 ```
 
-\note{
+::: notes
+
 - For nested calls, a Traceback is returned
 - From top to bottom you can figure out what was called.
-}
+
+:::
 
 
 # `SyntaxError`: Missing parentheses
@@ -255,9 +270,11 @@ print("Are you" + \" + "Monty" + \" + "?")
 
 (Unexpected character after line continuation character)
 
-\note{
+::: notes
+
 The line continuation character is `\ `.
-}
+
+:::
 
 
 # `SyntaxError`: Unexpected character
@@ -414,11 +431,13 @@ Some important ones you might encounter:
 - If you identified the problem: fix it.
 - It happens only in one out of 100 iterations? Great, let's check the debugger!
 
-\note{
+::: notes
+
 Despite what everyone tells you: even though there are debuggers (and some of
 them are great!), most of the time a simple `print` already reveals your
 problems. Just don't forget to delete it again!
-}
+
+:::
 
 
 # Debugging
@@ -461,7 +480,8 @@ assert add(3, 4) == 7, 'adding 3 and 4 is not 7'
 
 Syntax: `assert condition, failmessage`
 
-\note{
+::: notes
+
 Use simple examples, complex examples, edge cases... test what you know is correct.
 
 If `condition` is `False`, the test fails and the assertion raises an exception, executing the `failmessage`.
@@ -471,7 +491,8 @@ The fail message is optional, but it helps you to figure out, which assertion fa
 Assertions are not always useful: It's not really necessary if you just import
 a file. But if you do some complex calculations, it is almost always
 beneficial. Similar to functions, get a feeling when to use them.
-}
+
+:::
 
 
 # Avoid errors: assertions
@@ -500,7 +521,8 @@ assert sub(7, 3) == 4, '7 - 3 != 4'
 
 ![Python 3.6 documentation](img/py36sampledocs.png)
 
-\note{
+::: notes
+
 Reading documentation will make you a better programmer, as it explains a lot
 of things.
 
@@ -509,7 +531,8 @@ functions do, etc.
 
 Python documentation is usually very elaborate and exhausting, so it's almost
 always worth to give it a try.
-}
+
+:::
 
 
 # Using documentation
@@ -547,7 +570,8 @@ There are others, e.g.
 and [Python](https://docs.python.org/devguide/documenting.html) styles, but we
 use this.
 
-\note{
+::: notes
+
 It really does not matter much what you pick, as long as you are consistent
 throughout a project.
 
@@ -555,7 +579,8 @@ I recommend the Google style because it has the least amount of visual clutter i
 
 I hope to discuss how to build beautiful documentation like the Python docs in
 a few weeks, the latest when we do the project work.
-}
+
+:::
 
 
 # Writing documentation example
@@ -604,7 +629,8 @@ def difficult_function(argument, other_arg=None):
 
 \normalsize
 
-\note{
+::: notes
+
 You may omit sections (e.g. Args or Returns) if they are irrelevant for you
 function (not all functions raise nor do all have args).
 
@@ -612,7 +638,8 @@ You can find some documentation in the homework solutions of last week.
 
 More example on how to write it (even for features we have not and will not cover):
 [http://www.sphinx-doc.org/en/stable/ext/example_google.html](http://www.sphinx-doc.org/en/stable/ext/example_google.html)
-}
+
+:::
 
 
 # Your fifth homework

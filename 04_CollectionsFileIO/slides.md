@@ -21,11 +21,13 @@ Python has several scopes, relevant to us are:
 - global (inside "modules" or for now: scripts)
 - built-in (what Python itself offers: `len`, `range`, ...)
 
-\note{
+::: notes
+
 If a variable name is used inside multiple scopes, "local" is the strongest scope.
 
 Try not to overwrite built-in variables (your editor marks them colorful)!
-}
+
+:::
 
 
 # Homework issues: scope -- global solution
@@ -40,12 +42,14 @@ count_up()
 print(counter)
 ```
 
-\note{
+::: notes
+
 It is not really cool to use variables as globals (there might be situations
 where it's necessary, but try to avoid it).
 
 Better is to use a local solution.
-}
+
+:::
 
 
 # Homework issues: scope -- local solution
@@ -73,12 +77,14 @@ def add10(number):
 print(add10(2))
 ```
 
-\note{
+::: notes
+
 This won't work, but it's also probably not what was meant to work.
 
 If you use a counter inside a function, you in general want it to be reset each
 time you call that function -- so it should go inside.
-}
+
+:::
 
 
 # Homework issues: scope -- while
@@ -108,9 +114,11 @@ if fizz(3):
     print('fizz')
 ```
 
-\note{
+::: notes
+
 `== True` is never needed, you are always checking for True!
-}
+
+:::
 
 
 # Recursion
@@ -158,12 +166,14 @@ function(0)
 function(arg1=1, arg0=0)
 ```
 
-\note{
+::: notes
+
 - Positional arguments are the "normal" way we already discussed to provide variables.
 - They always go first, followed by positional arguments with default values.
 - A default value is always used if no other value is provided.
 - It is possible to use arguments by their names -- the order does not matter.
-}
+
+:::
 
 
 # Function arguments -- arbitrary argument lists
@@ -177,12 +187,14 @@ function(1, 2, 3)
 
 \cliqr{Can we have multiple argument lists?}
 
-\note{
+::: notes
+
 - Argument lists can not be used by their names.
 - There can only be one argument list, as it would otherwise be
   indistinguishable to which argument list each argument belongs.
 - The notation `(1, 2, 3)` is new, we will come back to it in a few slides.
-}
+
+:::
 
 
 # Function arguments -- keyword arguments
@@ -194,10 +206,12 @@ def function(**kwargs):
 function(arg0=0, mug='tea cup', animal='platypus')
 ```
 
-\note{
+::: notes
+
 - Keyword arguments can be captured using the double asterisk notation.
 - They are stored in a dictionary.
-}
+
+:::
 
 
 
@@ -211,11 +225,13 @@ Python offers four basic collection types:
 - Sets: `{1, 2, 'hello'}`
 
 
-\note{
+::: notes
+
 They are all iterables.
 
 Remember: Strings are iterables as well.
-}
+
+:::
 
 
 # Tuples
@@ -225,12 +241,14 @@ my_fruits = ('apple', 'pear', 'banana')
 print(my_fruits)
 ```
 
-\note{
+::: notes
+
 Tuples are immutable, that means they are copied when we assign them to another
 variable.
 
 Tuples are sorted the way they are created.
-}
+
+:::
 
 
 # Tuple functions: `len`
@@ -268,9 +286,11 @@ my_fruits = my_fruits + ('strawberry', )
 print(my_fruits)
 ```
 
-\note{
+::: notes
+
 We can check the documentation or `help(tuple)` for more information about functions.
-}
+
+:::
 
 
 # Lists
@@ -291,13 +311,15 @@ print(my_fruits)
 print(your_fruits)
 ```
 
-\note{
+::: notes
+
 Lists are mutable, which means that we only assign a reference to the object to
 our variables -- references both point to the same instance. Thus, we modify
 both unless we explicitly "copy" the list.
 
 They are also stored sorted.
-}
+
+:::
 
 
 # List functions: `insert`
@@ -326,10 +348,12 @@ last = fruits.pop()
 print(fruits, last)
 ```
 
-\note{
+::: notes
+
 It also supports the same as tuples: `len(my_fruits)`,
 `my_fruits.index('pear')`, and `my_fruits + ['strawberry']`, indexing, etc.
-}
+
+:::
 
 
 # Dictionaries
@@ -339,12 +363,14 @@ my_foods = {'fruit': 'apple', 'vegetable': 'carrot'}
 print(my_foods)
 ```
 
-\note{
+::: notes
+
 Dictionaries are also mutable.
 
 In general they are stored in the order they are created but it is not
 guaranteed, so don't rely on it!
-}
+
+:::
 
 
 # Dictionary functions: `keys` and `values`
@@ -390,11 +416,13 @@ my_meals = {'lunch', 'dinner', 'dinner'}
 print(my_meals)
 ```
 
-\note{
+::: notes
+
 Sets are unordered and have unique values. They also support some set
 operations. However, they are not that often used, although they are quite
 useful!
-}
+
+:::
 
 
 # Set operations
@@ -416,9 +444,11 @@ for fruit in fruits:
     print(fruit, end=', ')
 ```
 
-\note{
+::: notes
+
 It works exactly the same way for tuples and sets.
-}
+
+:::
 
 
 # Iteration over tuples, lists, and sets, with index
@@ -459,11 +489,13 @@ for key, value in food.items():
     print(key, value, end=', ', sep=':')
 ```
 
-\note{
+::: notes
+
 For dictionaries we have to define what we want to iterate over.
 
 By default the keys are used.
-}
+
+:::
 
 
 # Nested collections
@@ -516,11 +548,13 @@ IO or I/O or similar abbreviations usually stand for:
 
 Input and Output
 
-\note{
+::: notes
+
 Handled by (data) streams.
 
 We already used one: the standard output stream ("stdout")
-}
+
+:::
 
 
 # Input and output
@@ -550,10 +584,12 @@ print(*objects, sep=' ', end='\n',
 
 [Python Documentation, @pythondocs, https://docs.python.org/3/library/functions.html#print]
 
-\note{
+::: notes
+
 - You can ignore the `flush` parameter: some streams first collect data (buffering) and then write it (flush).
 - We will now try another stream for `file` -- the default is `sys.stdout`, which means to just print it to the terminal.
-}
+
+:::
 
 
 # `print` to file
@@ -568,7 +604,8 @@ with open('04_CollectionsFileIO/code/lottery.txt', \
 ```{ file=lottery.txt }
 ```
 
-\note{
+::: notes
+
 File names: try to use relative file names so that everyone can use your code.
 
 File modes: the letter after the file name is the mode. It can be one of:
@@ -578,7 +615,8 @@ File modes: the letter after the file name is the mode. It can be one of:
 - `a`ppend (updates/creates)
 - add `+` to open for read and write (e.g. `r+`)
 - and some more
-}
+
+:::
 
 
 # read/write to/from file
@@ -592,14 +630,16 @@ with open('04_CollectionsFileIO/code/lottery.txt', \
 print(result)
 ```
 
-\note{
+::: notes
+
 You might find other sources on the internet using different notations, e.g.
 with "open" and "close" for files -- just use `with` unless you can't. Because
 `with` opens the file and automatically closes it for you!
 
 Closing files is important because sometimes other processes are not allowed to
 access "used" files, even if you don't really use them anymore.
-}
+
+:::
 
 
 # Cast to the rescue
@@ -642,7 +682,8 @@ print(type(numbers))
 ```
 
 
-\note{
+::: notes
+
 `[int(num) for num in \ `
 
 &nbsp;&nbsp;`lottery_raw[1:-1].split(',')]`
@@ -660,7 +701,8 @@ is equivalent to (but shorter to write)
 &nbsp;&nbsp;&nbsp;&nbsp;`lottery_numbers.append(int(num))`
 
 This is called **list comprehension**.
-}
+
+:::
 
 
 # Reading a file line by line

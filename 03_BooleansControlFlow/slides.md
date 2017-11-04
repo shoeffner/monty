@@ -13,9 +13,11 @@ might be useful.
 
 Another option might be [detexify](http://detexify.kirelabs.org/).
 
-\note{
+::: notes
+
 Names and explanations of symbols can be looked up, examples included
-}
+
+:::
 
 
 # Common mistakes & conventions: File names
@@ -112,9 +114,11 @@ and
 
 + that something is **False**
 
-\note{
+::: notes
+
 Nevertheless it is an extremely useful and thus important concept in programming.
-}
+
+:::
 
 
 # Another data type: Boolean
@@ -125,11 +129,13 @@ We can *assign* these values to variables. For example:
 parrot_alive = True
 ```
 
-\note{
+::: notes
+
 We assigned the value `True` to the placeholder `parrot_alive`.
 
 Mind the spelling with a capital **T**!
-}
+
+:::
 
 
 # Another data type: Boolean
@@ -150,7 +156,6 @@ We can also check the truth value of previously assigned variables.
 
 # Comparison
 
-We can compare numbers using the following operators:
 
 Operator Comparison            `True`         `False`
 -------- --------------------- -------------- ---------
@@ -161,9 +166,13 @@ Operator Comparison            `True`         `False`
 `<=`     less than or equal    `3 <= 3`       `4 <= 3`
 `>=`     greater than or equal `2.4 >= 2.399` `0 >= 5`
 
-\note{
+:Numbers can be compared using these comparisons
+
+::: notes
+
 It is possible to compare strings the same way, but it follows less obvious rules.
-}
+
+:::
 
 
 # Chaining
@@ -197,13 +206,15 @@ What do you expect from the following three statements?
 >>> False < True
 ```
 
-\note{
+::: notes
+
 * `True` (`True < 2`)
 * `False` (because `True == 1`)
 * `True`
 
 Careful! `True` is equal to `1`, and `1` only, but for `if` (next slide) every non-zero number is considered `True`!
-}
+
+:::
 
 
 # Using truth values
@@ -245,9 +256,11 @@ print('Good bye')   # this line will ALWAYS be executed
 ```
 
 
-\note{
+::: notes
+
 We always indent to the next level with four spaces.
-}
+
+:::
 
 
 # `if` and `else`
@@ -263,9 +276,11 @@ x / 2  \quad & \text{if } x \text{ is even} \\
 
 Let's do it in Python!
 
-\note{
+::: notes
+
 Often `if` is not enough, e.g. in the Collatz conjecture.
-}
+
+:::
 
 
 # Collatz conjecture
@@ -328,7 +343,8 @@ What is the difference between these three?
 
 \cliqr{Which one is correct (beer)?}
 
-\note{
+::: notes
+
 The evaluation order matters.
 
 1. correct
@@ -336,16 +352,19 @@ The evaluation order matters.
 3. `beer == 'No'`, all get evaluated
 
 Rule of thumb: most constraining conditions first!
-}
+
+:::
 
 
 # Control flow
 
 ![Tech Support Cheat Sheet: 'Hey Megan, it's your father. How do I print out a flowchart?' [@xkcd627]](https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png)
 
-\note{
+::: notes
+
 When we talk about control flow we talk about how a program works through data step by step.
-}
+
+:::
 
 
 # How to control flow?
@@ -369,7 +388,8 @@ while i < 10:
     i = i + 1
 ```
 
-\note{
+::: notes
+
 Python uses `for` and `while`.
 
 They are mostly exchangeable with a bit of work, but in most cases you will
@@ -377,7 +397,8 @@ only need `for`.
 
 `range(stop)` returns a "list" of integers from `0` to `stop`, but excludes
 `stop`. For example `range(4)` gives four values: 0, 1, 2, and 3.
-}
+
+:::
 
 
 # `While`
@@ -404,11 +425,13 @@ while True:
 
 You can stop program execution with **Control + C**!
 
-\note{
+::: notes
+
 It can very easily happen that you get your conditions wrong or you forget to
 change the variable in the condition and your code keeps looping until the end
 of time.
-}
+
+:::
 
 
 # `For`
@@ -420,11 +443,13 @@ for counter in range(6):
     print(counter, end=', ')
 ```
 
-\note{
+::: notes
+
 To loop over some collection of values is called "iteration".
 
 Thus, collections of values which allow "iterations" are called "iterables".
-}
+
+:::
 
 
 # `For` and strings
@@ -456,9 +481,11 @@ while True:
     counter = counter + 1
 ```
 
-\note{
+::: notes
+
 Break stops the current loop and jumps to the end.
-}
+
+:::
 
 
 # ...Break some more...
@@ -473,9 +500,11 @@ for letter in 'Python':
             break
 ```
 
-\note{
+::: notes
+
 In this example we only break the inner loop!
-}
+
+:::
 
 
 # ...Then continue
@@ -489,12 +518,14 @@ for item in 'Python':
 
 \cliqr{What happens if continue is the last statement in the loop body?}
 
-\note{
+::: notes
+
 Continue skips the remainders of the loop body and jumps back to the top.
 
 If continue is at the end of the loop body, nothing special happens -- the loop
 would "continue" at this point anyway.
-}
+
+:::
 
 
 # Your third homework

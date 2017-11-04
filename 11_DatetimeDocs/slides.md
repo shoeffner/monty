@@ -113,9 +113,11 @@ print(bday.weekday())
 print(bday.isoweekday())  # Wait, what day is it now?
 ```
 
-\note{
+::: notes
+
 `weekday()` starts with Monday as 0, the ISO standard (`isoweekday()`) with Monday as 1. So this is Wednesday.
-}
+
+:::
 
 
 # Formatting outputs
@@ -138,7 +140,8 @@ print(now.strftime('%Z %X %f %j'))  # What?
 
 [^formats]: https://docs.python.org/3.6/library/datetime.html#strftime-and-strptime-behavior
 
-\note{
+::: notes
+
 `strftime` can be remembered as "**str**ing **f**ormat of **time**".
 
 The weird ones are:
@@ -147,7 +150,8 @@ The weird ones are:
 - %X: The current time.
 - %f: The current milliseconds.
 - %j: The current day of the year.
-}
+
+:::
 
 
 # Formatting rules
@@ -171,11 +175,13 @@ Format Meaning             Example
 
 \normalsize
 
-\note{
+::: notes
+
 This list is not exhaustive, it just contains some important ones.
 
 *Locale* can be roughly seen as you computers language and location settings.
-}
+
+:::
 
 
 # Formatting rules example: Locale
@@ -258,9 +264,11 @@ parsed = datetime.strptime('Wed Jun 14 14:47:12 2017',
 print(parsed.isoformat())
 ```
 
-\note{
+::: notes
+
 Analogue to `strftime`, `strptime` stands for **str**ing **p**arse **time**.
-}
+
+:::
 
 
 # Calculating with dates
@@ -422,10 +430,12 @@ import time
 print(time.time())
 ```
 
-\note{
+::: notes
+
 The seconds are exact, everything in between depends on the system. However,
 for most things that's enough.
-}
+
+:::
 
 
 # UNIX timestamp
@@ -454,11 +464,13 @@ end = time.time()
 print(end - start)
 ```
 
-\note{
+::: notes
+
 Important applications are: download times, complex computations, simulations, computer games, ...
 
 `time.sleep(...)` lets your program sleep for roughly the number of seconds passed to it.
-}
+
+:::
 
 
 # Benchmarking functions
@@ -469,11 +481,13 @@ import timeit
 print(timeit.timeit("123 + 456"))
 ```
 
-\note{
+::: notes
+
 timeit runs your function multiple times and calculates some statistics about it.
 
 This can help you figure out which functions are fast, which ones are slow, etc.
-}
+
+:::
 
 
 # Benchmarking functions
@@ -488,9 +502,11 @@ print(timeit.timeit("add(123, 456)",
                     setup="from __main__ import add"))
 ```
 
-\note{
+::: notes
+
 It requires a little bit more work to test your own functions: You need some *setup* to import them.
-}
+
+:::
 
 
 # Benchmarking functions
@@ -507,11 +523,13 @@ python -m timeit '123 + 456'
 100000000 loops, best of 3: 0.0128 usec per loop
 ```
 
-\note{
+::: notes
+
 Measure the time 100,000,000 times (sometimes fewer, it makes assumptions about
 how many iterations are reasonable) and returns the average of the best three
 runs.
-}
+
+:::
 
 
 # Enough of dates and times
@@ -558,11 +576,13 @@ Let's talk a little bit about the final projects!
 .3 code files and dirs.
 }
 
-\note{
+::: notes
+
 The `src` directory is the heart of your project. Here will all your modules, packages, etc. be.
 
 The `docs` directory is reserved for the documentation. We will have to do some minor adjustments here.
-}
+
+:::
 
 
 # Final projects: Kickstart
@@ -577,11 +597,13 @@ This is your project folder now. At the end, just zip it and submit it!
 
 ![Example docs](img/exampledocs.png)
 
-\note{
+::: notes
+
 We will use Sphinx for the documentation.
 
 `pip install sphinx`
-}
+
+:::
 
 
 # Final projects: Documentation
@@ -602,10 +624,12 @@ To build the documentation, navigate to the `docs` directory and type:
 make html
 ```
 
-\note{
+::: notes
+
 This may or may not work properly now. If you have any troubles you can't
 solve, talk to us!
-}
+
+:::
 
 
 # Final projects: Documentation
@@ -618,9 +642,11 @@ python -m http.server 8080
 
 Then bring up your browser and open http://localhost:8080
 
-\note{
+::: notes
+
 This can differ for older Python versions. Come to us with any problems!
-}
+
+:::
 
 
 # Final projects: Documentation
@@ -689,11 +715,13 @@ This is `a link`_ in a sentence.
 
 \normalsize
 
-\note{
+::: notes
+
 There's much much more to ReST, but these are the most important things you will need.
 
 You can try out (some) things at http://rst.ninjs.org/ .
-}
+
+:::
 
 
 # Final projects: Documentation -- Sphinx ReST

@@ -10,10 +10,12 @@
     ```
   which is slightly more flexible. We updated the solutions accordingly.
 
-\note{
+::: notes
+
 `from . import io` means: "From the directory the current module is in
 (`__init__.py`'s directory), import the module `io` (here `io.py`)"
-}
+
+:::
 
 
 # Homework issues: Values and references
@@ -27,7 +29,8 @@ print(my_value)
 print(my_list)  # list untouched
 ```
 
-\note{
+::: notes
+
 Python always copies values to new variables.
 
 For simple types (int, float, etc.) Python copies values.
@@ -35,7 +38,8 @@ For simple types (int, float, etc.) Python copies values.
 For complex types (lists, dictionaries, functions, instances (today)) Python copies the references.
 
 A reference is just a hint to the place where the data is stored.
-}
+
+:::
 
 
 # Homework issues: Values and references
@@ -61,10 +65,12 @@ print(my_list)
   comes after.
 - Same goes for `pass`.
 
-\note{
+::: notes
+
 `pass` is a `NOOP`, a "**No Op**eration" statement. Its only purpose is to make
 unfinished code syntactically correct.
-}
+
+:::
 
 
 # Sorting
@@ -89,14 +95,16 @@ data processing.
 
 What can we do to sort a list of numbers?
 
-\note{
+::: notes
+
 The most intuitive way is to search the smallest number and put it in front.
 Then search the second smallest number and add it to the second position. And
 so on.
 
 This procedure is called "selection sort". It is a fun exercise at home, but
 not really useful in practice.
-}
+
+:::
 
 
 # Bubble sort interactive
@@ -120,7 +128,8 @@ not really useful in practice.
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
 
-\note{
+::: notes
+
 - Bubble sort compares the first two elements.
 - If the first is greater than the second, it swaps them.
 - Then it compares the (possibly new) second and third elements and swaps if
@@ -128,7 +137,8 @@ not really useful in practice.
 - This process is done until it went through the list once.
 - If at any point a swap was needed, the process is repeated.
 - If not, the list is sorted.
-}
+
+:::
 
 
 # Bubble sort
@@ -140,7 +150,8 @@ not really useful in practice.
 
 \normalsize
 
-\note{
+::: notes
+
 While bubble sort is easy to implement and talk about, it is also not really
 useful in practice.
 
@@ -149,7 +160,8 @@ a look at its Wikipedia page. For most applications its the only sorting
 algorithm you need to know about.
 
 https://en.wikipedia.org/wiki/Quicksort
-}
+
+:::
 
 
 # Sorting something else than boring numbers
@@ -185,9 +197,11 @@ while swapped:
 
 \normalsize
 
-\note{
+::: notes
+
 The only thing to adjust is which values to compare. Since our list now contains dictionaries, we can access the value behind the key `height` to sort by height.
-}
+
+:::
 
 # Sorting persons
 
@@ -217,11 +231,13 @@ person = Person('Alecia', 37, 1.63)
 
 [^wikiletterfreq]: Data taken from [Wikipedia -- Letter frequency](https://en.wikipedia.org/wiki/Letter_frequency)
 
-\note{
+::: notes
+
 Dictionaries can be extended if needed, whenever a new key-value pair makes sense. They should not be used to model many instances, but to collect data with meaningful keys.
 
 Classes describe a concept of which one can instantiate objects (or instances, the terms are used interchangeably). In other words, classes are the **blueprint**s, while objects are the **realization**s.
-}
+
+:::
 
 
 # Modeling a person
@@ -270,7 +286,8 @@ person = Person('Bob')  # Instantiation of object/instance
 
 \normalsize
 
-\note{
+::: notes
+
 \scriptsize
 Each class starts with the keyword `class` followed by the class name (here `Person`) and introduces a new block, the *class body*.
 
@@ -288,7 +305,8 @@ All functions declared inside the class body are often called *methods* (and
 I will do that often), but they really are just functions which can be called
 by instances of the class.
 \normalsize
-}
+
+:::
 
 
 # Modeling other objects
@@ -325,7 +343,8 @@ car = Car('blue')
 print(car)
 ```
 
-\note{
+::: notes
+
 By default the print output of objects looks like this:
 
 `<__main__.Car object at 0x108e09358>`
@@ -333,7 +352,8 @@ By default the print output of objects looks like this:
 This is the module name, followed by the class name and the type of what you
 are printing (an object). The hexadecimal number (`0x108e09358`) is the memory
 address, so where Python stores the data.
-}
+
+:::
 
 
 # Beautiful print
@@ -350,7 +370,8 @@ car = Car('blue')
 print(car)
 ```
 
-\note{
+::: notes
+
 The `def __str__(self)` method is again special and allows for nicer print
 outputs (= string representations).
 
@@ -360,7 +381,8 @@ Calling `str(my_object)` causes Python to search for the `__str__` method.
 
 There are many more of these special methods like `__init__` and `__str__`, but
 for now these should be sufficient.
-}
+
+:::
 
 
 # Your o o seventh homework
