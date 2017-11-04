@@ -69,7 +69,7 @@ slides%: builddir%
 		echo Creating slides for $(path) ; \
 		pandoc \
 			-t beamer \
-			--latex-engine=$(ENGINE) \
+			--pdf-engine=$(ENGINE) \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
 			--highlight-style tango \
@@ -88,7 +88,7 @@ notes%: builddir%
 		echo Creating notes for $(path) ; \
 		pandoc \
 			-t beamer \
-			--latex-engine=$(ENGINE) \
+			--pdf-engine=$(ENGINE) \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
 			--highlight-style tango \
@@ -106,7 +106,7 @@ sheet%: builddir%
 	@if [ -f $(rsheet).md ]; then \
 		echo Creating exercises for $(path) ; \
 		pandoc \
-			--latex-engine=$(ENGINE) \
+			--pdf-engine=$(ENGINE) \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
 			--highlight-style tango \
@@ -124,7 +124,7 @@ solution%: builddir%
 	@if [ -f $(rsolution).md ]; then \
 		echo Creating solutions for $(path) ; \
 		pandoc \
-			--latex-engine=$(ENGINE) \
+			--pdf-engine=$(ENGINE) \
 			--filter panflute \
 			--bibliography=$(tpl)/bibliography.bib \
 			--highlight-style tango \
