@@ -41,19 +41,6 @@ But it takes a lot of time to become good at it.
 :::
 
 
-# Cliqr
-
-![We will use Cliqr throughout the class. Please bookmark http://vt.uos.de/bufuv](cliqr.png)
-
-\cliqr{Did you take part in our questionnaire?}
-
-::: notes
-
-Responses: https://goo.gl/VhpXY1
-
-:::
-
-
 # Questionnaire results: speed
 
 - This class is slow, so no worries. For a faster class, consider Brian's on Thursdays 12:00 - 14:00.
@@ -68,8 +55,6 @@ Responses: https://goo.gl/VhpXY1
   1. Form groups of sizes 3-4 if you want to have feedback sessions and sign up for groups on Stud.IP which have a time slot.
   2. Form groups of sizes 2-4 if you do not want to have feedback sessions and sign up for groups without.
   3. If there are not enough groups, please get in touch with us.
-
-\cliqr{Are you interested in private feedback sessions or homework corrections only?}
 
 
 # Questionnaire results: contents
@@ -131,8 +116,6 @@ Responses: https://goo.gl/VhpXY1
 We will often see Pseudocode: algorithms written down in a concise way, but
 close to natural language.
 
-\cliqr{What is an algorithm?}
-
 
 # Pseudocode example
 
@@ -186,8 +169,6 @@ Hello World!
 [^print]: "printing" means to output something, usually on the terminal. Don't
   bring out your printers and throw stacks of paper at us. We have nothing to
   throw back.
-
-\cliqr{Do you know about the terminal/command line/command prompt on your system?}
 
 
 # Hello World Pseudocode

@@ -341,7 +341,6 @@ What is the difference between these three?
 `    beer = 'No' ` `    beer = 'No' ` `    beer = 'No' `
 ------------------ ------------------ ------------------
 
-\cliqr{Which one is correct (beer)?}
 
 ::: notes
 
@@ -413,9 +412,6 @@ while counter <= 5:
 ```
 
 
-\cliqr{What can go wrong?}
-
-
 # Stopping infinite loops
 
 ```{ .python }
@@ -458,8 +454,6 @@ Thus, collections of values which allow "iterations" are called "iterables".
 for item in 'Python':
     print(item, end=', ')
 ```
-
-\cliqr{What is the output?}
 
 
 # `For` and strings
@@ -515,8 +509,6 @@ for item in 'Python':
         continue
     print(item, end=', ')
 ```
-
-\cliqr{What happens if continue is the last statement in the loop body?}
 
 ::: notes
 

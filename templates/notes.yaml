@@ -12,8 +12,6 @@ header-includes:
     - \setbeamercolor{background canvas}{bg=white}
     - \let\Tiny=\tiny
     - \newcommand{\pycode}[1]{\lstinputlisting[language=python]{#1}}
-    - \usepackage[pscoord]{eso-pic}
-    - \newcommand{\cliqr}[1]{\note{Cliqr{:} {#1}\par}\AddToShipoutPictureFG*{\put(\LenToUnit{.8\paperwidth},\LenToUnit{.9\paperheight}){\vtop{{\null}\parbox[t][.2\paperheight][c]{.2\paperwidth}{\begin{center}\includegraphics[width=.15\paperwidth]{templates/cliqr.png}\\[-.25em]\tiny vt.uos.de/bufuv\end{center}}}}}}
     - \usepackage{dirtree}
     - \usetikzlibrary{arrows,automata}
 panflute-path: 'templates/filters'

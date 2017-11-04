@@ -156,8 +156,6 @@ c = a * b
 print(c)
 ```
 
-\cliqr{What do you expect `c` to be?}
-
 
 # Variables and math
 
@@ -301,8 +299,6 @@ sqrt_a = math.sqrt(a)
 print(sqrt_a)
 ```
 
-\cliqr{Do you like video games?}
-
 ::: notes
 
 - There are lots of useful math functions already implemented in Python.
@@ -399,8 +395,6 @@ result1 = combine('Hello', 'World')
 result = combine(1, 4)
 print(result)
 ```
-
-\cliqr{What is the value of \texttt{result1}?}
 
 ::: notes
 

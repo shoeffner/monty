@@ -185,8 +185,6 @@ def function(*args):
 function(1, 2, 3)
 ```
 
-\cliqr{Can we have multiple argument lists?}
-
 ::: notes
 
 - Argument lists can not be used by their names.

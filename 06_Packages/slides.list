@@ -1,9 +1,9 @@
 code/lecture/printer.py
 code/lecture/reader.py
 code/lecture/example.data
-code/lecture/cliqr/a.py
-code/lecture/cliqr/b.py
-code/lecture/cliqr/c.py
+code/lecture/a.py
+code/lecture/b.py
+code/lecture/c.py
 code/lecture/importexamples.py
 code/lecture/ifmain/mymath.py
 code/lecture/magicsquare.py

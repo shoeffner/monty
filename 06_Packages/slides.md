@@ -557,23 +557,21 @@ Consider these files `a.py`, `b.py`, and `c.py` next to each other.
 How often will `python a.py` print "Hello World!", and which ones?
 
 
-```{ .python file=06_Packages/code/lecture/cliqr/a.py }
+```{ .python file=06_Packages/code/lecture/a.py }
 ```
 
-```{ .python file=06_Packages/code/lecture/cliqr/b.py }
+```{ .python file=06_Packages/code/lecture/b.py }
 ```
 
-```{ .python file=06_Packages/code/lecture/cliqr/c.py }
+```{ .python file=06_Packages/code/lecture/c.py }
 ```
 
 \normalsize
 
-\cliqr{Which "Hello World!"s will we see when running `python a.py`?}
-
 
 # `if __name__ == '__main__':`
 
-```{ .python file=06_Packages/code/lecture/cliqr/a.py wd=06_Packages/code/lecture/cliqr .exec }
+```{ .python file=06_Packages/code/lecture/a.py wd=06_Packages/code/lecture .exec }
 ```
 
 ::: notes
