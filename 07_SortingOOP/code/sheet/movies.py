@@ -21,7 +21,7 @@ def bubble_sort(numbers):
     swapped = True
     while swapped:
         swapped = False
-        for i in range(1, len(sorted_numbers[1:])):
+        for i in range(1, len(sorted_numbers)):
             if sorted_numbers[i - 1] > sorted_numbers[i]:
                 sorted_numbers[i], sorted_numbers[i - 1] = \
                     sorted_numbers[i - 1], sorted_numbers[i]

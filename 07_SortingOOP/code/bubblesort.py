@@ -1,4 +1,4 @@
-bubblelist = [3, 0, 1, 8, 7, 2, 5, 4, 6, 9]
+bubblelist = [3, 0, 1, 8, 7, 2, 5, 4, 9, 6]
 
 swapped = True
 while swapped:

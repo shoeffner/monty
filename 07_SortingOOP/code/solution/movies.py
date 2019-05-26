@@ -34,7 +34,7 @@ def movie_sort(movies):
     swapped = True
     while swapped:
         swapped = False
-        for i in range(1, len(sorted_movies[1:])):
+        for i in range(1, len(sorted_movies)):
             if sorted_movies[i - 1].year > sorted_movies[i].year:
                 sorted_movies[i], sorted_movies[i - 1] = \
                     sorted_movies[i - 1], sorted_movies[i]
@@ -56,7 +56,7 @@ def movie_sort_bonus(movies, key=lambda movie: movie.year):
     swapped = True
     while swapped:
         swapped = False
-        for i in range(1, len(sorted_movies[1:])):
+        for i in range(1, len(sorted_movies)):
             if key(sorted_movies[i - 1]) > key(sorted_movies[i]):
                 sorted_movies[i], sorted_movies[i - 1] = \
                     sorted_movies[i - 1], sorted_movies[i]
